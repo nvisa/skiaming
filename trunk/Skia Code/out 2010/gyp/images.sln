@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "images", "images.vcxproj", "{A3611DB6-6A7F-3064-F77C-D2741DD63172}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libjpeg", "libjpeg.vcxproj", "{FF9A6C9A-1FED-1E25-FB6E-CD6E1B0C567E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "utils", "utils.vcxproj", "{05332C0B-C859-DB59-FF72-CADC52112BED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05332C0B-C859-DB59-FF72-CADC52112BED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{05332C0B-C859-DB59-FF72-CADC52112BED}.Debug|Win32.Build.0 = Debug|Win32
+		{05332C0B-C859-DB59-FF72-CADC52112BED}.Release|Win32.ActiveCfg = Release|Win32
+		{05332C0B-C859-DB59-FF72-CADC52112BED}.Release|Win32.Build.0 = Release|Win32
+		{A3611DB6-6A7F-3064-F77C-D2741DD63172}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A3611DB6-6A7F-3064-F77C-D2741DD63172}.Debug|Win32.Build.0 = Debug|Win32
+		{A3611DB6-6A7F-3064-F77C-D2741DD63172}.Release|Win32.ActiveCfg = Release|Win32
+		{A3611DB6-6A7F-3064-F77C-D2741DD63172}.Release|Win32.Build.0 = Release|Win32
+		{FF9A6C9A-1FED-1E25-FB6E-CD6E1B0C567E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FF9A6C9A-1FED-1E25-FB6E-CD6E1B0C567E}.Debug|Win32.Build.0 = Debug|Win32
+		{FF9A6C9A-1FED-1E25-FB6E-CD6E1B0C567E}.Release|Win32.ActiveCfg = Release|Win32
+		{FF9A6C9A-1FED-1E25-FB6E-CD6E1B0C567E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
