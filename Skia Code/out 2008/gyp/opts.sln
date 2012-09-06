@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opts", "opts.vcproj", "{35EEB930-E22F-1FCE-1198-2D6FB20E5040}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opts_neon", "opts_neon.vcproj", "{701E78DE-9981-5F2F-B303-9E98D79E384C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opts_ssse3", "opts_ssse3.vcproj", "{34674BF9-374E-4929-9620-284E9899422A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34674BF9-374E-4929-9620-284E9899422A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{34674BF9-374E-4929-9620-284E9899422A}.Debug|Win32.Build.0 = Debug|Win32
+		{34674BF9-374E-4929-9620-284E9899422A}.Release|Win32.ActiveCfg = Release|Win32
+		{34674BF9-374E-4929-9620-284E9899422A}.Release|Win32.Build.0 = Release|Win32
+		{35EEB930-E22F-1FCE-1198-2D6FB20E5040}.Debug|Win32.ActiveCfg = Debug|Win32
+		{35EEB930-E22F-1FCE-1198-2D6FB20E5040}.Debug|Win32.Build.0 = Debug|Win32
+		{35EEB930-E22F-1FCE-1198-2D6FB20E5040}.Release|Win32.ActiveCfg = Release|Win32
+		{35EEB930-E22F-1FCE-1198-2D6FB20E5040}.Release|Win32.Build.0 = Release|Win32
+		{701E78DE-9981-5F2F-B303-9E98D79E384C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{701E78DE-9981-5F2F-B303-9E98D79E384C}.Debug|Win32.Build.0 = Debug|Win32
+		{701E78DE-9981-5F2F-B303-9E98D79E384C}.Release|Win32.ActiveCfg = Release|Win32
+		{701E78DE-9981-5F2F-B303-9E98D79E384C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
