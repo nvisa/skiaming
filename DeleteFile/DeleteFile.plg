@@ -1,0 +1,21 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DeleteFile - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/DeleteFile.res" /d "NDEBUG" /d "_AFXDLL" "D:\360ÔÆÅÌ\ÎÒµÄ³ÌÐò\DeleteFile\DeleteFile.rc"" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:no /pdb:"Release/DeleteFile.pdb" /machine:I386 /out:"Release/DeleteFile.exe"  ".\Release\DeleteFile.obj" ".\Release\DeleteFileDlg.obj" ".\Release\StdAfx.obj" ".\Release\DeleteFile.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+DeleteFile.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
