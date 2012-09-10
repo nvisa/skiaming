@@ -16,7 +16,8 @@
     and provides a function-pointer. This can be used to auto-register a set of
     services, e.g. a set of image codecs.
  */
-template <typename T, typename P> class SkTRegistry : SkNoncopyable {
+template <typename T, typename P> 
+class SkTRegistry : SkNoncopyable {
 public:
     typedef T (*Factory)(P);
 
