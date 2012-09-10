@@ -12,19 +12,21 @@
 
 #include "SkTypes.h"
 
-class SK_API SkDeque : SkNoncopyable {
+class SK_API SkDeque : SkNoncopyable {		//双端序列
 public:
     /**
      * elemSize specifies the size of each individual element in the deque
      * allocCount specifies how many elements are to be allocated as a block
+	 *elemSize:每个元素的长度
+	 *allocCount:被分配的块的元素个数
      */
     explicit SkDeque(size_t elemSize, int allocCount = 1);
     SkDeque(size_t elemSize, void* storage, size_t storageSize, int allocCount = 1);
     ~SkDeque();
 
-    bool    empty() const { return 0 == fCount; }
-    int     count() const { return fCount; }
-    size_t  elemSize() const { return fElemSize; }
+    bool    empty() const { return 0 == fCount; }	//清空
+    int     count() const { return fCount; }				//长度
+    size_t  elemSize() const { return fElemSize; }	//元素长度
 
     const void* front() const;
     const void* back() const;
@@ -47,7 +49,7 @@ private:
     struct Block;
 
 public:
-    class Iter {
+    class Iter {		//迭代器
     public:
         enum IterStart {
             kFront_IterStart,

@@ -23,6 +23,9 @@
     call, its (virtual) destructor is called. It is an error for the
     destructor to be called explicitly (or via the object going out of scope on
     the stack or calling delete) if getRefCnt() > 1.
+	被多对象共享的对象的基类.当拥有者想共享一个引用时,调用ref().当释放引用时,
+	调用unref().当被共享的引用书目由于调用unref()减少为0时,将调用析构函数.如果
+	getRefCnt() > 1,显式调用析构函数会出错.
 */
 class SK_API SkRefCnt : SkNoncopyable {
 public:
