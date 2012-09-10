@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\debugger">
+      <UniqueIdentifier>{50FEAF01-EF8B-0322-F711-085031E1FA3C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\debugger\QT">
+      <UniqueIdentifier>{DEC5C50F-A692-714D-8B88-9E95226DD373}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\gyp">
+      <UniqueIdentifier>{30B32512-2E13-32EA-B437-6F75133648E3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\debugger\SkDebugCanvas.cpp">
+      <Filter>..\..\debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\SkDebugger.cpp">
+      <Filter>..\..\debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\SkDrawCommand.cpp">
+      <Filter>..\..\debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\debuggermain.cpp">
+      <Filter>..\..\debugger</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\debugger\SkDrawCommand.h">
+      <Filter>..\..\debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\debugger\SkDebugCanvas.h">
+      <Filter>..\..\debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\debugger\SkObjectParser.h">
+      <Filter>..\..\debugger</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\debugger\SkObjectParser.cpp">
+      <Filter>..\..\debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\QT\SkRasterWidget.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\debugger\QT\SkGLWidget.h">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\debugger\QT\SkCanvasWidget.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\QT\SkDebuggerGUI.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\QT\SkSettingsWidget.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\QT\moc_4.6.2_SkDebuggerGUI.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\QT\moc_4.6.2_SkRasterWidget.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\debugger\QT\SkDebuggerGUI.h">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\debugger\QT\SkSettingsWidget.h">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\debugger\QT\SkCanvasWidget.h">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\debugger\QT\SkInspectorWidget.h">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\debugger\QT\SkListWidget.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\QT\moc_4.6.2_SkSettingsWidget.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\QT\moc_4.6.2_SkGLWidget.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\QT\moc_4.6.2_SkInspectorWidget.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\QT\SkInspectorWidget.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\debugger\QT\SkListWidget.h">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\debugger\QT\moc_4.6.2_SkCanvasWidget.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\debugger\QT\SkRasterWidget.h">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\debugger\QT\qrc_SkIcons.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\debugger\QT\SkGLWidget.cpp">
+      <Filter>..\..\debugger\QT</Filter>
+    </ClCompile>
+    <None Include="..\..\gyp\debugger.gyp">
+      <Filter>..\..\gyp</Filter>
+    </None>
+  </ItemGroup>
+</Project>
