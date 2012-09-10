@@ -107,7 +107,7 @@ private:
 };
 
 int main (int argc, char * const argv[]) {
-#ifdef SK_ENABLE_INST_COUNT
+#ifdef SK_ENABLE_INST_COUNT		//没有定义
     gPrintInstCount = true;
 #endif
     SkGraphics::Init();
@@ -116,13 +116,17 @@ int main (int argc, char * const argv[]) {
     const char* matchStr = NULL;
 
     char* const* stop = argv + argc;
-    for (++argv; argv < stop; ++argv) {
-        if (strcmp(*argv, "-android") == 0) {
+    for (++argv; argv < stop; ++argv) 
+	{
+        if (strcmp(*argv, "-android") == 0)		//有-android参数时,
+		{
             androidMode = true;
-
-        } else if (strcmp(*argv, "--match") == 0) {
+        } 
+		else if (strcmp(*argv, "--match") == 0) 
+		{
             ++argv;
-            if (argv < stop && **argv) {
+            if (argv < stop && **argv) 
+			{
                 matchStr = *argv;
             }
         }
@@ -130,7 +134,8 @@ int main (int argc, char * const argv[]) {
 
     {
         SkString header("Skia UnitTests:");
-        if (matchStr) {
+        if (matchStr) 
+		{
             header.appendf(" --match %s", matchStr);
         }
 #ifdef SK_DEBUG
@@ -143,7 +148,8 @@ int main (int argc, char * const argv[]) {
 #else
         header.append(" SK_SCALAR_IS_FLOAT");
 #endif
-        if (!androidMode) {
+        if (!androidMode) 
+		{
             SkDebugf("%s\n", header.c_str());
         }
     }

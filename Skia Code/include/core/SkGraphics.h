@@ -18,6 +18,7 @@ public:
      *  Call this at process initialization time if your environment does not
      *  permit static global initializers that execute code. Note that
      *  Init() is not thread-safe.
+	 *如果环境没有允许全局初始化执行代码,则调用此函数进行进程初始化.此方法不是进程安全的
      */
     static void Init();
 

@@ -7,7 +7,7 @@
  */
 /*  This file is meant to be included by .cpp files, so it can spew out a
     customized class + global definition.
-
+	*被cpp文件包含,所以可以定制一个类,并且为全局定义
     e.g.
     #include "TestClassDef.h"
     DEFINE_TESTCLASS("MyTest", MyTestClass, MyTestFunction)

@@ -33,7 +33,8 @@ namespace skiatest {
 
         void resetReporting();
         int countTests() const { return fTestCount; }
-        int countResults(Result r) {
+        int countResults(Result r) 
+		{
             SkASSERT((unsigned)r <= kLastResult);
             return fResultCount[r];
         }
