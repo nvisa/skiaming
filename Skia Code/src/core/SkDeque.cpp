@@ -12,9 +12,9 @@
 struct SkDeque::Block {
     Block*  fNext;
     Block*  fPrev;
-    char*   fBegin; // start of used section in this chunk
+    char*   fBegin; // start of used section in this chunk块首元素
     char*   fEnd;   // end of used section in this chunk
-    char*   fStop;  // end of the allocated chunk
+    char*   fStop;  // end of the allocated chunk块结束位置
 
     char*       start() { return (char*)(this + 1); }
     const char* start() const { return (const char*)(this + 1); }

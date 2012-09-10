@@ -1,0 +1,230 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_CALENDAR MENU 
+BEGIN
+    POPUP "Calendar"
+    BEGIN
+        MENUITEM "&New Event...",               ID_CALENDAR_NEWEVENT
+        MENUITEM "&Edit Event...",              ID_CALENDAR_EDITEVENT
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete",                     ID_CALENDAR_DELETEEVENT
+        MENUITEM SEPARATOR
+        MENUITEM "&Month View",                 ID_CALENDAR_MONTH
+        MENUITEM "&Week View",                  ID_CALENDAR_WEEK
+        MENUITEM "D&ay View",                   ID_CALENDAR_DAY
+        MENUITEM SEPARATOR
+        MENUITEM "Help",                        ID_CALENDAR_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "Background",                  ID_CALENDAR_BACKGROUND
+        MENUITEM SEPARATOR
+        MENUITEM "Options",                     ID_CALENDAR_OPTIONS
+    END
+END
+
+ID_CALENDAR_HELP MENU 
+BEGIN
+    POPUP "Help"
+    BEGIN
+        MENUITEM "&Manual",                     ID_HELP_MANUAL
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   ID_HELP_ABOUT
+    END
+END
+
+ID_CALENDAR_BACKGROUND MENU 
+BEGIN
+    POPUP "Background"
+    BEGIN
+        MENUITEM "None",                        ID_BACKGROUND_NONE
+        MENUITEM "Note",                        ID_BACKGROUND_NOTE
+        MENUITEM "Todo List",                   ID_BACKGROUND_TODOLIST
+        MENUITEM "Journal",                     ID_BACKGROUND_JOURNAL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_CALENDAR_NEWEVENT    "New Event\nNew Event"
+    ID_CALENDAR_DELETEEVENT "Delete\nDelete"
+    ID_CALENDAR_MONTH       "Month\nMonth"
+    ID_CALENDAR_WEEK        "Week\nWeek"
+    ID_CALENDAR_DAY         "Day\nDay"
+    ID_CALENDAR_EDITEVENT   "Edit\nEdit"
+    ID_CALENDAR_HELP        "Help\nHelp"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CALENDAR_BACKGROUND  "Background\nBackground"
+    ID_CALENDAR_OPTIONS     "Options"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\WizKMCalendar.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 187, 102
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,81,50,14
+    CTEXT           "WizKMCalendar Application v1.0\n\n(c) Copyright 2009",IDC_STATIC,25,57,78,32
+    ICON            IDR_MAINFRAME,IDC_STATIC,55,26,18,20
+    GROUPBOX        "",IDC_STATIC,7,7,115,88
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,1,0
+ PRODUCTVERSION 1,0,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "WizKMCalendar"
+            VALUE "FileVersion", "1.0.1.0"
+            VALUE "InternalName", "WizKMCalendar"
+            VALUE "LegalCopyright", "(c) amazingnote.com.  All rights reserved."
+            VALUE "OriginalFilename", "WizKMCalendar.exe"
+            VALUE "ProductName", "WizKM"
+            VALUE "ProductVersion", "1.0.1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "WizCalendar"
+    IDS_MODULE_NAME         "WizCalendar"
+    IDS_ALL_CALENDAR_TAGS   "All"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

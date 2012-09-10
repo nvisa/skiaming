@@ -41,6 +41,7 @@ class SkPicture;
     parameter to each of the draw() methods. The Paint holds attributes such as
     color, typeface, textSize, strokeWidth, shader (e.g. gradients, patterns),
     etc.
+SkCanvas类将所有的绘制命令压缩到一个设备(bitmap)里面
 */
 class SK_API SkCanvas : public SkRefCnt {
 public:
