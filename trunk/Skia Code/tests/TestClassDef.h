@@ -16,7 +16,8 @@
 
         void MyTestFunction(skiatest::Reporter*)
 */
-
+//定义类,并定义静态全局变量,静态全局变量只在本文件可见,文件外不可见,不会出现名字冲突
+//使用Test子类的Factory函数指针构造静态全局对象
 #define DEFINE_TESTCLASS(uiname, classname, function)                       \
     namespace skiatest {                                                    \
         class classname : public Test {                                     \
