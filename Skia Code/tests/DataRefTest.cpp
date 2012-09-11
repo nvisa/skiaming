@@ -119,7 +119,7 @@ static void test_cstring(skiatest::Reporter* reporter) {
     REPORTER_ASSERT(reporter, 0 == *r2->bytes());
 }
 
-static void TestData(skiatest::Reporter* reporter) {
+static void TestData(skiatest::Reporter* reporter) {		//DataTestClass调用OnRun的时候会调用此函数
     const char* str = "We the people, in order to form a more perfect union.";
     const int N = 10;
 
@@ -149,4 +149,4 @@ static void TestData(skiatest::Reporter* reporter) {
 }
 
 #include "TestClassDef.h"
-DEFINE_TESTCLASS("Data", DataTestClass, TestData)
+DEFINE_TESTCLASS("Data", DataTestClass, TestData)	//定义类,并声明全局变量

@@ -76,7 +76,7 @@ const char* Test::getName() {
 
 bool Test::run() {
     fReporter->startTest(this);
-    this->onRun(fReporter);
+    this->onRun(fReporter);		//调用子类测试函数
     fReporter->endTest(this);
     return fReporter->getCurrSuccess();
 }

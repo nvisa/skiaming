@@ -21,7 +21,7 @@ class SkTRegistry : SkNoncopyable {
 public:
     typedef T (*Factory)(P);
 
-    SkTRegistry(Factory fact) {
+    SkTRegistry(Factory fact) {		//使用函数指针构造出来
 #ifdef SK_BUILD_FOR_ANDROID
         // work-around for double-initialization bug
         {
@@ -35,7 +35,7 @@ public:
         }
 #endif
         fFact = fact;
-        fChain = gHead;
+        fChain = gHead;	//第一个的时候,fChain为0,
         gHead = this;
     }
 
@@ -46,12 +46,11 @@ public:
 
 private:
     Factory      fFact;
-    SkTRegistry* fChain;
-
+    SkTRegistry* fChain;	//指向上一个元素
     static SkTRegistry* gHead;
 };
 
-// The caller still needs to declare an instance of this somewhere
-template <typename T, typename P> SkTRegistry<T, P>* SkTRegistry<T, P>::gHead;
+// The caller still needs to declare an instance of this somewhere//静态成员变量初始化为0;必须的,
+template <typename T, typename P> SkTRegistry<T, P>* SkTRegistry<T, P>::gHead;	
 
 #endif

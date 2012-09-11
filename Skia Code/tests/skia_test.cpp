@@ -110,7 +110,7 @@ int main (int argc, char * const argv[]) {
 #ifdef SK_ENABLE_INST_COUNT		//没有定义
     gPrintInstCount = true;
 #endif
-    SkGraphics::Init();
+    SkGraphics::Init();	//什么都没执行
 
     bool androidMode = false;
     const char* matchStr = NULL;
@@ -155,14 +155,14 @@ int main (int argc, char * const argv[]) {
     }
 
     DebugfReporter reporter(androidMode);
-    Iter iter(&reporter);
+    Iter iter(&reporter);	//将TestRegistry::Head()保存
     Test* test;
 
     const int count = Iter::Count();
     int index = 0;
     int failCount = 0;
     int skipCount = 0;
-    while ((test = iter.next()) != NULL) {
+    while ((test = iter.next()) != NULL) {		//test为子类指针
         reporter.setIndexOfTotal(index, count);
         if (NULL != matchStr && !strstr(test->getName(), matchStr)) {
             ++skipCount;

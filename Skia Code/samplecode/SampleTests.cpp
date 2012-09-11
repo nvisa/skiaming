@@ -35,9 +35,9 @@ public:
 
     Test* next() {
         if (fReg) {
-            TestRegistry::Factory fact = fReg->factory();
+            TestRegistry::Factory fact = fReg->factory();	//fact为Test子类的Factory方法
             fReg = fReg->next();
-            Test* test = fact(NULL);
+            Test* test = fact(NULL);		//子类在此处new出来
             test->setReporter(fReporter);
             return test;
         }
