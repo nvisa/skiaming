@@ -42,6 +42,11 @@ class SkSurface_Base;
     parameter to each of the draw() methods. The Paint holds attributes such as
     color, typeface, textSize, strokeWidth, shader (e.g. gradients, patterns),
     etc.
+	Canvas将所有的绘制命令压缩至设备(bitmap).这包括设备本身的引用,一对矩阵/剪辑值.
+	对于任意给定的绘制命令(如drawRect),被绘制的对象的几何图形被在堆栈中的所有矩阵的
+	串联所转换.被转换的几何图形被堆栈中的所有剪切的交所裁剪出来.
+	当Canvas掌控绘制设备的状态,被绘制的对象的状态(风格)被Paint所掌控,Paint作为每个draw()
+	方法的参数.Paint掌控属性,如颜色,字体,文本大小,笔画宽度,调色器(渐进,临摹等)
 */
 class SK_API SkCanvas : public SkRefCnt {
 public:
@@ -50,7 +55,7 @@ public:
     SkCanvas();
 
     /** Construct a canvas with the specified device to draw into.
-
+	使用指定画入的设备创建canvas
         @param device   Specifies a device for the canvas to draw into.
     */
     explicit SkCanvas(SkDevice* device);

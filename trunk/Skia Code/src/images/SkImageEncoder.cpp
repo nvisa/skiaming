@@ -26,7 +26,7 @@ bool SkImageEncoder::encodeFile(const char file[], const SkBitmap& bm,
     SkFILEWStream   stream(file);
     return this->onEncode(&stream, bm, quality);
 }
-
+//静态函数,将图片文件解码为SkBitmap
 bool SkImageEncoder::EncodeFile(const char file[], const SkBitmap& bm, Type t,
                                 int quality) {
     SkAutoTDelete<SkImageEncoder> enc(SkImageEncoder::Create(t));

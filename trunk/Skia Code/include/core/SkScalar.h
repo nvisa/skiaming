@@ -294,7 +294,7 @@
 // DEPRECATED : use ToInt or ToScalar variant
 #define SkScalarFloor(x)    SkScalarFloorToInt(x)
 #define SkScalarCeil(x)     SkScalarCeilToInt(x)
-#define SkScalarRound(x)    SkScalarRoundToInt(x)
+#define SkScalarRound(x)    SkScalarRoundToInt(x)	//½«float×ªÎªint
 
 /**
  *  Returns -1 || 0 || 1 depending on the sign of value:

@@ -127,7 +127,7 @@ bool SkOSWindow::wndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
             return true;
         } break;
         case WM_SIZE:
-            this->resize(lParam & 0xFFFF, lParam >> 16);
+            this->resize(lParam & 0xFFFF, lParam >> 16);	//lParam的低8位和高8位
             break;
         case WM_PAINT: {
             PAINTSTRUCT ps;
