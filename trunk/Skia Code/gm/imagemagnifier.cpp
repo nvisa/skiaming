@@ -26,7 +26,7 @@ protected:
     }
 
     virtual SkString onShortName() SK_OVERRIDE {
-        return SkString("imagemagnifier");
+        return SkString("imagemagnifier--62");
     }
 
     virtual SkISize onISize() SK_OVERRIDE {

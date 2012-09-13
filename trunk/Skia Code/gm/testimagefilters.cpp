@@ -95,7 +95,7 @@ public:
 protected:
 
     virtual SkString onShortName() {
-        return SkString("testimagefilters");
+        return SkString("testimagefilters--86");
     }
 
     virtual SkISize onISize() { return SkISize::Make(700, 460); }

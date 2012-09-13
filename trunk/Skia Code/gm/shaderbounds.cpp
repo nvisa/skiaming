@@ -99,7 +99,7 @@ private:
 ///////////////////////////////////////////////////////////////////////////////
 
 static GM* MyFactory(void*) {
-    return new ShaderBoundsGM(MakeLinear, SkString("shaderbounds_linear"));
+    return new ShaderBoundsGM(MakeLinear, SkString("shaderbounds_linear--7"));
 }
 static GMRegistry reg(MyFactory);
 

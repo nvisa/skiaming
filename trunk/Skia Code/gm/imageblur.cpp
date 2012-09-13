@@ -21,7 +21,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("imageblur");
+        return SkString("imageblur--22");
     }
 
     virtual SkISize onISize() {

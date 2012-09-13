@@ -23,7 +23,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("imagefiltersgraph");
+        return SkString("imagefiltersgraph--46");
     }
 
     void make_bitmap() {

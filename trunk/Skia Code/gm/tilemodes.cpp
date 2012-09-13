@@ -75,7 +75,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("tilemodes");
+        return SkString("tilemodes--89");
     }
 
     SkISize onISize() { return make_isize(880, 560); }

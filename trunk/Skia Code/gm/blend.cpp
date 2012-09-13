@@ -19,7 +19,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("blend");
+        return SkString("blend--17");
     }
 
     void make_bitmap() {

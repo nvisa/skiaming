@@ -303,6 +303,8 @@ public:
         count reached saveCount. It is an error for saveCount to be less than
         getSaveCount()
         @param saveCount    The number of save() levels to restore from
+		当保存数目达到saveCount, 对于save(),清除一些调用的有效方法.如果saveCount
+		小于getSaveCount(),会出错
     */
     void restoreToCount(int saveCount);
 
@@ -315,6 +317,7 @@ public:
         @param dx   The distance to translate in X
         @param dy   The distance to translate in Y
         returns true if the operation succeeded (e.g. did not overflow)
+		用指定的转换合并当前矩阵
     */
     virtual bool translate(SkScalar dx, SkScalar dy);
 

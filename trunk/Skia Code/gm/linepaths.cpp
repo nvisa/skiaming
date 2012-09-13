@@ -17,7 +17,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("linepath");
+        return SkString("linepath--102");
     }
 
     SkISize onISize() { return make_isize(1240, 390); }
@@ -158,7 +158,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("lineclosepath");
+        return SkString("lineclosepath--103");
     }
 
     SkISize onISize() { return make_isize(1240, 390); }

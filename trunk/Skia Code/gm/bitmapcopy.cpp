@@ -53,7 +53,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("bitmapcopy");
+        return SkString("bitmapcopy--1.在bitmap上面画矩形,画文字,并进行bitmap拷贝");
     }
 
     virtual SkISize onISize() {

@@ -57,7 +57,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("twopointconical");
+        return SkString("twopointconical--2.paint的着色器,背景色,风格,canvas的画矩形,圆");
     }
 
     SkISize onISize() { return skiagm::make_isize(480, 780); }

@@ -23,7 +23,7 @@ protected:
     };
 
     SkString onShortName() {
-        return SkString("degeneratesegments");
+        return SkString("degeneratesegments--55");
     }
 
     SkISize onISize() { return make_isize(896, 930); }

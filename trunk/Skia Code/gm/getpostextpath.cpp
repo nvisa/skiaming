@@ -17,7 +17,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("getpostextpath");
+        return SkString("getpostextpath--29");
     }
 
     SkISize onISize() { return skiagm::make_isize(480, 780); }

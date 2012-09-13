@@ -35,7 +35,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("convexpaths");
+        return SkString("convexpaths--21");
     }
 
 

@@ -52,7 +52,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("colormatrix");
+        return SkString("colormatrix--59");
     }
 
     virtual SkISize onISize() {

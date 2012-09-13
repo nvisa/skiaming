@@ -21,7 +21,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("dashcubics");
+        return SkString("dashcubics--40");
     }
 
     virtual SkISize onISize() {

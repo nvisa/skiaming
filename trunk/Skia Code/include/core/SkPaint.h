@@ -130,6 +130,7 @@ public:
 
     /** Helper for setFlags(), setting or clearing the kAntiAlias_Flag bit
         @param aa   true to enable antialiasing, false to disable it
+		setFlags()进行设置或清除抗锯齿.aa为true使用抗锯齿
         */
     void setAntiAlias(bool aa);
 
@@ -181,6 +182,7 @@ public:
      *  Note: antialiasing must also be on for lcd rendering
      *  @param lcdText true to set the LCDRenderText bit in the paint's flags,
      *                 false to clear it.
+	 *LCD渲染
      */
     void setLCDRenderText(bool lcdText);
 

@@ -77,18 +77,29 @@ protected:
         switch (fMode) {
             case SkShader::kClamp_TileMode:
                 str.append("clamp");
+				if(fDoFilter && fDoRotate) str.append("_bilerp_rotate--82");
+				else if(fDoFilter && !fDoRotate) str.append("_bilerp_scale--76");
+				else if(!fDoFilter && fDoRotate) str.append("_point_rotate--73");
+				else str.append("_point_scale--79");
                 break;
             case SkShader::kRepeat_TileMode:
                 str.append("repeat");
+				if(fDoFilter && fDoRotate) str.append("_bilerp_rotate--83");
+				else if(fDoFilter && !fDoRotate) str.append("_bilerp_scale--77");
+				else if(!fDoFilter && fDoRotate) str.append("_point_rotate--74");
+				else str.append("_point_scale--80");
                 break;
             case SkShader::kMirror_TileMode:
                 str.append("mirror");
+				if(fDoFilter && fDoRotate) str.append("_bilerp_rotate--84");
+				else if(fDoFilter && !fDoRotate) str.append("_bilerp_scale--78");
+				else if(!fDoFilter && fDoRotate) str.append("_point_rotate--75");
+				else str.append("_point_scale--81");
                 break;
             default:
                 break;
         }
-        str.append(fDoFilter ? "_bilerp" : "_point");
-        str.append(fDoRotate ? "_rotate" : "_scale");
+		
         return str;
     }
 

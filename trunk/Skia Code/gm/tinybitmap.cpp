@@ -41,7 +41,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("tinybitmap");
+        return SkString("tinybitmap--8");
     }
 
     virtual SkISize onISize() { return make_isize(100, 100); }

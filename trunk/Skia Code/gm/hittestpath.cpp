@@ -35,7 +35,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("hittestpath");
+        return SkString("hittestpath--91");
     }
 
     virtual SkISize onISize() { return SkISize::Make(700, 460); }

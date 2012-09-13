@@ -27,7 +27,7 @@ protected:
     // overrides from SkEventSink
     virtual bool onQuery(SkEvent* evt) {
         if (SampleCode::TitleQ(*evt)) {
-            SampleCode::TitleR(evt, "Animated Gif");
+            SampleCode::TitleR(evt, "Animated Gif--119");
             return true;
         }
         return this->INHERITED::onQuery(evt);

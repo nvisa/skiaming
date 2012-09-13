@@ -17,7 +17,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("quadpath");
+        return SkString("quadpath--13");
     }
 
     SkISize onISize() { return make_isize(1240, 390); }
@@ -159,7 +159,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("quadclosepath");
+        return SkString("quadclosepath--14");
     }
 
     SkISize onISize() { return make_isize(1240, 390); }

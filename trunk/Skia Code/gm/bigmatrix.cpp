@@ -20,7 +20,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("bigmatrix");
+        return SkString("bigmatrix--92");
     }
 
     virtual SkISize onISize() {

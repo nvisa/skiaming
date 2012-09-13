@@ -86,7 +86,7 @@ public:
 protected:
 
     virtual SkString onShortName() {
-        return SkString("arithmode");
+        return SkString("arithmode--3.SkArithmeticMode的使用,canvas的drawBitmap");
     }
 
     virtual SkISize onISize() { return SkISize::Make(640, 480); }

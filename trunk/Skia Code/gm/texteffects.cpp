@@ -229,7 +229,7 @@ public:
 
 protected:
     virtual SkString onShortName() SK_OVERRIDE {
-        return SkString("texteffects");
+        return SkString("texteffects--42");
     }
 
     virtual SkISize onISize() SK_OVERRIDE {

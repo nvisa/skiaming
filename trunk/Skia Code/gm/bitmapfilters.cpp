@@ -98,7 +98,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("bitmapfilters");
+        return SkString("bitmapfilters--60");
     }
 
     virtual SkISize onISize() {

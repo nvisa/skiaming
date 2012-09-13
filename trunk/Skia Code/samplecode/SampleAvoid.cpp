@@ -45,7 +45,7 @@ public:
 protected:
     virtual bool onQuery(SkEvent* evt) {
         if (SampleCode::TitleQ(*evt)) {
-            SampleCode::TitleR(evt, "AvoidXfermode");
+            SampleCode::TitleR(evt, "AvoidXfermode--159");
             return true;
         }
         return this->INHERITED::onQuery(evt);

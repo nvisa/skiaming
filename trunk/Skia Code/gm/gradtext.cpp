@@ -43,7 +43,7 @@ public:
     ChromeGradTextGM1() { }
 protected:
 
-    virtual SkString onShortName() { return SkString("chrome_gradtext1"); }
+    virtual SkString onShortName() { return SkString("chrome_gradtext1--65"); }
     virtual SkISize onISize() { return make_isize(500, 480); }
     virtual void onDraw(SkCanvas* canvas) {
         SkPaint paint;
@@ -71,7 +71,7 @@ public:
     ChromeGradTextGM2() { }
 protected:
 
-    virtual SkString onShortName() { return SkString("chrome_gradtext2"); }
+    virtual SkString onShortName() { return SkString("chrome_gradtext2--66"); }
     virtual SkISize onISize() { return make_isize(500, 480); }
     virtual void onDraw(SkCanvas* canvas) {
         SkPaint paint;
@@ -104,7 +104,7 @@ public:
 protected:
 
     virtual SkString onShortName() {
-        return SkString("gradtext");
+        return SkString("gradtext--64");
     }
 
     virtual SkISize onISize() { return make_isize(500, 480); }

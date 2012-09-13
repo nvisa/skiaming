@@ -17,7 +17,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("nocolorbleed");
+        return SkString("nocolorbleed--61");
     }
 
     virtual SkISize onISize() {

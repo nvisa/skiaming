@@ -55,6 +55,7 @@ public:
     /** Decrement the reference count. If the reference count is 1 before the
         decrement, then delete the object. Note that if this is the case, then
         the object needs to have been allocated via new, and not on the stack.
+		减少引用数目.如果在减少前为1,则删除对象
     */
     void unref() const {
         SkASSERT(fRefCnt > 0);

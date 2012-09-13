@@ -28,7 +28,7 @@ protected:
 #endif
 
     virtual SkString onShortName() {
-        return SkString("blurs");
+        return SkString("blurs--56");
     }
 
     virtual SkISize onISize() {

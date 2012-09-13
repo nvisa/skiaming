@@ -129,9 +129,9 @@ protected:
     virtual SkString onShortName() {
         SkString str;
         str.printf("simpleaaclip_%s",
-                    kRect_GeomType == fGeomType ? "rect" :
-                    (kPath_GeomType == fGeomType ? "path" :
-                    "aaclip"));
+                    kRect_GeomType == fGeomType ? "rect--18" :
+                    (kPath_GeomType == fGeomType ? "path--19" :
+                    "aaclip--20"));
         return str;
     }
 

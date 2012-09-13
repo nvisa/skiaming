@@ -89,13 +89,19 @@ protected:
 
     virtual SkString onShortName() {
         if (!fDoPaths && !fAntiAlias) {
-            return SkString("complexclip2");
+            return SkString("complexclip2--25");
         }
 
         SkString str;
-        str.printf("complexclip2_%s_%s",
-                    fDoPaths ? "path" : "rect",
-                    fAntiAlias ? "aa" : "bw");
+		if(fDoPaths && fAntiAlias)
+			str.printf("complexclip2_%s_%s","path", "aa--28");
+		else if(fDoPaths && !fAntiAlias)
+			str.printf("complexclip2_%s_%s","path", "bw--26");
+		else if(!fDoPaths && fAntiAlias)
+			str.printf("complexclip2_%s_%s","rect", "aa--27");
+//         str.printf("complexclip2_%s_%s",
+//                     fDoPaths ? "path" : "rect",
+//                     fAntiAlias ? "aa--27" : "bw--26");	//path
         return str;
     }
 

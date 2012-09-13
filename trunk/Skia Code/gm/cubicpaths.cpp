@@ -17,7 +17,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("cubicpath");
+        return SkString("cubicpath--68");
     }
 
     SkISize onISize() { return make_isize(1240, 390); }
@@ -160,7 +160,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("cubicclosepath");
+        return SkString("cubicclosepath--69");
     }
 
     SkISize onISize() { return make_isize(1240, 390); }

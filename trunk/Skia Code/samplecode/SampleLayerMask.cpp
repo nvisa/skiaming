@@ -22,7 +22,7 @@ protected:
     // overrides from SkEventSink
     virtual bool onQuery(SkEvent* evt) {
         if (SampleCode::TitleQ(*evt)) {
-            SampleCode::TitleR(evt, "LayerMask");
+            SampleCode::TitleR(evt, "LayerMask--166");
             return true;
         }
         return this->INHERITED::onQuery(evt);

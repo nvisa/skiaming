@@ -136,7 +136,7 @@ namespace skiagm {
     protected:
 
         virtual SkString onShortName() {
-            return SkString("aarectmodes");
+            return SkString("aarectmodes--38");
         }
 
         virtual SkISize onISize() { return make_isize(640, 480); }

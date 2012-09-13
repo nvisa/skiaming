@@ -65,7 +65,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("ninepatch-stretch");
+        return SkString("ninepatch-stretch--15");
     }
 
     virtual SkISize onISize() {

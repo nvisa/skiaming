@@ -95,7 +95,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("tablecolorfilter");
+        return SkString("tablecolorfilter--43");
     }
 
     virtual SkISize onISize() {

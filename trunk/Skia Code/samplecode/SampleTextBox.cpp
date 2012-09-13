@@ -63,7 +63,7 @@ protected:
     // overrides from SkEventSink
     virtual bool onQuery(SkEvent* evt)  {
         if (SampleCode::TitleQ(*evt)) {
-            SkString str("TextBox");
+            SkString str("TextBox-131");
             SampleCode::TitleR(evt, str.c_str());
             return true;
         }

@@ -21,7 +21,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("lighting");
+        return SkString("lighting--16");
     }
 
     void make_bitmap() {

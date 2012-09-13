@@ -312,7 +312,7 @@ protected:
     // overrides from SkEventSink
     virtual bool onQuery(SkEvent* evt) {
         if (SampleCode::TitleQ(*evt)) {
-            SampleCode::TitleR(evt, "Demo");
+            SampleCode::TitleR(evt, "Demo--161");
             return true;
         }
         return this->INHERITED::onQuery(evt);

@@ -39,7 +39,7 @@ protected:
     // overrides from SkEventSink
     virtual bool onQuery(SkEvent* evt) {
         if (SampleCode::TitleQ(*evt)) {
-            SampleCode::TitleR(evt, "PathClip");
+            SampleCode::TitleR(evt, "PathClip--162");
             return true;
         }
         return this->INHERITED::onQuery(evt);

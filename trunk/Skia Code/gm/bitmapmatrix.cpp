@@ -23,7 +23,7 @@ public:
 
 protected:
     virtual SkString onShortName() SK_OVERRIDE {
-        return SkString("drawbitmapmatrix");
+        return SkString("drawbitmapmatrix--57");
     }
 
     virtual SkISize onISize() SK_OVERRIDE { return make_isize(1024, 256); }
