@@ -39,7 +39,7 @@ protected:
     // overrides from SkEventSink
     virtual bool onQuery(SkEvent* evt) {
         if (SampleCode::TitleQ(*evt)) {
-            SampleCode::TitleR(evt, "Texture Domain");
+            SampleCode::TitleR(evt, "Texture Domain--143");
             return true;
         }
         return this->INHERITED::onQuery(evt);

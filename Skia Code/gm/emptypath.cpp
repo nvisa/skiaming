@@ -18,7 +18,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("emptypath");
+        return SkString("emptypath--4.SkPathµÄStokeºÍFill,canvasµÄdrawPath");
     }
 
     SkISize onISize() { return make_isize(600, 280); }

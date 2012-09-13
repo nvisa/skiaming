@@ -150,7 +150,7 @@ void SkAnimatorView::onDraw(SkCanvas* canvas) {
 
 bool SkAnimatorView::onQuery(SkEvent* evt) {
     if (SampleCode::TitleQ(*evt)) {
-        SampleCode::TitleR(evt, "Animator");
+        SampleCode::TitleR(evt, "Animator--127");
         return true;
     }
     return this->INHERITED::onQuery(evt);

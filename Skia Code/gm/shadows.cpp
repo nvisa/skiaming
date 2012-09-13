@@ -36,7 +36,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("shadows");
+        return SkString("shadows--54");
     }
 
     virtual SkISize onISize() {

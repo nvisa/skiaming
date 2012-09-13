@@ -40,7 +40,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("strokes_round");
+        return SkString("strokes_round--96");
     }
 
     virtual SkISize onISize() {
@@ -92,7 +92,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("strokes_poly");
+        return SkString("strokes_poly--97");
     }
 
     virtual SkISize onISize() {
@@ -189,7 +189,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("strokes3");
+        return SkString("strokes3--98");
     }
 
     virtual SkISize onISize() {

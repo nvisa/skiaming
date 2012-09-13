@@ -43,7 +43,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("cmykjpeg");
+        return SkString("cmykjpeg--87");
     }
 
     virtual SkISize onISize() {

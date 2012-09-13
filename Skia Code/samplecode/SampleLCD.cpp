@@ -20,7 +20,7 @@ protected:
     // overrides from SkEventSink
     virtual bool onQuery(SkEvent* evt) {
         if (SampleCode::TitleQ(*evt)) {
-            SampleCode::TitleR(evt, "LCD Text");
+            SampleCode::TitleR(evt, "LCD Text--160");
             return true;
         }
         return this->INHERITED::onQuery(evt);

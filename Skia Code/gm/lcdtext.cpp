@@ -25,7 +25,7 @@ public:
 protected:
 
     SkString onShortName() {
-        return SkString("lcdtext");
+        return SkString("lcdtext--5");
     }
 
     SkISize onISize() { return make_isize(640, 480); }

@@ -16,7 +16,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("points");
+        return SkString("points--23");
     }
 
     virtual SkISize onISize() {

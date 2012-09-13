@@ -15,7 +15,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("poly2poly");
+        return SkString("poly2poly--85");
     }
 
     virtual SkISize onISize() {

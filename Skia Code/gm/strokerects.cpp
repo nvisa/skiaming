@@ -26,7 +26,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("strokerects");
+        return SkString("strokerects--93");
     }
 
     virtual SkISize onISize() {

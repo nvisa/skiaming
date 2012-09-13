@@ -153,7 +153,7 @@ public:
 protected:
 
     virtual SkString onShortName() {
-        return SkString("imagefiltersbase");
+        return SkString("imagefiltersbase--53");
     }
 
     virtual SkISize onISize() { return SkISize::Make(700, 460); }

@@ -109,7 +109,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("image");
+        return SkString("image-24");
     }
 
     virtual SkISize onISize() {

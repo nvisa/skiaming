@@ -118,7 +118,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("gammatext");
+        return SkString("gammatext--94");
     }
 
     virtual SkISize onISize() {

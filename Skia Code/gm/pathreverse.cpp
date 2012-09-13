@@ -70,7 +70,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("path-reverse");
+        return SkString("path-reverse--11");
     }
 
     virtual SkISize onISize() {

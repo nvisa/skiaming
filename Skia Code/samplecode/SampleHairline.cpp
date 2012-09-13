@@ -177,7 +177,7 @@ static const struct {
     const char* fName;
     HairProc    fProc;
 } gProcs[] = {
-    { "line",   line_proc },
+    { "line--170",   line_proc },
     { "poly",   poly_proc },
     { "quad",   quad_proc },
     { "cube",   cube_proc },

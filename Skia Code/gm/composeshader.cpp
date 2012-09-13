@@ -52,7 +52,7 @@ public:
 
 protected:
     virtual SkString onShortName() SK_OVERRIDE {
-        return SkString("composeshader");
+        return SkString("composeshader--32");
     }
 
     virtual SkISize onISize() SK_OVERRIDE {

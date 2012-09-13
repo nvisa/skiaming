@@ -261,7 +261,7 @@ protected:
     virtual bool onQuery(SkEvent* evt)  {
         if (SampleCode::TitleQ(*evt))
         {
-            SkString str("Patch");
+            SkString str("Patch--129");
             SampleCode::TitleR(evt, str.c_str());
             return true;
         }

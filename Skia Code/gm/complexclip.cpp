@@ -32,9 +32,17 @@ protected:
 
     SkString onShortName() {
         SkString str;
-        str.printf("complexclip_%s%s",
-                   fDoAAClip ? "aa" : "bw",
-                   fDoSaveLayer ? "_layer" : "");
+		if(fDoAAClip && fDoSaveLayer)
+			str.printf("complexclip_%s%s","aa", "_layer--37");
+		else if(fDoAAClip && !fDoSaveLayer)
+			str.printf("complexclip_%s%s","aa", "--35");
+		else if(!fDoAAClip && fDoSaveLayer)
+			str.printf("complexclip_%s%s","bw", "_layer--36");
+		else
+			str.printf("complexclip_%s%s","bw", "--34");
+//         str.printf("complexclip_%s%s",
+//                    fDoAAClip ? "aa" : "bw",
+//                    fDoSaveLayer ? "_layer" : "");
         return str;
     }
 

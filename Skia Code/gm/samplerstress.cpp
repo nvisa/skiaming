@@ -29,7 +29,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("samplerstress");
+        return SkString("samplerstress--104");
     }
 
     virtual SkISize onISize() {

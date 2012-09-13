@@ -85,7 +85,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("drawbitmaprect");
+        return SkString("drawbitmaprect--70");
     }
 
     SkISize onISize() { return make_isize(gSize, gSize); }

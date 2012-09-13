@@ -22,7 +22,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("morphology");
+        return SkString("morphology--99");
     }
 
     void make_bitmap() {

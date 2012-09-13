@@ -40,7 +40,7 @@ public:
 
 protected:
     virtual SkString onShortName() SK_OVERRIDE {
-        return SkString("typeface");
+        return SkString("typeface--101");
     }
 
     virtual SkISize onISize() SK_OVERRIDE {

@@ -160,7 +160,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("pathinvfill");
+        return SkString("pathinvfill--63");
     }
 
     virtual SkISize onISize() {

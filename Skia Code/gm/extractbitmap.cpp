@@ -33,7 +33,7 @@ public:
 protected:
     // overrides from SkEventSink
     virtual SkString onShortName() SK_OVERRIDE {
-        return SkString("extractbitmap");
+        return SkString("extractbitmap--44");
     }
 
     virtual SkISize onISize() SK_OVERRIDE {

@@ -20,7 +20,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("stroke-fill");
+        return SkString("stroke-fill--88");
     }
 
     virtual SkISize onISize() {

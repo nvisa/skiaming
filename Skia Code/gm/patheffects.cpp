@@ -108,7 +108,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("patheffect");
+        return SkString("patheffect--45");
     }
 
     SkISize onISize() { return make_isize(800, 600); }

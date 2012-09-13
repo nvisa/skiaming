@@ -33,7 +33,7 @@ public:
 protected:
 
     SkString onShortName() {
-        return SkString("verttext2");
+        return SkString("verttext2--12");
     }
 
     SkISize onISize() { return make_isize(640, 480); }

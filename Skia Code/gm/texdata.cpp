@@ -30,7 +30,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("texdata");
+        return SkString("texdata--95");
     }
 
     virtual SkISize onISize() {

@@ -182,7 +182,7 @@ protected:
     {
         if (SampleCode::TitleQ(*evt))
         {
-            SampleCode::TitleR(evt, "Text Effects");
+            SampleCode::TitleR(evt, "Text Effects--109");
             return true;
         }
         return this->INHERITED::onQuery(evt);

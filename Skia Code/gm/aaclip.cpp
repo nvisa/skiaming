@@ -150,7 +150,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("aaclip");
+        return SkString("aaclip--30");
     }
 
     virtual SkISize onISize() {

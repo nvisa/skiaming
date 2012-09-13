@@ -38,7 +38,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("dashing");
+        return SkString("dashing--71");
     }
 
     SkISize onISize() { return skiagm::make_isize(640, 300); }
@@ -120,7 +120,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("dashing2");
+        return SkString("dashing2--72");
     }
 
     SkISize onISize() { return skiagm::make_isize(640, 480); }

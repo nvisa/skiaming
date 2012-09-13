@@ -75,7 +75,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("xfermodes");
+        return SkString("xfermodes--31");
     }
 
     virtual SkISize onISize() {

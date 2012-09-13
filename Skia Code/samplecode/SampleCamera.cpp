@@ -59,7 +59,7 @@ protected:
     virtual bool onQuery(SkEvent* evt) {
         if (SampleCode::TitleQ(*evt))
         {
-            SampleCode::TitleR(evt, "Camera");
+            SampleCode::TitleR(evt, "Camera--136");
             return true;
         }
         return this->INHERITED::onQuery(evt);

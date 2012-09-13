@@ -77,7 +77,7 @@ protected:
     // overrides from SkEventSink
     virtual bool onQuery(SkEvent* evt)  {
         if (SampleCode::TitleQ(*evt)) {
-            SkString str("PolyToPolyView");
+            SkString str("PolyToPolyView--121");
             SampleCode::TitleR(evt, str.c_str());
             return true;
         }

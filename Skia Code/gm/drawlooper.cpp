@@ -31,7 +31,7 @@ protected:
     }
 
     virtual SkString onShortName() SK_OVERRIDE {
-        return SkString("drawlooper");
+        return SkString("drawlooper--58");
     }
 
     virtual void onDraw(SkCanvas* canvas) SK_OVERRIDE {

@@ -25,7 +25,7 @@ public:
 
 protected:
     virtual SkString onShortName() SK_OVERRIDE {
-        return SkString("circles");
+        return SkString("circles--39");
     }
 
     virtual SkISize onISize() SK_OVERRIDE {

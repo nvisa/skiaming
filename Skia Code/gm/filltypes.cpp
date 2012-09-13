@@ -26,7 +26,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("filltypes");
+        return SkString("filltypes--67");
     }
 
     virtual SkISize onISize() {

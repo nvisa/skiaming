@@ -20,7 +20,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("fontscaler");
+        return SkString("fontscaler--90");
     }
 
     virtual SkISize onISize() {

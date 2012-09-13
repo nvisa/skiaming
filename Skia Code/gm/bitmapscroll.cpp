@@ -63,7 +63,7 @@ public:
 
 protected:
     virtual SkString onShortName() {
-        return SkString("bitmapscroll");
+        return SkString("bitmapscroll--9");
     }
 
     virtual SkISize onISize() {

@@ -87,7 +87,7 @@ namespace skiagm {
     protected:
 
         virtual SkString onShortName() {
-            return SkString("hairmodes");
+            return SkString("hairmodes--41");
         }
 
         virtual SkISize onISize() { return make_isize(640, 480); }

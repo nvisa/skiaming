@@ -52,7 +52,7 @@ public:
 
 protected:
     virtual SkString onShortName() SK_OVERRIDE {
-        return SkString("verylargebitmap");
+        return SkString("verylargebitmap--33");
     }
 
     virtual SkISize onISize() SK_OVERRIDE {

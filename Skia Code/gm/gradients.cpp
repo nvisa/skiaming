@@ -99,7 +99,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("gradients");
+        return SkString("gradients--47");
     }
 
     virtual SkISize onISize() { return make_isize(640, 615); }
@@ -144,7 +144,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("gradients_local_perspective");
+        return SkString("gradients_local_perspective--51");
     }
 
     virtual SkISize onISize() { return make_isize(640, 615); }
@@ -194,7 +194,7 @@ private:
 class GradientsViewPerspectiveGM : public GradientsGM {
 protected:
     SkString onShortName() {
-        return SkString("gradients_view_perspective");
+        return SkString("gradients_view_perspective--52");
     }
 
     virtual SkISize onISize() { return make_isize(640, 400); }
@@ -234,7 +234,7 @@ public:
 
 protected:
     SkString onShortName() {
-        return SkString("gradients_degenerate_2pt");
+        return SkString("gradients_degenerate_2pt--48");
     }
 
     virtual SkISize onISize() { return make_isize(320, 320); }
@@ -273,7 +273,7 @@ public:
     ClampedGradientsGM() {}
 
 protected:
-    SkString onShortName() { return SkString("clamped_gradients"); }
+    SkString onShortName() { return SkString("clamped_gradients--49"); }
 
     virtual SkISize onISize() { return make_isize(640, 510); }
 
@@ -312,7 +312,7 @@ public:
     RadialGradientGM() {}
 
 protected:
-    SkString onShortName() { return SkString("radial_gradient"); }
+    SkString onShortName() { return SkString("radial_gradient--50"); }
     virtual SkISize onISize() { return make_isize(1280, 1280); }
     void drawBG(SkCanvas* canvas) {
         canvas->drawColor(0xFF000000);

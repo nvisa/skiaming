@@ -93,7 +93,7 @@ protected:
     // overrides from SkEventSink
     virtual bool onQuery(SkEvent* evt) {
         if (SampleCode::TitleQ(*evt)) {
-            SampleCode::TitleR(evt, "DitherBitmap");
+            SampleCode::TitleR(evt, "DitherBitmap--137");
             return true;
         }
         return this->INHERITED::onQuery(evt);

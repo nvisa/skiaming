@@ -116,7 +116,7 @@ public:
 protected:
 
     SkString onShortName() {
-        return SkString("shadertext");
+        return SkString("shadertext--10");
     }
 
     SkISize onISize() { return make_isize(1450, 500); }
