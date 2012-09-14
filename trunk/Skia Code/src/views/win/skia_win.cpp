@@ -134,16 +134,16 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow, LPTSTR lpCmdLine)
    int argc = 0;
    TCHAR exename[1024], *next;
    int exenameLen = GetModuleFileName(NULL, exename, 1024);
-   argv[argc++] = tchar_to_utf8(exename);
+   argv[argc++] = tchar_to_utf8(exename);	//_strdup进行了开辟空间
    TCHAR* arg = _tcstok_s(lpCmdLine, _T(" "), &next);
    while (arg != NULL) {
       argv[argc++] = tchar_to_utf8(arg);
       arg = _tcstok_s(NULL, _T(" "), &next);
    }
 
-   gSkWind = create_sk_window(hWnd, argc, argv);
+   gSkWind = create_sk_window(hWnd, argc, argv);	//此处构造全局变量
    for (int i = 0; i < argc; ++i) {
-      free(argv[i]);
+      free(argv[i]);		//137行的说明
    }
 
    ShowWindow(hWnd, nCmdShow);

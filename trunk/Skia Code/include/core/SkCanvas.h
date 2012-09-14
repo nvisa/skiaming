@@ -110,7 +110,7 @@ public:
 
     /**
      *  Create a new raster device and make it current. This also returns
-     *  the new device.
+     *  the new device.创建光栅设备
      */
     SkDevice* setBitmapDevice(const SkBitmap& bitmap);
 

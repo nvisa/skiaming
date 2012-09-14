@@ -19,7 +19,10 @@ private:
 
 public:
     GMSampleView(GM* gm)
-    : fGM(gm) {}
+    : fGM(gm) 
+	{
+
+	}
 
     virtual ~GMSampleView() {
         delete fGM;

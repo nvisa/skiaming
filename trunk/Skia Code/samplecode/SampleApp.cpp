@@ -1569,7 +1569,7 @@ bool SampleWindow::previousSample() {
 bool SampleWindow::nextSample() {
     fCurrIndex = (fCurrIndex + 1) % fSamples.count();
     this->loadView(create_transition(curr_view(this), (*fSamples[fCurrIndex])(),
-                                     fTransitionNext));
+                                      fTransitionNext));
     return true;
 }
 

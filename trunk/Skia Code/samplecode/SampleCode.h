@@ -100,7 +100,7 @@ private:
     SkViewFactory*  fFact;
     SkViewRegister* fChain;
 
-    static SkViewRegister* gHead;
+    static SkViewRegister* gHead;	//æ≤Ã¨÷∏’Î
 };
 
 ///////////////////////////////////////////////////////////////////////////////

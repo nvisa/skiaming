@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -15,16 +15,16 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>views</RootNamespace>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
-  <ImportGroup Label="ExtensionSettings"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Label="PropertySheets">
-    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
   </ImportGroup>
-  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\..\..\gyp\bin\;$(MSBuildProjectDirectory)\..\..\gyp\bin\</ExecutablePath>
     <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
@@ -97,52 +97,53 @@
     <None Include="..\..\src\views\mac\SkOSWindow_Mac.mm">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </None>
-    <None Include="..\..\gyp\views.gyp"/>
+    <None Include="..\..\gyp\views.gyp" />
+    <None Include="ClassDiagram21.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\views\SkTagList.h"/>
-    <ClInclude Include="..\..\src\views\SkViewPriv.h"/>
-    <ClInclude Include="..\..\include\views\SkView.h"/>
-    <ClInclude Include="..\..\include\views\SkTextBox.h"/>
-    <ClInclude Include="..\..\include\views\SkOSWindow_Win.h"/>
-    <ClInclude Include="..\..\include\views\SkSystemEventTypes.h"/>
-    <ClInclude Include="..\..\include\views\SkOSWindow_SDL.h"/>
-    <ClInclude Include="..\..\include\views\SkApplication.h"/>
-    <ClInclude Include="..\..\include\views\SkOSMenu.h"/>
-    <ClInclude Include="..\..\include\views\SkEventSink.h"/>
-    <ClInclude Include="..\..\include\views\SkWindow.h"/>
-    <ClInclude Include="..\..\include\views\SkOSWindow_Unix.h"/>
-    <ClInclude Include="..\..\include\views\SkBGViewArtist.h"/>
-    <ClInclude Include="..\..\include\views\SkWidget.h"/>
-    <ClInclude Include="..\..\include\views\SkStackViewLayout.h"/>
-    <ClInclude Include="..\..\include\views\SkEvent.h"/>
-    <ClInclude Include="..\..\include\views\SkKey.h"/>
-    <ClInclude Include="..\..\include\views\SkOSWindow_Mac.h"/>
-    <ClInclude Include="..\..\include\views\SkViewInflate.h"/>
-    <ClInclude Include="..\..\include\views\SkTouchGesture.h"/>
+    <ClInclude Include="..\..\src\views\SkTagList.h" />
+    <ClInclude Include="..\..\src\views\SkViewPriv.h" />
+    <ClInclude Include="..\..\include\views\SkView.h" />
+    <ClInclude Include="..\..\include\views\SkTextBox.h" />
+    <ClInclude Include="..\..\include\views\SkOSWindow_Win.h" />
+    <ClInclude Include="..\..\include\views\SkSystemEventTypes.h" />
+    <ClInclude Include="..\..\include\views\SkOSWindow_SDL.h" />
+    <ClInclude Include="..\..\include\views\SkApplication.h" />
+    <ClInclude Include="..\..\include\views\SkOSMenu.h" />
+    <ClInclude Include="..\..\include\views\SkEventSink.h" />
+    <ClInclude Include="..\..\include\views\SkWindow.h" />
+    <ClInclude Include="..\..\include\views\SkOSWindow_Unix.h" />
+    <ClInclude Include="..\..\include\views\SkBGViewArtist.h" />
+    <ClInclude Include="..\..\include\views\SkWidget.h" />
+    <ClInclude Include="..\..\include\views\SkStackViewLayout.h" />
+    <ClInclude Include="..\..\include\views\SkEvent.h" />
+    <ClInclude Include="..\..\include\views\SkKey.h" />
+    <ClInclude Include="..\..\include\views\SkOSWindow_Mac.h" />
+    <ClInclude Include="..\..\include\views\SkViewInflate.h" />
+    <ClInclude Include="..\..\include\views\SkTouchGesture.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\views\SkParsePaint.cpp"/>
-    <ClCompile Include="..\..\src\views\SkOSMenu.cpp"/>
-    <ClCompile Include="..\..\src\views\SkTextBox.cpp"/>
-    <ClCompile Include="..\..\src\views\SkStackViewLayout.cpp"/>
-    <ClCompile Include="..\..\src\views\SkEvent.cpp"/>
-    <ClCompile Include="..\..\src\views\SkWidgets.cpp"/>
-    <ClCompile Include="..\..\src\views\SkViewPriv.cpp"/>
-    <ClCompile Include="..\..\src\views\SkWindow.cpp"/>
-    <ClCompile Include="..\..\src\views\SkTouchGesture.cpp"/>
-    <ClCompile Include="..\..\src\views\SkViewInflate.cpp"/>
-    <ClCompile Include="..\..\src\views\SkEventSink.cpp"/>
-    <ClCompile Include="..\..\src\views\SkBGViewArtist.cpp"/>
-    <ClCompile Include="..\..\src\views\SkTagList.cpp"/>
-    <ClCompile Include="..\..\src\views\SkProgressView.cpp"/>
-    <ClCompile Include="..\..\src\views\SkWidget.cpp"/>
-    <ClCompile Include="..\..\src\views\SkView.cpp"/>
+    <ClCompile Include="..\..\src\views\SkParsePaint.cpp" />
+    <ClCompile Include="..\..\src\views\SkOSMenu.cpp" />
+    <ClCompile Include="..\..\src\views\SkTextBox.cpp" />
+    <ClCompile Include="..\..\src\views\SkStackViewLayout.cpp" />
+    <ClCompile Include="..\..\src\views\SkEvent.cpp" />
+    <ClCompile Include="..\..\src\views\SkWidgets.cpp" />
+    <ClCompile Include="..\..\src\views\SkViewPriv.cpp" />
+    <ClCompile Include="..\..\src\views\SkWindow.cpp" />
+    <ClCompile Include="..\..\src\views\SkTouchGesture.cpp" />
+    <ClCompile Include="..\..\src\views\SkViewInflate.cpp" />
+    <ClCompile Include="..\..\src\views\SkEventSink.cpp" />
+    <ClCompile Include="..\..\src\views\SkBGViewArtist.cpp" />
+    <ClCompile Include="..\..\src\views\SkTagList.cpp" />
+    <ClCompile Include="..\..\src\views\SkProgressView.cpp" />
+    <ClCompile Include="..\..\src\views\SkWidget.cpp" />
+    <ClCompile Include="..\..\src\views\SkView.cpp" />
     <ClCompile Include="..\..\src\views\SDL\SkOSWindow_SDL.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\src\views\win\SkOSWindow_win.cpp"/>
-    <ClCompile Include="..\..\src\views\win\skia_win.cpp"/>
+    <ClCompile Include="..\..\src\views\win\SkOSWindow_win.cpp" />
+    <ClCompile Include="..\..\src\views\win\skia_win.cpp" />
     <ClCompile Include="..\..\src\views\unix\skia_unix.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
@@ -159,6 +160,6 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
-  <ImportGroup Label="ExtensionTargets"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
 </Project>
