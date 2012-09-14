@@ -127,7 +127,7 @@ void SkView::draw(SkCanvas* canvas)
         }
 
         int sc = canvas->save();
-        this->onDraw(canvas);
+        this->onDraw(canvas);		//µ÷ÓÃSkViewµÄonDraw
         canvas->restoreToCount(sc);
 
         if (fParent) {

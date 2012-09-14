@@ -176,9 +176,9 @@ bool SkWindow::update(SkIRect* updateArea, SkCanvas* canvas)
         SkCanvas    rasterCanvas;
 
         if (NULL == canvas) {
-            canvas = &rasterCanvas;
+            canvas = &rasterCanvas;	//canvas的最初产生
         }
-        canvas->setBitmapDevice(bm);
+        canvas->setBitmapDevice(bm);	//创建光栅设备
 
         canvas->clipRegion(fDirtyRgn);
         if (updateArea)

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="..">
@@ -543,5 +543,10 @@
     <ClCompile Include="..\..\samplecode\SampleFontCache.cpp">
       <Filter>..\..\samplecode\_excluded_files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram11.cd" />
+    <None Include="ClassDiagram12.cd" />
+    <None Include="ClassDiagram13.cd" />
   </ItemGroup>
 </Project>

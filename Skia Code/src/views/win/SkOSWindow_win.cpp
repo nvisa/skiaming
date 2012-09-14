@@ -127,7 +127,7 @@ bool SkOSWindow::wndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
             return true;
         } break;
         case WM_SIZE:
-            this->resize(lParam & 0xFFFF, lParam >> 16);	//lParam的低8位和高8位
+            this->resize(lParam & 0xFFFF, lParam >> 16);	//lParam的低16位和高16位
             break;
         case WM_PAINT: {
             PAINTSTRUCT ps;
@@ -167,7 +167,7 @@ bool SkOSWindow::wndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 }
 
 void SkOSWindow::doPaint(void* ctx) {
-    this->update(NULL);
+    this->update(NULL);	//调用父类SkWindow的update
 
     if (kNone_BackEndType == fAttached)
     {
