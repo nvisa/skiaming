@@ -50,7 +50,7 @@
  * 'kScratch_CacheID' indicates that the resource is a "scratch" resource.
  * When used to acquire a resource it indicates the cache user is
  * looking for a resource that matches a resource-subclass-specific set of
- * “dimensions” such as width, height, buffer size, or pixel config, but not
+ * “dimensions?such as width, height, buffer size, or pixel config, but not
  * for particular resource contents (e.g., texel or vertex values). The public
  * IDs are unique within a private ID value but not necessarily across
  * private IDs.

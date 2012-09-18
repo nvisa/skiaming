@@ -127,7 +127,7 @@ void SkView::draw(SkCanvas* canvas)
         }
 
         int sc = canvas->save();
-        this->onDraw(canvas);		//调用SkView的onDraw
+        this->onDraw(canvas);		//调用SkView的onDraw//此处进入了各GM的onDraw
         canvas->restoreToCount(sc);
 
         if (fParent) {

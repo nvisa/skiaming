@@ -25,7 +25,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      LPTSTR    lpCmdLine,
                      int       nCmdShow)
 {
-    UNREFERENCED_PARAMETER(hPrevInstance);
+    UNREFERENCED_PARAMETER(hPrevInstance);	//防止空引用
 
     MSG msg;
 
@@ -141,7 +141,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow, LPTSTR lpCmdLine)
       arg = _tcstok_s(NULL, _T(" "), &next);
    }
 
-   gSkWind = create_sk_window(hWnd, argc, argv);	//此处构造全局变量
+   gSkWind = create_sk_window(hWnd, argc, argv);	//此处构造全局变量,返回的为SampleWindow指针
    for (int i = 0; i < argc; ++i) {
       free(argv[i]);		//137行的说明
    }
