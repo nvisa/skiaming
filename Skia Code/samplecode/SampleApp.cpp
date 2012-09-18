@@ -712,9 +712,9 @@ SampleWindow::SampleWindow(void* hwnd, int argc, char** argv, DeviceManager* dev
 
     this->registerPictFileSamples(argv, argc);
     this->registerPictFileSample(argv, argc);
-    SkGMRegistyToSampleRegistry();
+    SkGMRegistyToSampleRegistry();	//创建了各GM对象
     {
-        const SkViewRegister* reg = SkViewRegister::Head();
+        const SkViewRegister* reg = SkViewRegister::Head();	//
         while (reg) {
             *fSamples.append() = reg->factory();
             reg = reg->next();
@@ -889,7 +889,7 @@ SampleWindow::SampleWindow(void* hwnd, int argc, char** argv, DeviceManager* dev
 
     skiagm::GM::SetResourcePath(resourcePath);
 
-    this->loadView((*fSamples[fCurrIndex])());
+    this->loadView((*fSamples[fCurrIndex])());	//构造GMSampleView
 
     fPDFData = NULL;
 

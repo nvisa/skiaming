@@ -30,7 +30,7 @@ public:
 
     /** Default construct, initializing the reference count to 1.
     */
-    SkRefCnt() : fRefCnt(1) {}
+    SkRefCnt()	:fRefCnt(1) {}
 
     /** Destruct, asserting that the reference count is 1.
     */

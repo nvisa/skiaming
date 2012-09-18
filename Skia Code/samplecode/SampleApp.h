@@ -67,7 +67,7 @@ public:
                                    SampleWindow* win) = 0;
 
         // called after drawing, should get the results onto the
-        // screen.
+        // screen.在绘制之后,可以将绘制显示在屏幕上
         virtual void publishCanvas(DeviceType dType,
                                    SkCanvas* canvas,
                                    SampleWindow* win) = 0;

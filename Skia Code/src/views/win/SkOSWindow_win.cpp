@@ -35,7 +35,7 @@
 #define INVALIDATE_DELAY_MS 200
 
 static SkOSWindow* gCurrOSWin;
-static HWND gEventTarget;
+static HWND gEventTarget;	//±£´æ´°¿Ú¾ä±ú
 
 #define WM_EVENT_CALLBACK (WM_USER+0)
 
@@ -55,7 +55,7 @@ SkOSWindow::SkOSWindow(void* hWnd) {
     fHGLRC = NULL;
 #endif
     fAttached = kNone_BackEndType;
-    gEventTarget = (HWND)hWnd;
+    gEventTarget = (HWND)hWnd;	//±£´æ´°¿Ú¾ä±ú
 }
 
 SkOSWindow::~SkOSWindow() {

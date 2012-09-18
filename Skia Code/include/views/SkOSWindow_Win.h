@@ -21,7 +21,10 @@ public:
     SkOSWindow(void* hwnd);
     virtual ~SkOSWindow();
 
-    void*   getHWND() const { return fHWND; }
+    void*   getHWND() const 
+	{ 
+		return fHWND; 
+	}
     void    setSize(int width, int height);
     void    updateSize();
 
@@ -60,7 +63,7 @@ protected:
     virtual void onSetTitle(const char title[]);
 
 private:
-    void*               fHWND;
+    void*               fHWND;		//±£´æ´°¿Ú¾ä±ú
 
     void                doPaint(void* ctx);
 
