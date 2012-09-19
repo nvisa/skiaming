@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\src\sfnt">
+      <UniqueIdentifier>{F3FB6488-412C-9146-7A16-CB277A40E779}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\gyp">
+      <UniqueIdentifier>{30B32512-2E13-32EA-B437-6F75133648E3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\sfnt\SkOTTable_name.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkOTTable_head.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkPanose.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkPreprocessorSeq.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkOTTable_OS_2_VA.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkOTTable_OS_2_V0.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkIBMFamilyClass.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkOTTable_post.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkOTTableTypes.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkOTTable_OS_2_V1.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkSFNTHeader.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkOTTable_OS_2_V2.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkOTTable_hhea.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkTypedEnum.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkOTTable_OS_2.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkOTTable_OS_2_V3.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkOTTable_OS_2_V4.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sfnt\SkOTUtils.h">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\src\sfnt\SkOTUtils.cpp">
+      <Filter>..\..\src\sfnt</Filter>
+    </ClCompile>
+    <None Include="..\..\gyp\sfnt.gyp">
+      <Filter>..\..\gyp</Filter>
+    </None>
+  </ItemGroup>
+</Project>

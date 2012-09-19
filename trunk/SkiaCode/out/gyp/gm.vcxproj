@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1CD63E86-99DB-755A-CA3E-7B365C94A545}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gm</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\..\..\gyp\bin\;$(MSBuildProjectDirectory)\..\..\gyp\bin\</ExecutablePath>
+    <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src\core;..\..\src\pipe\utils;..\..\src\gpu;..\..\gyp\config;..\..\include\config;..\..\include\core;..\..\include\pipe;..\..\gyp\ext;..\..\include\effects;..\..\include\images;..\..\third_party\externals\libjpeg;..\..\include\pdf;..\..\include\ports;..\..\include\utils;..\..\include\utils\win;..\..\include\device\xps;..\..\src\utils;..\..\include\gpu;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_SUPPORT_PDF;SK_SUPPORT_XPS;GR_WIN32_BUILD=1;SK_DEBUG;SK_ENABLE_INST_COUNT;GR_DEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>OpenGL32.lib;usp10.lib;windowscodecs.lib;T2Embed.lib;FontSub.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\src\core;..\..\src\pipe\utils;..\..\src\gpu;..\..\gyp\config;..\..\include\config;..\..\include\core;..\..\include\pipe;..\..\gyp\ext;..\..\include\effects;..\..\include\images;..\..\third_party\externals\libjpeg;..\..\include\pdf;..\..\include\ports;..\..\include\utils;..\..\include\utils\win;..\..\include\device\xps;..\..\src\utils;..\..\include\gpu;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_SUPPORT_PDF;SK_SUPPORT_XPS;GR_WIN32_BUILD=1;SK_DEBUG;SK_ENABLE_INST_COUNT;GR_DEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src\core;..\..\src\pipe\utils;..\..\src\gpu;..\..\gyp\config;..\..\include\config;..\..\include\core;..\..\include\pipe;..\..\gyp\ext;..\..\include\effects;..\..\include\images;..\..\third_party\externals\libjpeg;..\..\include\pdf;..\..\include\ports;..\..\include\utils;..\..\include\utils\win;..\..\include\device\xps;..\..\src\utils;..\..\include\gpu;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <Optimization>Full</Optimization>
+      <PreprocessorDefinitions>NDEBUG;SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_SUPPORT_PDF;SK_SUPPORT_XPS;GR_WIN32_BUILD=1;SK_RELEASE;GR_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>OpenGL32.lib;usp10.lib;windowscodecs.lib;T2Embed.lib;FontSub.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\src\core;..\..\src\pipe\utils;..\..\src\gpu;..\..\gyp\config;..\..\include\config;..\..\include\core;..\..\include\pipe;..\..\gyp\ext;..\..\include\effects;..\..\include\images;..\..\third_party\externals\libjpeg;..\..\include\pdf;..\..\include\ports;..\..\include\utils;..\..\include\utils\win;..\..\include\device\xps;..\..\src\utils;..\..\include\gpu;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SK_GAMMA_SRGB;SK_GAMMA_APPLY_TO_A8;SK_ALLOW_STATIC_GLOBAL_INITIALIZERS=1;SK_SCALAR_IS_FLOAT;SK_CAN_USE_FLOAT;SK_SUPPORT_GPU=1;SK_BUILD_FOR_WIN32;SK_IGNORE_STDINT_DOT_H;_CRT_SECURE_NO_WARNINGS;GR_GL_FUNCTION_TYPE=__stdcall;SK_SUPPORT_PDF;SK_SUPPORT_XPS;GR_WIN32_BUILD=1;SK_RELEASE;GR_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\gyp\gm.gyp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\pipe\utils\SamplePipeControllers.h"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\pipe\utils\SamplePipeControllers.cpp"/>
+    <ClCompile Include="..\..\gm\bitmapcopy.cpp"/>
+    <ClCompile Include="..\..\gm\aarectmodes.cpp"/>
+    <ClCompile Include="..\..\gm\drawbitmaprect.cpp"/>
+    <ClCompile Include="..\..\gm\circles.cpp"/>
+    <ClCompile Include="..\..\gm\simpleaaclip.cpp"/>
+    <ClCompile Include="..\..\gm\hairmodes.cpp"/>
+    <ClCompile Include="..\..\gm\convexpaths.cpp"/>
+    <ClCompile Include="..\..\gm\texteffects.cpp"/>
+    <ClCompile Include="..\..\gm\arithmode.cpp"/>
+    <ClCompile Include="..\..\gm\tablecolorfilter.cpp"/>
+    <ClCompile Include="..\..\gm\emptypath.cpp"/>
+    <ClCompile Include="..\..\gm\extractbitmap.cpp"/>
+    <ClCompile Include="..\..\gm\bitmapmatrix.cpp"/>
+    <ClCompile Include="..\..\gm\lcdtext.cpp"/>
+    <ClCompile Include="..\..\gm\shaderbounds.cpp"/>
+    <ClCompile Include="..\..\gm\tinybitmap.cpp"/>
+    <ClCompile Include="..\..\gm\patheffects.cpp"/>
+    <ClCompile Include="..\..\gm\nocolorbleed.cpp"/>
+    <ClCompile Include="..\..\gm\filltypes.cpp"/>
+    <ClCompile Include="..\..\gm\bitmapscroll.cpp"/>
+    <ClCompile Include="..\..\gm\imagefiltersgraph.cpp"/>
+    <ClCompile Include="..\..\gm\shadertext.cpp"/>
+    <ClCompile Include="..\..\gm\gammatext.cpp"/>
+    <ClCompile Include="..\..\gm\pathreverse.cpp"/>
+    <ClCompile Include="..\..\gm\image.cpp"/>
+    <ClCompile Include="..\..\gm\blend.cpp"/>
+    <ClCompile Include="..\..\gm\degeneratesegments.cpp"/>
+    <ClCompile Include="..\..\gm\verttext2.cpp"/>
+    <ClCompile Include="..\..\gm\quadpaths.cpp"/>
+    <ClCompile Include="..\..\gm\imagemagnifier.cpp"/>
+    <ClCompile Include="..\..\gm\drawlooper.cpp"/>
+    <ClCompile Include="..\..\gm\colormatrix.cpp"/>
+    <ClCompile Include="..\..\gm\cubicpaths.cpp"/>
+    <ClCompile Include="..\..\gm\twopointradial.cpp"/>
+    <ClCompile Include="..\..\gm\ninepatchstretch.cpp"/>
+    <ClCompile Include="..\..\gm\linepaths.cpp"/>
+    <ClCompile Include="..\..\gm\lighting.cpp"/>
+    <ClCompile Include="..\..\gm\shadows.cpp"/>
+    <ClCompile Include="..\..\gm\blurs.cpp"/>
+    <ClCompile Include="..\..\gm\bitmapfilters.cpp"/>
+    <ClCompile Include="..\..\gm\pathfill.cpp"/>
+    <ClCompile Include="..\..\gm\gradtext.cpp"/>
+    <ClCompile Include="..\..\gm\dashcubics.cpp"/>
+    <ClCompile Include="..\..\gm\system_preferences_default.cpp"/>
+    <ClCompile Include="..\..\gm\gmmain.cpp"/>
+    <ClCompile Include="..\..\gm\typeface.cpp"/>
+    <ClCompile Include="..\..\gm\dashing.cpp"/>
+    <ClCompile Include="..\..\gm\imageblur.cpp"/>
+    <ClCompile Include="..\..\gm\poly2poly.cpp"/>
+    <ClCompile Include="..\..\gm\points.cpp"/>
+    <ClCompile Include="..\..\gm\testimagefilters.cpp"/>
+    <ClCompile Include="..\..\gm\cmykjpeg.cpp"/>
+    <ClCompile Include="..\..\gm\strokefill.cpp"/>
+    <ClCompile Include="..\..\gm\complexclip2.cpp"/>
+    <ClCompile Include="..\..\gm\getpostextpath.cpp"/>
+    <ClCompile Include="..\..\gm\gm.cpp"/>
+    <ClCompile Include="..\..\gm\tilemodes.cpp"/>
+    <ClCompile Include="..\..\gm\fontscaler.cpp"/>
+    <ClCompile Include="..\..\gm\xfermodes.cpp"/>
+    <ClCompile Include="..\..\gm\aaclip.cpp"/>
+    <ClCompile Include="..\..\gm\complexclip.cpp"/>
+    <ClCompile Include="..\..\gm\hittestpath.cpp"/>
+    <ClCompile Include="..\..\gm\bigmatrix.cpp"/>
+    <ClCompile Include="..\..\gm\strokerects.cpp"/>
+    <ClCompile Include="..\..\gm\gradients.cpp"/>
+    <ClCompile Include="..\..\gm\strokes.cpp"/>
+    <ClCompile Include="..\..\gm\morphology.cpp"/>
+    <ClCompile Include="..\..\gm\filltypespersp.cpp"/>
+    <ClCompile Include="..\..\gm\imagefiltersbase.cpp"/>
+    <ClCompile Include="..\..\gm\verttext.cpp"/>
+    <ClCompile Include="..\..\gm\composeshader.cpp"/>
+    <ClCompile Include="..\..\gm\texdata.cpp"/>
+    <ClCompile Include="..\..\gm\verylargebitmap.cpp"/>
+    <ClCompile Include="..\..\gm\giantbitmap.cpp"/>
+    <ClCompile Include="..\..\gm\samplerstress.cpp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="core.vcxproj">
+      <Project>{B7760B5E-BFA8-486B-ACFD-49E3A6DE8E76}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="effects.vcxproj">
+      <Project>{D9D01FA5-F2CA-CC59-9611-2BC2664C7300}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="images.vcxproj">
+      <Project>{D000CBCA-63F1-CA86-11CA-C9F0014BDD02}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="pdf.vcxproj">
+      <Project>{69BB57F9-DE94-0AE6-CAF9-387522853C04}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="ports.vcxproj">
+      <Project>{833B10B4-2948-77BA-DD2B-33AEF5275D0A}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="utils.vcxproj">
+      <Project>{9FC88F86-01EC-2317-33FD-1E3A4AFBF9E3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="xps.vcxproj">
+      <Project>{CE073760-E68D-81EC-FA85-1F86BF91184B}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="gr.vcxproj">
+      <Project>{1DB1185B-4C81-7F1B-F513-0AA483C59E8D}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="skgr.vcxproj">
+      <Project>{4E72B380-DD57-184B-12CD-7D63F86CE4D3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="opts.vcxproj">
+      <Project>{FE133517-2B0F-AE47-0B42-46F40733206F}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="opts_ssse3.vcxproj">
+      <Project>{466871AF-15C2-659E-B0E1-8987D9572281}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="angle.vcxproj">
+      <Project>{03CD2508-BE35-3BAE-F6C8-502909FECCCD}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="libjpeg.vcxproj">
+      <Project>{5F3EED85-9B0A-4E69-BAD5-7A4DA8399699}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="sfnt.vcxproj">
+      <Project>{AD7F8E41-9717-8B1E-5364-BD91E0D8FE13}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="zlib.vcxproj">
+      <Project>{58038F58-F10E-6CFA-9BE0-0ECF1F5A9764}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>
