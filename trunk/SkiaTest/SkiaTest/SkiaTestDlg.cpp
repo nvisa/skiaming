@@ -71,6 +71,12 @@ bool SkiaTestFunc0102beginFill(SkCanvas* pCanvas, SkBitmap* pBitmap)	//2.beginFi
 	unsigned b = (BYTE)(color >> 16);
 	pCanvas->drawARGB(255, r, g, b);
 
+	
+	return true;
+}
+
+bool SkiaTestFunc3(SkCanvas* pCanvas, SkBitmap* pBitmap)
+{
 	SkPaint paint;
 	paint.setDither(true);
 	pCanvas->translate(SkIntToScalar(10), SkIntToScalar(10));
@@ -84,7 +90,11 @@ bool SkiaTestFunc0102beginFill(SkCanvas* pCanvas, SkBitmap* pBitmap)	//2.beginFi
 	paint.setShader(pShader)->unref();
 	SkRect rect = { 0, 0, SkIntToScalar(100), SkIntToScalar(100) };
 	pCanvas->drawRect(rect, paint);
-
+	return true;
+	
+}
+bool SkiaTestFunc4(SkCanvas* pCanvas, SkBitmap* pBitmap)
+{
 	SkPoint pts[2];
 	SkColor colors[2];
 
@@ -111,17 +121,6 @@ bool SkiaTestFunc0102beginFill(SkCanvas* pCanvas, SkBitmap* pBitmap)	//2.beginFi
 	paint.setShader(pShaderCompose);
 	pCanvas->drawRectCoords(150, 0, SkIntToScalar(250), SkIntToScalar(100), paint);
 	pShaderCompose->unref();
-	return true;
-}
-
-bool SkiaTestFunc3(SkCanvas* pCanvas, SkBitmap* pBitmap)
-{
-	AfxMessageBox(L"No !");
-	return false;
-}
-bool SkiaTestFunc4(SkCanvas* pCanvas, SkBitmap* pBitmap)
-{
-	AfxMessageBox(L"NO !");
 	return false;
 }
 bool SkiaTestFunc5(SkCanvas* pCanvas, SkBitmap* pBitmap)
