@@ -253,6 +253,9 @@ public:
         When the balancing call to restore() is made, the previous matrix, clip,
         and drawFilter are restored.
         @return The value to pass to restoreToCount() to balance this save()
+		保存当前matrix,clip,和drawFilter,并将其拷贝到一个私有栈中.后面的translate
+		, scale, rotate, skew, concat 或clipRect, clipPath, 和setDrawFilter都操作在这个
+		拷贝上.当调用restore()的时候,之前的matrix, clip,和drawFilter被恢复.
     */
     virtual int save(SaveFlags flags = kMatrixClip_SaveFlag);
 

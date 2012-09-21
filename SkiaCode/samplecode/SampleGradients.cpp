@@ -137,7 +137,8 @@ protected:
     }
 
     virtual void onDrawContent(SkCanvas* canvas) {
-        SkPoint pts[2] = {
+        SkPoint pts[2] = 
+		{
             { 0, 0 },
             { SkIntToScalar(100), SkIntToScalar(100) }
         };
@@ -148,11 +149,14 @@ protected:
         canvas->save();
         canvas->translate(SkIntToScalar(20), SkIntToScalar(10));
 
-        for (int tm = 0; tm < SkShader::kTileModeCount; ++tm) {
+        for (int tm = 0; tm < SkShader::kTileModeCount; ++tm) 
+		{
             canvas->save();
-            for (size_t i = 0; i < SK_ARRAY_COUNT(gGradData); i++) {
+            for (size_t i = 0; i < SK_ARRAY_COUNT(gGradData); i++) 
+			{
                 canvas->save();
-                for (size_t j = 0; j < SK_ARRAY_COUNT(gGradMakers); j++) {
+                for (size_t j = 0; j < SK_ARRAY_COUNT(gGradMakers); j++) 
+				{
                     SkShader* shader;
                     shader = gGradMakers[j](pts, gGradData[i], (SkShader::TileMode)tm, NULL);
                     paint.setShader(shader)->unref();
@@ -168,7 +172,8 @@ protected:
         canvas->restore();
 
         canvas->translate(0, SkIntToScalar(370));
-        if (false) { // avoid bit rot, suppress warning
+        if (false) 
+		{ // avoid bit rot, suppress warning
             test_alphagradients(canvas);
         }
         this->inval(NULL);
