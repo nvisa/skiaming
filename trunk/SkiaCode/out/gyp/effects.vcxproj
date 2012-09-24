@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -15,16 +15,16 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>effects</RootNamespace>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
-  <ImportGroup Label="ExtensionSettings"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Label="PropertySheets">
-    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
   </ImportGroup>
-  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\..\..\gyp\bin\;$(MSBuildProjectDirectory)\..\..\gyp\bin\</ExecutablePath>
     <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
@@ -91,99 +91,100 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="..\..\gyp\effects.gyp"/>
-    <None Include="..\..\gyp\effects.gypi"/>
+    <None Include="..\..\gyp\effects.gyp" />
+    <None Include="..\..\gyp\effects.gypi" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\effects\SkEmbossMask_Table.h"/>
-    <ClInclude Include="..\..\src\effects\SkBlurMask.h"/>
-    <ClInclude Include="..\..\src\effects\SkEmbossMask.h"/>
-    <ClInclude Include="..\..\src\effects\gradients\SkBitmapCache.h"/>
-    <ClInclude Include="..\..\src\effects\gradients\SkRadialGradient_Table.h"/>
-    <ClInclude Include="..\..\src\effects\gradients\SkLinearGradient.h"/>
-    <ClInclude Include="..\..\src\effects\gradients\SkRadialGradient.h"/>
-    <ClInclude Include="..\..\src\effects\gradients\SkTwoPointRadialGradient.h"/>
-    <ClInclude Include="..\..\src\effects\gradients\SkSweepGradient.h"/>
-    <ClInclude Include="..\..\src\effects\gradients\SkClampRange.h"/>
-    <ClInclude Include="..\..\src\effects\gradients\SkGradientShaderPriv.h"/>
-    <ClInclude Include="..\..\src\effects\gradients\SkTwoPointConicalGradient.h"/>
-    <ClInclude Include="..\..\include\effects\SkBlurDrawLooper.h"/>
-    <ClInclude Include="..\..\include\effects\SkTransparentShader.h"/>
-    <ClInclude Include="..\..\include\effects\Sk1DPathEffect.h"/>
-    <ClInclude Include="..\..\include\effects\SkTableMaskFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkAvoidXfermode.h"/>
-    <ClInclude Include="..\..\include\effects\SkColorMatrixFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkCornerPathEffect.h"/>
-    <ClInclude Include="..\..\include\effects\SkLayerDrawLooper.h"/>
-    <ClInclude Include="..\..\include\effects\SkColorFilterImageFilter.h"/>
-    <ClInclude Include="..\..\include\effects\Sk2DPathEffect.h"/>
-    <ClInclude Include="..\..\include\effects\SkEmbossMaskFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkLightingImageFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkDrawExtraPathEffect.h"/>
-    <ClInclude Include="..\..\include\effects\SkPorterDuff.h"/>
-    <ClInclude Include="..\..\include\effects\SkBlurMaskFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkColorMatrix.h"/>
-    <ClInclude Include="..\..\include\effects\SkLayerRasterizer.h"/>
-    <ClInclude Include="..\..\include\effects\SkBlurImageFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkStippleMaskFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkMagnifierImageFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkMorphologyImageFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkSingleInputImageFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkPixelXorXfermode.h"/>
-    <ClInclude Include="..\..\include\effects\SkTableColorFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkPaintFlagsDrawFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkBlendImageFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkDiscretePathEffect.h"/>
-    <ClInclude Include="..\..\include\effects\SkDashPathEffect.h"/>
-    <ClInclude Include="..\..\include\effects\SkBitmapSource.h"/>
-    <ClInclude Include="..\..\include\effects\SkKernel33MaskFilter.h"/>
-    <ClInclude Include="..\..\include\effects\SkArithmeticMode.h"/>
-    <ClInclude Include="..\..\include\effects\SkGradientShader.h"/>
+    <ClInclude Include="..\..\src\effects\SkEmbossMask_Table.h" />
+    <ClInclude Include="..\..\src\effects\SkBlurMask.h" />
+    <ClInclude Include="..\..\src\effects\SkEmbossMask.h" />
+    <ClInclude Include="..\..\src\effects\gradients\SkBitmapCache.h" />
+    <ClInclude Include="..\..\src\effects\gradients\SkRadialGradient_Table.h" />
+    <ClInclude Include="..\..\src\effects\gradients\SkLinearGradient.h" />
+    <ClInclude Include="..\..\src\effects\gradients\SkRadialGradient.h" />
+    <ClInclude Include="..\..\src\effects\gradients\SkTwoPointRadialGradient.h" />
+    <ClInclude Include="..\..\src\effects\gradients\SkSweepGradient.h" />
+    <ClInclude Include="..\..\src\effects\gradients\SkClampRange.h" />
+    <ClInclude Include="..\..\src\effects\gradients\SkGradientShaderPriv.h" />
+    <ClInclude Include="..\..\src\effects\gradients\SkTwoPointConicalGradient.h" />
+    <ClInclude Include="..\..\include\effects\SkBlurDrawLooper.h" />
+    <ClInclude Include="..\..\include\effects\SkTransparentShader.h" />
+    <ClInclude Include="..\..\include\effects\Sk1DPathEffect.h" />
+    <ClInclude Include="..\..\include\effects\SkTableMaskFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkAvoidXfermode.h" />
+    <ClInclude Include="..\..\include\effects\SkColorMatrixFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkCornerPathEffect.h" />
+    <ClInclude Include="..\..\include\effects\SkLayerDrawLooper.h" />
+    <ClInclude Include="..\..\include\effects\SkColorFilterImageFilter.h" />
+    <ClInclude Include="..\..\include\effects\Sk2DPathEffect.h" />
+    <ClInclude Include="..\..\include\effects\SkEmbossMaskFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkLightingImageFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkDrawExtraPathEffect.h" />
+    <ClInclude Include="..\..\include\effects\SkPorterDuff.h" />
+    <ClInclude Include="..\..\include\effects\SkBlurMaskFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkColorMatrix.h" />
+    <ClInclude Include="..\..\include\effects\SkLayerRasterizer.h" />
+    <ClInclude Include="..\..\include\effects\SkBlurImageFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkStippleMaskFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkMagnifierImageFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkMorphologyImageFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkSingleInputImageFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkPixelXorXfermode.h" />
+    <ClInclude Include="..\..\include\effects\SkTableColorFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkPaintFlagsDrawFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkBlendImageFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkDiscretePathEffect.h" />
+    <ClInclude Include="..\..\include\effects\SkDashPathEffect.h" />
+    <ClInclude Include="..\..\include\effects\SkBitmapSource.h" />
+    <ClInclude Include="..\..\include\effects\SkKernel33MaskFilter.h" />
+    <ClInclude Include="..\..\include\effects\SkArithmeticMode.h" />
+    <ClInclude Include="..\..\include\effects\SkGradientShader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\effects\SkBlurMaskFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkBlurMask.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkPaintFlagsDrawFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\Sk2DPathEffect.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkTableColorFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkBitmapSource.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkLayerRasterizer.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkEmbossMaskFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkStippleMaskFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkMorphologyImageFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkColorFilterImageFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkBlurImageFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkBlurDrawLooper.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkColorMatrixFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkTransparentShader.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkEmbossMask.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkDiscretePathEffect.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkAvoidXfermode.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkCornerPathEffect.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkDashPathEffect.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkPorterDuff.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkBlendImageFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkSingleInputImageFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkTestImageFilters.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkKernel33MaskFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkPixelXorXfermode.cpp"/>
-    <ClCompile Include="..\..\src\effects\Sk1DPathEffect.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkArithmeticMode.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkLightingImageFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkMagnifierImageFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkLayerDrawLooper.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkColorFilters.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkColorMatrix.cpp"/>
-    <ClCompile Include="..\..\src\effects\SkTableMaskFilter.cpp"/>
-    <ClCompile Include="..\..\src\effects\gradients\SkGradientShader.cpp"/>
-    <ClCompile Include="..\..\src\effects\gradients\SkClampRange.cpp"/>
-    <ClCompile Include="..\..\src\effects\gradients\SkSweepGradient.cpp"/>
-    <ClCompile Include="..\..\src\effects\gradients\SkTwoPointRadialGradient.cpp"/>
-    <ClCompile Include="..\..\src\effects\gradients\SkTwoPointConicalGradient.cpp"/>
-    <ClCompile Include="..\..\src\effects\gradients\SkLinearGradient.cpp"/>
-    <ClCompile Include="..\..\src\effects\gradients\SkRadialGradient.cpp"/>
-    <ClCompile Include="..\..\src\effects\gradients\SkBitmapCache.cpp"/>
+    <ClCompile Include="..\..\src\effects\SkBlurMaskFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkBlurMask.cpp" />
+    <ClCompile Include="..\..\src\effects\SkPaintFlagsDrawFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\Sk2DPathEffect.cpp" />
+    <ClCompile Include="..\..\src\effects\SkTableColorFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkBitmapSource.cpp" />
+    <ClCompile Include="..\..\src\effects\SkLayerRasterizer.cpp" />
+    <ClCompile Include="..\..\src\effects\SkEmbossMaskFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkStippleMaskFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkMorphologyImageFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkColorFilterImageFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkBlurImageFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkBlurDrawLooper.cpp" />
+    <ClCompile Include="..\..\src\effects\SkColorMatrixFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkTransparentShader.cpp" />
+    <ClCompile Include="..\..\src\effects\SkEmbossMask.cpp" />
+    <ClCompile Include="..\..\src\effects\SkDiscretePathEffect.cpp" />
+    <ClCompile Include="..\..\src\effects\SkAvoidXfermode.cpp" />
+    <ClCompile Include="..\..\src\effects\SkCornerPathEffect.cpp" />
+    <ClCompile Include="..\..\src\effects\SkDashPathEffect.cpp" />
+    <ClCompile Include="..\..\src\effects\SkPorterDuff.cpp" />
+    <ClCompile Include="..\..\src\effects\SkBlendImageFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkSingleInputImageFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkTestImageFilters.cpp" />
+    <ClCompile Include="..\..\src\effects\SkKernel33MaskFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkPixelXorXfermode.cpp" />
+    <ClCompile Include="..\..\src\effects\Sk1DPathEffect.cpp" />
+    <ClCompile Include="..\..\src\effects\SkArithmeticMode.cpp" />
+    <ClCompile Include="..\..\src\effects\SkLightingImageFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkMagnifierImageFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\SkLayerDrawLooper.cpp" />
+    <ClCompile Include="..\..\src\effects\SkColorFilters.cpp" />
+    <ClCompile Include="..\..\src\effects\SkColorMatrix.cpp" />
+    <ClCompile Include="..\..\src\effects\SkTableMaskFilter.cpp" />
+    <ClCompile Include="..\..\src\effects\gradients\SkGradientShader.cpp" />
+    <ClCompile Include="..\..\src\effects\gradients\SkClampRange.cpp" />
+    <ClCompile Include="..\..\src\effects\gradients\SkSweepGradient.cpp" />
+    <ClCompile Include="..\..\src\effects\gradients\SkTwoPointRadialGradient.cpp" />
+    <ClCompile Include="..\..\src\effects\gradients\SkTwoPointConicalGradient.cpp" />
+    <ClCompile Include="..\..\src\effects\gradients\SkLinearGradient.cpp" />
+    <ClCompile Include="..\..\src\effects\gradients\SkRadialGradient.cpp" />
+    <ClCompile Include="..\..\src\effects\gradients\SkBitmapCache.cpp" />
   </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
-  <ImportGroup Label="ExtensionTargets"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
 </Project>

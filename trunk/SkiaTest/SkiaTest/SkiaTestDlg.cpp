@@ -8,14 +8,17 @@
 #include "afxdialogex.h"
 #include "SkCanvas.h"
 #include "SkBitmap.h"
-#include "SkGraphics.h"
-#include "SkImageEncoder.h"
-#include "SkString.h"
-#include "SkTemplates.h"
-#include "SkImageDecoder.h"
-#include "SkStream.h"
-#include "SkGradientShader.h"
-#include "SkComposeShader.h"
+#include "SkiaTestFunc.h"
+// #include "SkGraphics.h"
+ #include "SkImageEncoder.h"
+// #include "SkString.h"
+// #include "SkTemplates.h"
+ #include "SkImageDecoder.h"
+// #include "SkStream.h"
+// #include "SkGradientShader.h"
+// #include "SkComposeShader.h"
+// #include "SkColorFilter.h"
+// #include "SkBlurMaskFilter.h"
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -30,130 +33,22 @@ static struct SkiaContentAndSpecification
 	{L"1.02. beginFill", L"1.02. Graphics::beginFill"},
 	{L"1.03. beginGradientFill", L"1.03. Graphics::beginGradientFill"},
 	{L"1.04. beginShaderFill", L"1.04. Graphics::beginShaderFill"},
-	{L"1.05. beginShaderFill",L"1.05. Graphics::beginShaderFill"},
-	{L"1.06. ", L"1.06. "},
+	{L"2.01. BlurFilter",L"2.01. flash.filters.BlurFilter"},
+	{L"2.02. ColorMatrixFilter", L"flash.filters.ColorMatrixFilter"},
 	{L"1.07. ", L"1.07."},
 };
-bool SkiaTestFunc0101beginBitmapFill(SkCanvas* pCanvas, SkBitmap* pBitmap)	//1.beginBitmapFill:用位图图像填充绘图区
-{	
-	SkFILEStream stream("1.01.Graphics.beginBitmapFill.png");
-	if(!stream.isValid())
-	{
-		AfxMessageBox(L"stream is invalid !");
-		return false;
-	}
-	SkImageDecoder* pDecode = SkImageDecoder::Factory(&stream);
-	if(NULL == pDecode)
-	{
-		AfxMessageBox(L"decode is null !");
-		return false;
-	}
-	SkAutoTDelete<SkImageDecoder> ad(pDecode);
-	stream.rewind();
-	pBitmap->reset();
-	if(!pDecode->decode(&stream, pBitmap, SkBitmap::kARGB_8888_Config,
-		SkImageDecoder::kDecodePixels_Mode))
-	{
-		AfxMessageBox(L"dcode failed !");
-		return false;
-	}
-	return true;
-}
-bool SkiaTestFunc0102beginFill(SkCanvas* pCanvas, SkBitmap* pBitmap)	//2.beginFill:简单颜色填充
-{
-	static COLORREF color = RGB(0, 0, 0);
-	CColorDialog colorDlg(color, CC_FULLOPEN | CC_RGBINIT);
-	colorDlg.m_cc.lpTemplateName = TEXT("选择填充色");
-	if(IDOK != colorDlg.DoModal()) return false;	
-	color = colorDlg.GetColor();
-	unsigned r = (BYTE)color;
-	unsigned g = (BYTE)((WORD)color >> 8);
-	unsigned b = (BYTE)(color >> 16);
-	pCanvas->drawARGB(255, r, g, b);
 
-	
-	return true;
-}
-
-bool SkiaTestFunc3(SkCanvas* pCanvas, SkBitmap* pBitmap)
-{
-	SkPaint paint;
-	paint.setDither(true);
-	pCanvas->translate(SkIntToScalar(10), SkIntToScalar(10));
-	SkPoint pt[2] = { { 0, 0 },
-	{ SkIntToScalar(100), SkIntToScalar(100)}};
-	SkColor Colors[] = {SK_ColorRED, SK_ColorGREEN, SK_ColorBLUE, 
-		SK_ColorWHITE, SK_ColorBLACK};
-	SkScalar pos[] = {0, 1.0f};
-	SkShader* pShader = SkGradientShader::CreateLinear(pt, Colors, pos,
-		2, (SkShader::TileMode)0, NULL);
-	paint.setShader(pShader)->unref();
-	SkRect rect = { 0, 0, SkIntToScalar(100), SkIntToScalar(100) };
-	pCanvas->drawRect(rect, paint);
-	return true;
-	
-}
-bool SkiaTestFunc4(SkCanvas* pCanvas, SkBitmap* pBitmap)
-{
-	SkPoint pts[2];
-	SkColor colors[2];
-
-	pts[0].set(0, 0);
-	pts[1].set(SkIntToScalar(100), 0);
-	colors[0] = SK_ColorRED;
-	colors[1] = SK_ColorWHITE;
-	SkShader* pShaderA = SkGradientShader::CreateLinear(pts, colors, NULL, 2,
-		SkShader::kClamp_TileMode);
-
-	pts[0].set(0, 0);
-	pts[1].set(0, SkIntToScalar(100));
-	colors[0] = SK_ColorBLUE;
-	colors[1] = SkColorSetARGB(0x80, 0, 255, 0);
-	SkShader* pShaderB = SkGradientShader::CreateLinear(pts, colors, NULL, 2,
-		SkShader::kClamp_TileMode);
-	SkXfermode* mode = SkXfermode::Create(SkXfermode::kDstIn_Mode);
-	SkShader* pShaderCompose = new SkComposeShader(pShaderA, pShaderB, mode);
-	pShaderA->unref();
-	pShaderB->unref();
-	mode->unref();
-	paint.setColor(SK_ColorGREEN);
-	pCanvas->drawRectCoords(150, 0, SkIntToScalar(250), SkIntToScalar(100), paint);
-	paint.setShader(pShaderCompose);
-	pCanvas->drawRectCoords(150, 0, SkIntToScalar(250), SkIntToScalar(100), paint);
-	pShaderCompose->unref();
-	return false;
-}
-bool SkiaTestFunc5(SkCanvas* pCanvas, SkBitmap* pBitmap)
-{
-	AfxMessageBox(L"NO !");
-	return false;
-}
-bool SkiaTestFunc6(SkCanvas* pCanvas, SkBitmap* pBitmap)
-{
-	AfxMessageBox(L"NO !");
-	return false;
-}
-bool SkiaTestFunc7(SkCanvas* pCanvas, SkBitmap* pBitmap)
-{
-	AfxMessageBox(L"NO !");
-	return false;
-}
-bool SkiaTestFunc8(SkCanvas* pCanvas, SkBitmap* pBitmap)
-{
-	AfxMessageBox(L"NO !");
-	return false;
-}
 typedef bool (*FuncSkiaTest)(SkCanvas*, SkBitmap*);
 FuncSkiaTest gSkiaTestFunc[] =
 {
 	SkiaTestFunc0101beginBitmapFill,
 	SkiaTestFunc0102beginFill,
-	SkiaTestFunc3,
-	SkiaTestFunc4,
-	SkiaTestFunc5,
-	SkiaTestFunc6,
-	SkiaTestFunc7,
-	SkiaTestFunc8
+	SkiaTestFunc0103beginGradientFill,
+	SkiaTestFunc0104beginShaderFill,
+	SkiaTestFunc0201BlurFilter,
+ 	SkiaTestFunc0202ColorMatrixFilter,
+// 	SkiaTestFunc7,
+// 	SkiaTestFunc8
 };
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框
 
@@ -329,7 +224,7 @@ void CSkiaTestDlg::OnBnClickedBntDraw()
 	m_pCanvas->setBitmapDevice(*m_pBitmap);
 	CComboBox* pCombo = (CComboBox*)GetDlgItem(IDC_COMBO);
 	if(!gSkiaTestFunc[pCombo->GetCurSel()](m_pCanvas, m_pBitmap))	return;
-
+	
 	
 	BITMAPINFO bmi;
 	memset(&bmi, 0, sizeof(bmi));

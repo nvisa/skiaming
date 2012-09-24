@@ -22,6 +22,9 @@
     <None Include="res\SkiaTest.ico">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="1.01.Graphics.beginBitmapFill.png">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SkiaTest.h">
@@ -39,6 +42,9 @@
     <ClInclude Include="Resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="SkiaTestFunc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SkiaTest.cpp">
@@ -48,6 +54,24 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0101beginBitmapFill.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0102beginFill.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0103beginGradientFill.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0104beginShaderFill.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0201BlurFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0202ColorMatrixFilter.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
