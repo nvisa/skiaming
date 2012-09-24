@@ -39,6 +39,7 @@ class GrTexture;
  *  Therefore, we should not create any real dependencies on this API yet -- it
  *  is being checked in as a check-point so we can explore these and other
  *  considerations.
+ 图像滤镜的基类.在paint使用后,所有的绘制照常,但好像绘制发生在幕后一样.
  */
 class SK_API SkImageFilter : public SkFlattenable {
 public:
