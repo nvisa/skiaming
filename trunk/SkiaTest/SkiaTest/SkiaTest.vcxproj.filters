@@ -74,6 +74,39 @@
     <ClCompile Include="SkiaTestFunc0202ColorMatrixFilter.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="SkiaTestFunc0301SkBlendImageFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0302SkBlurImageFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0303SkColorFilterImageFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0304SkLightingImageFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0305SkMagnifierImageFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0306SkModeColorFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0401SkTable_ColorFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0402SkColorMatrixFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0403SkLightingColorFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0404SkSimpleColorFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTestFunc0405SkModeColorFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SkiaTest.rc">

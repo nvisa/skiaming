@@ -33,9 +33,23 @@ static struct SkiaContentAndSpecification
 	{L"1.02. beginFill", L"1.02. Graphics::beginFill"},
 	{L"1.03. beginGradientFill", L"1.03. Graphics::beginGradientFill"},
 	{L"1.04. beginShaderFill", L"1.04. Graphics::beginShaderFill"},
+	
 	{L"2.01. BlurFilter",L"2.01. flash.filters.BlurFilter"},
 	{L"2.02. ColorMatrixFilter", L"flash.filters.ColorMatrixFilter"},
-	{L"1.07. ", L"1.07."},
+	{L"3.01 SkBlendImageFilter", L"3.01 SkImageFilter\r\nSkBlendImageFilter"},
+	{L"3.02 SkBlurImageFilter", L"3.02 SkImageFilter\r\nSkBlurImageFilter"},
+	{L"3.03 SkColorFilterImageFilter", L"3.03 SkImageFilter\r\nSkColorFilterImageFilter"},
+	{L"3.04 SkLightingImageFilter", L"3.04 SkImageFilter\r\nSkLightingImageFilter"},
+	{L"3.05 SkMagnifierImageFilter", L"3.05 SkImageFilter\r\nSkMagnifierImageFilter"},
+	{L"4.01 SkModeColorFilter", L"4.01 SkImageFilter\r\nSkModeColorFilter"},
+	{L"4.02 SkColorMatrixFilter", L"4.02 SkColorFilter\r\nSkColorMatrixFilter"},
+	{L"4.03 SkLightingColorFilter", L"4.03 SkImageFilter\r\nSkLightingColorFilter"},
+	{L"4.04 SkSimpleColorFilter", L"4.04 SkImageFilter\r\nSkSimpleColorFilter"},
+	{L"4.05 SkModeColorFilter", L"4.05 SkImageFilter\r\nSkModeColorFilter"},
+// 	{L"4.06 SkModeColorFilter", L"4.06 SkImageFilter\r\nSkModeColorFilter"},
+// 	{L"4.07 SkModeColorFilter", L"4.07 SkImageFilter\r\nSkModeColorFilter"},
+// 	{L"4.08 SkModeColorFilter", L"4.08 SkImageFilter\r\nSkModeColorFilter"},
+// 	{L"4.09 SkModeColorFilter", L"4.09 SkImageFilter\r\nSkModeColorFilter"},
 };
 
 typedef bool (*FuncSkiaTest)(SkCanvas*, SkBitmap*);
@@ -47,6 +61,17 @@ FuncSkiaTest gSkiaTestFunc[] =
 	SkiaTestFunc0104beginShaderFill,
 	SkiaTestFunc0201BlurFilter,
  	SkiaTestFunc0202ColorMatrixFilter,
+	SkiaTestFunc0301SkBlendImageFilter,
+	SkiaTestFunc0302SkBlurImageFilter,
+	SkiaTestFunc0303SkColorFilterImageFilter,
+	SkiaTestFunc0304SkLightingImageFilter,
+	SkiaTestFunc0305SkMagnifierImageFilter,
+	SkiaTestFunc0401SkTable_ColorFilter,
+	SkiaTestFunc0402SkColorMatrixFilter,
+	SkiaTestFunc0403SkLightingColorFilter,
+	SkiaTestFunc0404SkSimpleColorFilter,
+	SkiaTestFunc0405SkModeColorFilter,
+
 // 	SkiaTestFunc7,
 // 	SkiaTestFunc8
 };
