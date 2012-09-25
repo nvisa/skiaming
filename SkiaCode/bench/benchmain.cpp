@@ -394,7 +394,8 @@ static void help() {
     SkDebugf("    -h|--help : Show this help message.\n");
 }
 
-int main (int argc, char * const argv[]) {
+int main (int argc, char * const argv[]) 
+{
 #ifdef SK_ENABLE_INST_COUNT
     gPrintInstCount = true;
 #endif
@@ -434,43 +435,59 @@ int main (int argc, char * const argv[]) {
     SkBenchLogger logger;
 
     char* const* stop = argv + argc;
-    for (++argv; argv < stop; ++argv) {
+    for (++argv; argv < stop; ++argv) 
+	{
         if (strcmp(*argv, "-o") == 0) {
             argv++;
-            if (argv < stop && **argv) {
+            if (argv < stop && **argv) 
+			{
                 outDir.set(*argv);
-                if (outDir.c_str()[outDir.size() - 1] != '/') {
+                if (outDir.c_str()[outDir.size() - 1] != '/') 
+				{
                     outDir.append("/");
                 }
             }
-        } else if (strcmp(*argv, "-repeat") == 0) {
+        } 
+		else if (strcmp(*argv, "-repeat") == 0) 
+		{
             argv++;
             if (argv < stop) {
                 repeatDraw = atoi(*argv);
-                if (repeatDraw < 1) {
+                if (repeatDraw < 1) 
+				{
                     repeatDraw = 1;
                 }
-            } else {
+            } 
+			else 
+			{
                 logger.logError("missing arg for -repeat\n");
                 help();
                 return -1;
             }
-        } else if (strcmp(*argv, "-logPerIter") == 0) {
-            if (!parse_bool_arg(++argv, stop, &logPerIter)) {
+        } 
+		else if (strcmp(*argv, "-logPerIter") == 0) 
+		{
+            if (!parse_bool_arg(++argv, stop, &logPerIter)) 
+			{
                 logger.logError("missing arg for -logPerIter\n");
                 help();
                 return -1;
             }
-        } else if (strcmp(*argv, "-timers") == 0) {
+        } 
+		else if (strcmp(*argv, "-timers") == 0) 
+		{
             argv++;
-            if (argv < stop) {
+            if (argv < stop) 
+			{
                 timerWall = false;
                 truncatedTimerWall = false;
                 timerCpu = false;
                 truncatedTimerCpu = false;
                 timerGpu = false;
-                for (char* t = *argv; *t; ++t) {
-                    switch (*t) {
+                for (char* t = *argv; *t; ++t) 
+				{
+                    switch (*t) 
+					{
                     case 'w': timerWall = true; break;
                     case 'c': timerCpu = true; break;
                     case 'W': truncatedTimerWall = true; break;
@@ -478,71 +495,106 @@ int main (int argc, char * const argv[]) {
                     case 'g': timerGpu = true; break;
                     }
                 }
-            } else {
+            } 
+			else 
+			{
                 logger.logError("missing arg for -timers\n");
                 help();
                 return -1;
             }
-        } else if (!strcmp(*argv, "-rotate")) {
+        } 
+		else if (!strcmp(*argv, "-rotate")) 
+		{
             doRotate = true;
-        } else if (!strcmp(*argv, "-scale")) {
+        } 
+		else if (!strcmp(*argv, "-scale")) 
+		{
             doScale = true;
-        } else if (!strcmp(*argv, "-clip")) {
+        } 
+		else if (!strcmp(*argv, "-clip"))
+		{
             doClip = true;
-        } else if (!strcmp(*argv, "-min")) {
+        } 
+		else if (!strcmp(*argv, "-min")) 
+		{
             printMin = true;
-        } else if (strcmp(*argv, "-forceAA") == 0) {
-            if (!parse_bool_arg(++argv, stop, &forceAA)) {
+        } 
+		else if (strcmp(*argv, "-forceAA") == 0) 
+		{
+            if (!parse_bool_arg(++argv, stop, &forceAA)) 
+			{
                 logger.logError("missing arg for -forceAA\n");
                 help();
                 return -1;
             }
-        } else if (strcmp(*argv, "-forceFilter") == 0) {
-            if (!parse_bool_arg(++argv, stop, &forceFilter)) {
+        } 
+		else if (strcmp(*argv, "-forceFilter") == 0) 
+		{
+            if (!parse_bool_arg(++argv, stop, &forceFilter)) 
+			{
                 logger.logError("missing arg for -forceFilter\n");
                 help();
                 return -1;
             }
-        } else if (strcmp(*argv, "-forceDither") == 0) {
+        } 
+		else if (strcmp(*argv, "-forceDither") == 0) 
+		{
             bool tmp;
-            if (!parse_bool_arg(++argv, stop, &tmp)) {
+            if (!parse_bool_arg(++argv, stop, &tmp)) 
+			{
                 logger.logError("missing arg for -forceDither\n");
                 help();
                 return -1;
             }
             forceDither = tmp ? SkTriState::kTrue : SkTriState::kFalse;
-        } else if (strcmp(*argv, "-forceBlend") == 0) {
+        } 
+		else if (strcmp(*argv, "-forceBlend") == 0) 
+		{
             bool wantAlpha = false;
-            if (!parse_bool_arg(++argv, stop, &wantAlpha)) {
+            if (!parse_bool_arg(++argv, stop, &wantAlpha)) 
+			{
                 logger.logError("missing arg for -forceBlend\n");
                 help();
                 return -1;
             }
             forceAlpha = wantAlpha ? 0x80 : 0xFF;
-        } else if (strcmp(*argv, "-mode") == 0) {
+        } else if (strcmp(*argv, "-mode") == 0) 
+		{
             argv++;
-            if (argv < stop) {
-                if (strcmp(*argv, "normal") == 0) {
+            if (argv < stop) 
+			{
+                if (strcmp(*argv, "normal") == 0) 
+				{
                     benchMode = kNormal_benchModes;
-                } else if (strcmp(*argv, "deferred") == 0) {
+                } 
+				else if (strcmp(*argv, "deferred") == 0) 
+				{
                     benchMode = kDeferred_benchModes;
-                } else if (strcmp(*argv, "record") == 0) {
+                } else if (strcmp(*argv, "record") == 0) 
+				{
                     benchMode = kRecord_benchModes;
-                } else if (strcmp(*argv, "picturerecord") == 0) {
+                } else if (strcmp(*argv, "picturerecord") == 0)
+				{
                     benchMode = kPictureRecord_benchModes;
-                } else {
+                } else 
+				{
                     logger.logError("bad arg for -mode\n");
                     help();
                     return -1;
                 }
-            } else {
+            } 
+			else 
+			{
                 logger.logError("missing arg for -mode\n");
                 help();
                 return -1;
             }
-        } else if (strcmp(*argv, "-strokeWidth") == 0) {
+        } 
+		else if (strcmp(*argv, "-strokeWidth") == 0) 
+		{
             argv++;
-            if (argv < stop) {
+            if (argv < stop) 
+			{
                 const char *strokeWidthStr = *argv;
                 if (sscanf(strokeWidthStr, "%f", &strokeWidth) != 1) {
                   logger.logError("bad arg for -strokeWidth\n");
@@ -550,66 +602,94 @@ int main (int argc, char * const argv[]) {
                   return -1;
                 }
                 hasStrokeWidth = true;
-            } else {
+            } 
+			else 
+			{
                 logger.logError("missing arg for -strokeWidth\n");
                 help();
                 return -1;
             }
-        } else if (strcmp(*argv, "-match") == 0) {
+        } 
+		else if (strcmp(*argv, "-match") == 0) 
+		{
             argv++;
-            if (argv < stop) {
+            if (argv < stop) 
+			{
                 *fMatches.append() = *argv;
-            } else {
+            } 
+			else 
+			{
                 logger.logError("missing arg for -match\n");
                 help();
                 return -1;
             }
-        } else if (strcmp(*argv, "-config") == 0) {
+        } 
+		else if (strcmp(*argv, "-config") == 0) 
+		{
             argv++;
-            if (argv < stop) {
+            if (argv < stop) 
+			{
                 int index = findConfig(*argv);
-                if (index >= 0) {
+                if (index >= 0) 
+				{
                     *configs.append() = index;
                     userConfig = true;
-                } else {
+                } 
+				else 
+				{
                     SkString str;
                     str.printf("unrecognized config %s\n", *argv);
                     logger.logError(str);
                     help();
                     return -1;
                 }
-            } else {
+            } 
+			else 
+			{
                 logger.logError("missing arg for -config\n");
                 help();
                 return -1;
             }
-        } else if (strcmp(*argv, "-logFile") == 0) {
+        } 
+		else if (strcmp(*argv, "-logFile") == 0) 
+		{
             argv++;
-            if (argv < stop) {
-                if (!logger.SetLogFile(*argv)) {
+            if (argv < stop) 
+			{
+                if (!logger.SetLogFile(*argv)) 
+				{
                     SkString str;
                     str.printf("Could not open %s for writing.", *argv);
                     logger.logError(str);
                     return -1;
                 }
-            } else {
+            } else 
+			{
                 logger.logError("missing arg for -logFile\n");
                 help();
                 return -1;
             }
-        } else if (strlen(*argv) > 2 && strncmp(*argv, "-D", 2) == 0) {
+        } 
+		else if (strlen(*argv) > 2 && strncmp(*argv, "-D", 2) == 0) 
+		{
             argv++;
-            if (argv < stop) {
+            if (argv < stop) 
+			{
                 defineDict.set(argv[-1] + 2, *argv);
-            } else {
+            } else 
+			{
                 logger.logError("incomplete '-Dfoo bar' definition\n");
                 help();
                 return -1;
             }
-        } else if (strcmp(*argv, "--help") == 0 || strcmp(*argv, "-h") == 0) {
+        } 
+		else if (strcmp(*argv, "--help") == 0 || strcmp(*argv, "-h") == 0) 
+		{
             help();
             return 0;
-        } else {
+        } 
+		else 
+		{
             SkString str;
             str.printf("unrecognized arg %s\n", *argv);
             logger.logError(str);
@@ -618,18 +698,22 @@ int main (int argc, char * const argv[]) {
         }
     }
     if ((benchMode == kRecord_benchModes || benchMode == kPictureRecord_benchModes)
-            && !outDir.isEmpty()) {
+            && !outDir.isEmpty()) 
+	{
         logger.logError("'-mode record' and '-mode picturerecord' are not"
                   " compatible with -o.\n");
         return -1;
     }
-    if ((benchMode == kRecord_benchModes || benchMode == kPictureRecord_benchModes)) {
+    if ((benchMode == kRecord_benchModes || benchMode == kPictureRecord_benchModes)) 
+	{
         perIterTimeformat.set("%.4f");
         normalTimeFormat.set("%6.4f");
     }
-    if (!userConfig) {
+    if (!userConfig) 
+	{
         // if no config is specified by user, we add them all.
-        for (unsigned int i = 0; i < SK_ARRAY_COUNT(gConfigs); ++i) {
+        for (unsigned int i = 0; i < SK_ARRAY_COUNT(gConfigs); ++i) 
+		{
             *configs.append() = i;
         }
     }
@@ -647,7 +731,8 @@ int main (int argc, char * const argv[]) {
                     benchMode == kRecord_benchModes,
                     benchMode == kPictureRecord_benchModes);
         const char * ditherName;
-        switch (forceDither) {
+        switch (forceDither) 
+		{
             case SkTriState::kDefault: ditherName = "default"; break;
             case SkTriState::kTrue: ditherName = "true"; break;
             case SkTriState::kFalse: ditherName = "false"; break;
@@ -655,9 +740,12 @@ int main (int argc, char * const argv[]) {
         }
         str.appendf(" dither=%s", ditherName);
 
-        if (hasStrokeWidth) {
+        if (hasStrokeWidth) 
+		{
             str.appendf(" strokeWidth=%f", strokeWidth);
-        } else {
+        } 
+		else 
+		{
             str.append(" strokeWidth=none");
         }
 
@@ -708,11 +796,13 @@ int main (int argc, char * const argv[]) {
     BenchTimer timer = BenchTimer(timerCtx);
     Iter iter(&defineDict);
     SkBenchmark* bench;
-    while ((bench = iter.next()) != NULL) {
+    while ((bench = iter.next()) != NULL) 
+	{
         SkAutoTUnref<SkBenchmark> benchUnref(bench);
 
         SkIPoint dim = bench->getSize();
-        if (dim.fX <= 0 || dim.fY <= 0) {
+        if (dim.fX <= 0 || dim.fY <= 0) 
+		{
             continue;
         }
 
@@ -720,12 +810,14 @@ int main (int argc, char * const argv[]) {
         bench->setForceAA(forceAA);
         bench->setForceFilter(forceFilter);
         bench->setDither(forceDither);
-        if (hasStrokeWidth) {
+        if (hasStrokeWidth) 
+		{
             bench->setStrokeWidth(strokeWidth);
         }
 
         // only run benchmarks if their name contains matchStr
-        if (skip_name(fMatches, bench->getName())) {
+        if (skip_name(fMatches, bench->getName())) 
+		{
             continue;
         }
 
@@ -738,7 +830,8 @@ int main (int argc, char * const argv[]) {
 
         AutoPrePostDraw appd(bench);
 
-        for (int x = 0; x < configs.count(); ++x) {
+        for (int x = 0; x < configs.count(); ++x) 
+		{
             int configIndex = configs[x];
 
             outConfig = gConfigs[configIndex].fConfig;
@@ -748,7 +841,8 @@ int main (int argc, char * const argv[]) {
 
 #if SK_SUPPORT_GPU
             if (kGPU_Backend == backend &&
-                (NULL == glHelper || !glHelper->isValid())) {
+                (NULL == glHelper || !glHelper->isValid())) 
+			{
                 continue;
             }
 #endif
@@ -756,7 +850,8 @@ int main (int argc, char * const argv[]) {
             SkCanvas* canvas = NULL;
             SkPicture pictureRecordFrom;
             SkPicture pictureRecordTo;
-            switch(benchMode) {
+            switch(benchMode) 
+			{
                 case kDeferred_benchModes:
                     canvas = new SkDeferredCanvas(device);
                     break;
@@ -764,7 +859,8 @@ int main (int argc, char * const argv[]) {
                     canvas = pictureRecordTo.beginRecording(dim.fX, dim.fY);
                     canvas->ref();
                     break;
-                case kPictureRecord_benchModes: {
+                case kPictureRecord_benchModes: 
+					{
                     // This sets up picture-to-picture recording.
                     // The C++ drawing calls for the benchmark are recorded into
                     // pictureRecordFrom. As the benchmark, we will time how
@@ -776,7 +872,7 @@ int main (int argc, char * const argv[]) {
                     canvas = pictureRecordTo.beginRecording(dim.fX, dim.fY);
                     canvas->ref();
                     break;
-                }
+					}
                 case kNormal_benchModes:
                     canvas = new SkCanvas(device);
                     break;
@@ -786,33 +882,42 @@ int main (int argc, char * const argv[]) {
             device->unref();
             SkAutoUnref canvasUnref(canvas);
 
-            if (doClip) {
+            if (doClip) 
+			{
                 performClip(canvas, dim.fX, dim.fY);
             }
-            if (doScale) {
+            if (doScale) 
+			{
                 performScale(canvas, dim.fX, dim.fY);
             }
-            if (doRotate) {
+            if (doRotate) 
+			{
                 performRotate(canvas, dim.fX, dim.fY);
             }
 
             // warm up caches if needed
-            if (repeatDraw > 1) {
+            if (repeatDraw > 1) 
+			{
 #if SK_SUPPORT_GPU
-                if (glHelper) {
+                if (glHelper) 
+				{
                     // purge the GPU resources to reduce variance
                     glHelper->grContext()->freeGpuResources();
                 }
 #endif
                 SkAutoCanvasRestore acr(canvas, true);
-                if (benchMode == kPictureRecord_benchModes) {
+                if (benchMode == kPictureRecord_benchModes) 
+				{
                     pictureRecordFrom.draw(canvas);
-                } else {
+                } 
+				else 
+				{
                     bench->draw(canvas);
                 }
                 canvas->flush();
 #if SK_SUPPORT_GPU
-                if (glHelper) {
+                if (glHelper) 
+				{
                     glHelper->grContext()->flush();
                     SK_GL(*glHelper->glContext(), Finish());
                 }
@@ -821,9 +926,11 @@ int main (int argc, char * const argv[]) {
 
             // record timer values for each repeat, and their sum
             TimerData timerData(perIterTimeformat, normalTimeFormat);
-            for (int i = 0; i < repeatDraw; i++) {
+            for (int i = 0; i < repeatDraw; i++) 
+			{
                 if ((benchMode == kRecord_benchModes
-                     || benchMode == kPictureRecord_benchModes)) {
+                     || benchMode == kPictureRecord_benchModes)) 
+				{
                     // This will clear the recorded commands so that they do not
                     // acculmulate.
                     canvas = pictureRecordTo.beginRecording(dim.fX, dim.fY);
@@ -831,9 +938,12 @@ int main (int argc, char * const argv[]) {
 
                 timer.start();
                 SkAutoCanvasRestore acr(canvas, true);
-                if (benchMode == kPictureRecord_benchModes) {
+                if (benchMode == kPictureRecord_benchModes) 
+				{
                     pictureRecordFrom.draw(canvas);
-                } else {
+                } 
+				else 
+				{
                     bench->draw(canvas);
                 }
                 canvas->flush();
@@ -842,7 +952,8 @@ int main (int argc, char * const argv[]) {
                 // don't wait for all the GL calls to complete
                 timer.truncatedEnd();
 #if SK_SUPPORT_GPU
-                if (glHelper) {
+                if (glHelper) 
+				{
                     glHelper->grContext()->flush();
                     SK_GL(*glHelper->glContext(), Finish());
                 }
@@ -854,13 +965,15 @@ int main (int argc, char * const argv[]) {
                 timerData.appendTimes(&timer, repeatDraw - 1 == i);
 
             }
-            if (repeatDraw > 1) {
+            if (repeatDraw > 1) 
+			{
                 SkString result = timerData.getResult(logPerIter, printMin, repeatDraw, configName,
                                                       timerWall, truncatedTimerWall, timerCpu,
                                                       truncatedTimerCpu, timerGpu && glHelper);
                 logger.logProgress(result);
             }
-            if (outDir.size() > 0) {
+            if (outDir.size() > 0) 
+			{
                 saveFile(bench->getName(), configName, outDir.c_str(),
                          device->accessBitmap(false));
             }
@@ -871,5 +984,6 @@ int main (int argc, char * const argv[]) {
     // need to clean up here rather than post-main to allow leak detection to work
     gDebugGLHelper.cleanup();
 #endif
+	getchar();
     return 0;
 }

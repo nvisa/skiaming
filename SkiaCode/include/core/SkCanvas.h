@@ -71,6 +71,7 @@ public:
 
     /**
      *  Trigger the immediate execution of all pending draw operations.
+	 触发所有待绘制命令
      */
     void flush();
 
@@ -271,6 +272,8 @@ public:
                      offscreen when restore() is called
         @param flags  LayerFlags
         @return The value to pass to restoreToCount() to balance this save()
+		和save()相似,此外,这个操作分配一个离屏bitmap.所有绘制命令绘制到bitmap.
+		只有当使用restore()使用后,才将离屏传输到canvas
     */
     virtual int saveLayer(const SkRect* bounds, const SkPaint* paint,
                           SaveFlags flags = kARGB_ClipLayer_SaveFlag);
@@ -294,6 +297,7 @@ public:
         modifications to the matrix/clip/drawFilter state since the last save
         call.
         It is an error to call restore() more times than save() was called.
+		为了和save()对应.用于移除所有对matrix/clip/drawFilter状态的改变
     */
     virtual void restore();
 
@@ -688,6 +692,8 @@ public:
         @param left     The position of the left side of the bitmap being drawn
         @param top      The position of the top side of the bitmap being drawn
         @param paint    The paint used to draw the bitmap, or NULL
+		在(x,y)绘制特定bitmap.不使用当前矩阵.注意:如果paint包含一个在bitmap之内
+		的maskfilter, bitmap就会被绘制好像在使用CLAMP模式的Shader一样.
     */
     virtual void drawSprite(const SkBitmap& bitmap, int left, int top,
                             const SkPaint* paint = NULL);
