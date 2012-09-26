@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B8ED5D5E-B719-4109-87A4-92870C1B2224}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FlashDisplay</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AccessibilityProperties.h" />
+    <ClInclude Include="AVM1Movie.h" />
+    <ClInclude Include="BevelFilter.h" />
+    <ClInclude Include="Bitmap.h" />
+    <ClInclude Include="BitmapData.h" />
+    <ClInclude Include="BitmapDataChannel.h" />
+    <ClInclude Include="BitmapFilter.h" />
+    <ClInclude Include="BitmapFilterQuality.h" />
+    <ClInclude Include="BitmapFilterType.h" />
+    <ClInclude Include="BlendMode.h" />
+    <ClInclude Include="BlurFilter.h" />
+    <ClInclude Include="ByteArray.h" />
+    <ClInclude Include="CapsStyle.h" />
+    <ClInclude Include="ColorCorrection.h" />
+    <ClInclude Include="ColorCorrectionSupport.h" />
+    <ClInclude Include="ColorMatrixFilter.h" />
+    <ClInclude Include="ColorTransform.h" />
+    <ClInclude Include="ConvolutionFilter.h" />
+    <ClInclude Include="DisplacementMapFilter.h" />
+    <ClInclude Include="DisplayObject.h" />
+    <ClInclude Include="DisplayObjectContainer.h" />
+    <ClInclude Include="DropShadowFilter.h" />
+    <ClInclude Include="EventDispatcher.h" />
+    <ClInclude Include="GlowFilter.h" />
+    <ClInclude Include="GradientBevelFilter.h" />
+    <ClInclude Include="GradientGlowFilter.h" />
+    <ClInclude Include="GradientType.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="GraphicsBitmapFill.h" />
+    <ClInclude Include="GraphicsEndFill.h" />
+    <ClInclude Include="GraphicsGradientFill.h" />
+    <ClInclude Include="GraphicsPath.h" />
+    <ClInclude Include="GraphicsShaderFill.h" />
+    <ClInclude Include="GraphicsSolidFill.h" />
+    <ClInclude Include="GraphicsStroke.h" />
+    <ClInclude Include="GraphicsTrianglePath.h" />
+    <ClInclude Include="IBitmapDrawable.h" />
+    <ClInclude Include="IGraphicsData.h" />
+    <ClInclude Include="IGraphicsFill.h" />
+    <ClInclude Include="InteractiveObject.h" />
+    <ClInclude Include="InterpolationMethod.h" />
+    <ClInclude Include="JointStyle.h" />
+    <ClInclude Include="LineScaleMode.h" />
+    <ClInclude Include="Loader.h" />
+    <ClInclude Include="LoaderInfo.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MorphShape.h" />
+    <ClInclude Include="MovieClip.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="ShaderData.h" />
+    <ClInclude Include="ShaderFilter.h" />
+    <ClInclude Include="Shape.h" />
+    <ClInclude Include="SimpleButton.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Stage.h" />
+    <ClInclude Include="StaticText.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TextField.h" />
+    <ClInclude Include="TextLine.h" />
+    <ClInclude Include="URLRequest.h" />
+    <ClInclude Include="Video.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
