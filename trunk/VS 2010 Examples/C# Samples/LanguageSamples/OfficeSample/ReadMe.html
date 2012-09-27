@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>此示例演示如何使用</title>
+<style type="text/css">
+.style1 {
+	color: #0000FF;
+}
+.style2 {
+	line-height: 115%;
+	font-size: 10.0pt;
+	font-family: Consolas;
+	margin-left: .2in;
+	margin-right: 0in;
+	margin-top: 0in;
+	margin-bottom: 10.0pt;
+}
+.style3 {
+	color: #FF0000;
+}
+.style4 {
+	color: #0D540D;
+}
+.style5 {
+	color: #000000;
+}
+</style>
+</head>
+
+<body>
+
+<p>本示例演示如何使用称为“COM 互操作”<em></em>、“省略 ref”<strong></strong>、“索引属性”<em></em>、“命名参数”和“可选参数”<em></em>的 C# 4.0 功能来创建与 Microsoft Office 进行通信的 C# 应用程序。 传统上，为了访问 Word、Excel 等 Microsoft Office 应用程序，C# 开发人员不得不编写相对冗长的代码。 新增的 C# 4.0 功能极大简化了对 Office API 的调用。</p>
+<p>请看本示例中所用 Microsoft Office 方法的以下声明：</p>
+<p>void PasteSpecial(<span class="style1">ref object </span>IconIndex = <span class="style1">null</span>, <span class="style1">ref object</span> Link = <span class="style1">null</span>, <BR> &nbsp;&nbsp;&nbsp; <span class="style1">ref object </span>Placement = <span class="style1">null</span>, <span class="style1">ref object </span> DisplayAsIcon = <span class="style1">null</span>,<span class="style1"> </span><BR> <span class="style1">&nbsp;&nbsp;&nbsp; ref object</span> DataType = <span class="style1">null</span>, <span class="style1">ref object</span> IconFileName = <span class="style1">null</span>, <BR> <span class="style1">&nbsp;&nbsp;&nbsp; ref object</span> IconLabel = <span class="style1">null</span>);</p>
+
+<p>可以看到，此方法接受相当多的参数。 在 C# 中，开发人员传统上必须填写每个参数，即使进行这一调用的开发人员本欲通过支持可选参数来简化其使用也是如此。 在 C# 4.0 中，利用新增的对命名参数和可选参数的支持，开发人员可以仅指定所需参数，其他参数则使用其默认值：</p>
+<p>word.Selection.PasteSpecial(Link: <span class="style1">true</span>, DisplayAsIcon: <span class="style1">true</span>);</p>
+<p>在对 <strong>PasteSpecial</strong> 方法的调用中，<strong>Link</strong> 和 <strong>DisplayAsIcon</strong> 参数是显式命名的，且设置为值 <span class="style5"><strong>true</strong></span>。 所有其他参数都默认为 Office API 开发人员在内部指定的值，如上面的签名所示。</p>
+<p>您可以创建自己的支持命名参数和可选参数的调用。 请看以下示例：</p>
+<p class="style2"><span class="style1">public void</span> M(<span class="style1">int</span> x, <span class="style1">int</span> y = 5, <span class="style1">int</span> z = 7) { }</p>
+<p>在此方法中，为参数 y 和 z 分配了默认值。 对此方法的调用如下所示：</p>
+<p>M(<span class="style3">1</span>, <span class="style3">2</span>, <span class="style3">3</span>); <span class="style4">// M 的普通调用</span><br /> M(<span class="style3">1</span>, 2);<span class="style4"> // 省略 z，等效于 M(1, 2, 7)</span><br /> M(<span class="style3">1</span>);&nbsp; <span class="style4">// 同时省略 y 和 z，等效于 M(1, 5, 7)</span><br /> M(<span class="style3">1</span>, z:<span class="style3"> 3</span>); <span class="style4">// 通过名称传递 z</span><br /> M(x: <span class="style3">1</span>, z:<span class="style3"> 3</span>); <span class="style4">// 通过名称同时传递 x 和 z</span><br /> M(z:<span class="style3"> 3</span>, x:<span class="style3"> 1</span>); <span class="style4">// 反转实参的顺序</span></p>
+<p>通过 C# 4.0 新增的动态功能，C# 开发人员可以更加方便地对 Office 编程。 现在，Office 中使用的类型可供 C# 开发人员调用，如同以 <strong>dynamic</strong> 类型对它们进行了声明一样。 下面是设置单元格属性的传统方式：</p>
+<p class="style2">((Excel.Range)excel.Cells[1, 1]).Value2 = &quot;ID&quot;;</p>
+<p>现在，在 C# 4.0 中，开发人员可以编写如下所示的代码：</p>
+<p class="style2">X1.Cells[<span class="style3">1</span>, <span class="style3">1</span>].Value =<span class="style3"> &quot;ID&quot;</span>;</p>
+<p>借助索引属性<em></em>功能，可以进一步简化调用，如下所示：</p>
+<p class="style2">xl.Cells[1, 1] = &quot;ID&quot;;</p>
+<p>最后要介绍的是 No-PIA 功能，Office 开发人员一定会对它感兴趣。 主互操作程序集从 COM 接口生成，可在设计时提供有用的类型支持。 不过在运行时，这些程序集会增加程序的大小，可能导致版本控制问题。 利用 No-PIA 功能，可以继续在设计时使用 PIA，但在运行时省略 PIA。 C# 编译器将程序实际使用的小部分 PIA 直接复制到其程序集中。 您不再需要在程序的分发中包括 PIA。</p>
+
+</body>
+
+</html>
+

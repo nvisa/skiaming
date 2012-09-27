@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>简单变化示例</title>
+<style type="text/css">
+</style>
+</head>
+
+<body>
+<p><strong>SimpleVariance</strong> 示例程序演示在委托和接口中使用泛型类型时，C# 4.0 对协变和逆变的支持。 在 C# 3.0 中，泛型类型是固定的。 因此，本示例在 C# 4.0 中可正常编译，但在早期版本的 C# 中无法编译。</p>
+
+<p>程序首先声明两个简单类和两个委托：</p>
+
+<pre class="code"><span style="color: blue">class</span>  <span style="color: #2b91af">Animal</span> { }
+<span style="color: blue">class</span> <span style="color: #2b91af">Cat</span> : <span style="color: #2b91af">Animal</span> { }
+
+<span style="color: blue">delegate </span>T <span style="color: #2b91af">Func1</span>&lt;<span style="color: blue">out </span>T&gt;();
+<span style="color: blue">delegate void </span><span style="color: #2b91af">Action1</span>&lt;<span style="color: blue">in </span>T&gt;(T a);</pre>
+<p>然后，实现这些委托并使用这些类：</p>
+<pre class="code"><span style="color: #2b91af">Func1</span>&lt;<span style="color: #2b91af">Cat</span>&gt; cat = () =&gt; <span style="color: blue">new </span><span style="color: #2b91af">Cat</span>();
+<span style="color: #2b91af">Action1</span>&lt;<span style="color: #2b91af">Animal</span>&gt; act1 = (ani) =&gt; { <span style="color: #2b91af">Console</span>.WriteLine(ani); };</pre>
+
+<p>再进行需要协变和逆变支持的分配：</P>
+
+<pre class="code"><span style="color: #2b91af">Func1</span>&lt;<span style="color: #2b91af">Animal</span>&gt; animal = cat;
+<span style="color: #2b91af">Action1</span>&lt;<span style="color: #2b91af">Cat</span>&gt; cat1 = act1;</pre>
+
+<p>后面这一组分配在 C# 4.0 中可以正常工作，但在早期版本的 C# 中无法工作。 第一个分配演示协变，第二个分配演示逆变。</p>
+<p>通过新增的上下文关键字 <strong>out</strong> 和 <strong>in</strong>，可以指定泛型类型是要传递到委托或接口方法中，还是要从委托或接口方法返回。</p>
+
+</body>
+
+</html>
+

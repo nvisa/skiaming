@@ -1,0 +1,566 @@
+﻿<!--To view a formatted version of this file, switch to Design view by clicking the Design tab at the bottom of the HTML Designer window.-->
+
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="ReadMe_files/filelist.xml">
+<title>LINQ to TerraServer 提供程序示例</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="country-region"/> <o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/> <o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--span.CODEEMBEDDED
+	{position:relative;
+	top:0pt;}
+
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1073750139 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{font-family:"Times New Roman";
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{font-family:"Times New Roman";
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	font-family:Tahoma;
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+p.Normal1, li.Normal1, div.Normal1
+	{mso-style-name:"Normal1\,Text\,t";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:13.0pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.Heading11, li.Heading11, div.Heading11
+	{mso-style-name:"Heading 11\,h1";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:-.25in;
+	line-height:18.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;
+	font-weight:bold;}
+p.Heading21, li.Heading21, div.Heading21
+	{mso-style-name:"Heading 21\,h2";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:-.25in;
+	line-height:16.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:gray;
+	font-weight:bold;}
+p.Heading31, li.Heading31, div.Heading31
+	{mso-style-name:"Heading 31\,h3";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:-.25in;
+	line-height:16.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:silver;
+	font-weight:bold;}
+p.NumberedList1, li.NumberedList1, div.NumberedList1
+	{mso-style-name:"Numbered List 1\,nl1";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	line-height:13.0pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.TableSpacing, li.TableSpacing, div.TableSpacing
+	{mso-style-name:"Table Spacing\,ts";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:6.0pt;
+	mso-pagination:widow-orphan;
+	font-size:6.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:silver;}
+p.BulletedList1, li.BulletedList1, div.BulletedList1
+	{mso-style-name:"Bulleted List 1\,bl1";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	line-height:13.0pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.BulletedList2, li.BulletedList2, div.BulletedList2
+	{mso-style-name:"Bulleted List 2\,bl2";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	line-height:13.0pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.CodeEmbedded
+	{mso-style-name:"Code Embedded\,ce";
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";
+	color:navy;}
+span.Italic
+	{mso-style-name:"Italic\,i";
+	font-family:"Times New Roman";
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:fuchsia;
+	font-style:italic;}
+span.UI
+	{mso-style-name:"UI\,ui";
+	font-family:"Times New Roman";
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:gray;
+	font-weight:bold;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=Heading11 style='margin-left:0in'>LINQ to TerraServer 提供程序示例</p>
+
+<p class=Normal1>本示例是 TerraServer-USA Web 服务的自定义 LINQ 提供程序。 示例中还包含一个示例客户端应用程序，它使用自定义 LINQ 提供程序向 Web 服务查询地理数据。</p>
+
+<p class=Normal1>TerraServer-USA Web 服务公开一个方法，向该方法提供部分或完整的地名时，它将返回有关<st1:place w:st="on"><st1:country-region
+ w:st="on">美国</st1:country-region></st1:place>相应位置的信息。 此方法名为 <span class=SpellE><span
+class=CodeEmbedded>GetPlaceList</span></span>，LINQ 提供程序调用它来获取运行 LINQ 查询所针对的数据。 该提供程序使用 Windows Communication Foundation (WCF) 与 Web 服务通信。 有关 TerraServer-USA Web 服务的更多信息，请参见 <span
+lang=DE style='mso-ansi-language:DE'><a
+href="http://terraserver.microsoft.com/webservices.aspx"><span lang=EN-US
+style='font-family:"Times New Roman";mso-ansi-language:EN-US'>Overview of the TerraServer-USA Web Services</span></a></span>（TerraServer-USA Web 服务概述）。</p>
+
+<p class=Normal1>借助实现 <span class=SpellE><b>System.Linq.IQueryable</b></span><b>&lt;T&gt;</b> 接口的 LINQ 提供程序（如本例中的提供程序），可以针对该提供程序所连接的数据源编写 LINQ 查询。 提供程序可以对数据本身执行查询功能，也可以将 LINQ 查询转换为适合提供程序所连接数据源的查询语言。 该提供程序通过 Web 服务获取原始数据，然后修改原始查询，使得 LINQ to Objects 能够处理查询执行。</p>
+
+<p class=Normal1><b style='mso-bidi-font-weight:normal'>安全说明</b>：</p>
+
+<p class=Normal1>此代码示例用于阐释概念，仅显示与该概念相关的代码。 代码示例不一定满足特定环境的安全要求，不应原样照搬使用。 我们建议您添加安全性代码和错误处理代码，让您的项目更加安全可靠。 Microsoft 按“原样”提供此代码示例，不提供任何保证。</p>
+
+<p class=Heading21 style='margin-left:0in'>要求</p>
+
+<p class=Normal1>您需要以下组件来运行此示例：</p>
+
+<p class=BulletedList1><span style='font-family:Symbol'>·</span><span
+style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Visual Studio 2008</p>
+
+<p class=Heading21 style='margin-left:0in'>在 Visual Studio 中运行客户端应用程序</p>
+
+<p class=NumberedList1>1.<span style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>使用 Visual Studio 打开文件 <span class=SpellE>LinqToTerraServerProvider.sln</span>。</p>
+
+<p class=NumberedList1>2.<span style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>按 <b style='mso-bidi-font-weight:normal'><span style='color:gray'>F5</span></b> 运行应用程序。</p>
+
+<p class=Heading21 style='margin-left:0in'>文件说明</p>
+
+<p class=Normal1>下表列出了 <span class=SpellE><b>LinqToTerraServerProvider</b></span> 项目中的文件。</p>
+
+<p class=TableSpacing><a name="ddue_InsertableRange">&nbsp;</a></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=609
+ style='width:456.8pt;border-collapse:collapse;mso-padding-alt:0in 0in 0in 0in'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>文件</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border:solid silver 1.0pt;
+  border-left:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>说明</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>Evaluator.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>对查询的表达式树进行部分计算。 这会将 LINQ 查询中的所有局部变量引用转换为值。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>ExpressionTreeHelpers.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>包含一些方法，它们可用于确定有关特定类型表达式树的信息，以及从这些表达式树中提取数据。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>ExpressionTreeModifier.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>一个表达式树访问器子类，用于修改表示完整 LINQ 查询的表达式树。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>ExpressionVisitor.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>基表达式树访问器类。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>InnermostWhereFinder.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>一个表达式树访问器子类，它将在表示最里层 <span class=SpellE><b>System.Linq.Queryable.Where</b></span> 方法调用的查询表达式树中查找表达式。 这个最里层的表达式是提供程序从中提取搜索位置的表达式。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>InvalidQueryException.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>定义当提交无效的查询时将引发的异常。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>LocationFinder.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>一个表达式树访问器子类，它从 LINQ 查询中提取要在 Web 服务请求中使用的位置信息。 此类识别按下列格式之一提供的位置信息：</p>
+  <p class=BulletedList2><span style='font-family:Symbol'>·</span><span
+  style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>相等表达式，例如 <span class=SpellE><span
+  class=CodeEmbedded>place.Name</span></span><span class=CodeEmbedded> == &quot;<st1:City w:st="on"><st1:place w:st="on">Seattle</st1:place></st1:City>&quot;</span>。</p>
+  <p class=BulletedList2><span style='font-family:Symbol'>·</span><span
+  style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>方法 <span class=SpellE><b>System.String.StartsWith</b></span> 的方法调用表达式，例如 <span class=SpellE><span class=CodeEmbedded>place.Name.StartsWith</span></span><span
+  class=CodeEmbedded>(&quot;Seat&quot;)</span>。</p>
+  <p class=BulletedList2><span style='font-family:Symbol'>·</span><span
+  style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>方法 <span class=SpellE><b>System.Linq.Enumerable.Contains</b></span><b>&lt;T&gt;</b> 或 <span class=SpellE><b>System.Collections.Generic.List</b></span><b>&lt;T&gt;.Contains</b> 的方法调用表达式，例如 <span class=SpellE><span class=CodeEmbedded>placeList.Contains</span></span><span
+  class=CodeEmbedded>(<span class=SpellE>place.Name</span>)</span>。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>Place.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>定义一个自定义 .NET 类型，以表示来自 Web 服务的数据。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>QueryableTerraServerData.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>包含客户端查询定义查询时所针对的类型。 此类型实现 <span class=SpellE><b><span style='color:black'>System.Linq.IOrderedQueryable</span></b></span><b><span
+  style='color:black'>&lt;T&gt;</span></b> 来支持查询中的排序操作。 因为 <span class=SpellE><b><span style='color:black'>System.Linq.IOrderedQueryable</span></b></span><b><span
+  style='color:black'>&lt;T&gt;</span></b> 派生自 <span class=SpellE><b><span
+  style='color:black'>System.Linq.IQueryable</span></b></span><b><span
+  style='color:black'>&lt;T&gt;</span></b>，所以此类型还可以通过实现 <span class=SpellE><b><span
+  style='color:black'>System.Linq.IOrderedQueryable</span></b></span><b><span
+  style='color:black'>&lt;T&gt;</span></b> 来实现 <span
+  class=SpellE><b><span style='color:black'>System.Linq.IQueryable</span></b></span><b><span
+  style='color:black'>&lt;T&gt;</span></b>。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>TerraServerQueryContext.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>包含一个类，该类组织执行查询的工作。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>TerraServerQueryProvider.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>包含实现 <span class=SpellE><b><span
+  style='color:black'>System.Linq.IQueryProvider</span></b></span> 接口的类型。 <span class=SpellE><b><span
+  style='color:black'>System.Linq.Queryable</span></b></span> 中定义的标准查询运算符方法将调用此接口定义的方法来执行查询。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>TypeSystem.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>此帮助器类实现一个方法，用于提供包含查询结果的泛型集合的元素类型。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;mso-yfti-lastrow:yes'>
+  <td width=224 valign=top style='width:167.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>WebServiceHelper.cs</span></p>
+  </td>
+  <td width=385 valign=top style='width:289.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>包含 Web 服务中的数据。 此代码包含两项可增强提供程序库可用性的检查。 第一项检查将每个查询的 Web 服务调用总次数限制为五次，从而限制客户端应用程序等待响应的最长时间。 第二项检查确定 Web 服务返回的结果数是否与它可返回的最大结果数相等。 如果结果数是最大数目，那么从 Web 服务返回的结果可能已被截断。 此时提供程序将引发异常，而不是将不完整的列表返回到客户端。</p>
+  </td>
+ </tr>
+</table>
+
+<p class=TableSpacing>&nbsp;</p>
+
+<p class=Normal1>下表列出了 <span class=SpellE><b>ClientApp</b></span> 项目中的文件。</p>
+
+<p class=TableSpacing>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=609
+ style='width:456.8pt;border-collapse:collapse;mso-padding-alt:0in 0in 0in 0in'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=92 valign=top style='width:68.75pt;border:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>文件</span></p>
+  </td>
+  <td width=517 valign=top style='width:388.05pt;border:solid silver 1.0pt;
+  border-left:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>说明</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=92 valign=top style='width:68.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>Program.cs</span></p>
+  </td>
+  <td width=517 valign=top style='width:388.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>包含三个示例 LINQ 查询，用来查询在 <span class=SpellE>LinqToTerraServerProvider</span> 项目中定义的 <span
+  class=SpellE><span class=CodeEmbedded>QueryableTerraServerData</span></span> 类型。</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=92 valign=top style='width:68.75pt;border:solid silver 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1><span lang=DE style='mso-ansi-language:DE'>app.config</span></p>
+  </td>
+  <td width=517 valign=top style='width:388.05pt;border-top:none;border-left:
+  none;border-bottom:solid silver 1.0pt;border-right:solid silver 1.0pt;
+  padding:0in 5.75pt 0in 5.75pt'>
+  <p class=Normal1>包含一个终结点，它定义应用程序与 Web 服务进行通信的方式。</p>
+  </td>
+ </tr>
+</table>
+
+<p class=TableSpacing>&nbsp;</p>
+
+<p class=Normal1>有关此自定义 LINQ 提供程序的设计的详尽讨论，请参见 <span lang=DE style='mso-ansi-language:DE'><a
+href="http://msdn2.microsoft.com/en-us/library/default.aspx"><span lang=EN-US
+style='mso-ascii-font-family:Verdana;mso-hansi-font-family:Verdana;mso-ansi-language:
+EN-US'>MSDN Library</span></a></span> 中的主题“<span class=Italic><span style='font-family:
+Verdana;color:windowtext'>Walkthrough: Creating an <span class=SpellE>IQueryable</span> LINQ Provider</span></span>”（演练：创建 Iqueryable LINQ 提供程序）。</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,33 @@
+﻿<html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" /><META NAME="save" CONTENT="history" /><title xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">主从数据示例</title><META NAME="Description" CONTENT="本示例只能在 Microsoft Office Excel 2007 中运行。"></META><META NAME="MS.LOCALE" CONTENT="en-us" /><style>
+body
+{font-family:Verdana;font-size:medium;}
+div#mainSection, div#header
+{font-size:70%;width: 100%;}
+div#mainBody
+{font-size:90%;}
+div#mainSection div table
+{font-size: 100%;text-align: left;}
+span#nsrTitle
+{color:#003399;font-size:90%;font-weight:600;}
+div#header
+{background-color:#D4DFFF;}
+.heading
+{font-size:120%;color:#003399;}
+.subHeading
+{font-size:100%;margin-bottom:4;}
+li
+{margin-top:-2;margin-bottom:3;}
+p
+{margin-top:10;margin-bottom:5;}
+div.tableSection p
+{margin-top:1;margin-bottom:4;}	
+div#mainSection table th
+{background-color:#EFEFF7;color:#000066;text-align:left;}
+div#mainSection table td
+{background-color:#F7F7FF;}
+div#mainSection table
+{margin-top:5px;margin-bottom: px;}
+.style1{color: Green;}
+			</style></head><body><div id="header"><table width="100%" id="topTable"></table></div><div id="mainSection"><div id="mainBody"><p><span class="style1">&#39; 版权所有© Microsoft Corporation。 保留所有权利。 </span> <br class="style1" /> <span class="style1">&#39; 此代码的发布遵从 </span> <br class="style1" /> <span class="style1">&#39; Microsoft 公共许可（MS-PL，<a href="http://opensource.org/licenses/ms-pl.html"> http://opensource.org/licenses/ms-pl.html</a>）的条款。</span></p><br /><div class="introduction"><div class="alert"><table width="100%" cellspacing="0" cellpadding="0" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><tr><th align="left"><b>注意：</b></th></tr><tr><td><p>本示例在 Microsoft Office Excel 2007 及更高版本中运行。</p></td></tr></table></div><p xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">此示例演示如何从关系数据库或 XML 文件中检索数据，并在 Excel 中使用该数据。</p><p xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">该示例是一个订单履行工作表。 工作表中显示了客户订单的详细信息，以便于将货品打包发运。 工作表还显示了各种货品的当前库存，以使用户了解订单可否履行。</p><div class="alert"><table width="100%" cellspacing="0" cellpadding="0" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><tr><th align="left"><b>安全说明：</b></th></tr><tr><td><p>此代码示例用于阐释概念，仅显示与该概念相关的代码。 代码示例不一定满足特定环境的安全要求，不应原样照搬使用。 我们建议您添加安全性代码和错误处理代码，让您的项目更加安全可靠。 Microsoft 按“原样”提供此代码示例，不提供任何保证。</p></td></tr></table></div><p xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">有关如何在计算机上安装示例项目的信息，请参见“如何：安装和使用帮助中的示例文件”。</p></div><h3 class="procedureSubHeading" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">运行示例</h3><div class="subSection"><ol xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>按 F5。</p></li><li><p>在<span class="ui">“Select a Customer”（选择客户）</span>列表中选择客户名称。</p><p><span class="ui">“未履行的订单”</span>列表便会被那些未标记为<span class="ui">“已履行”</span>的订单的订单编号所填充。</p></li><li><p>在<span class="ui">“未履行的订单”</span>列表中选择一个编号。</p><p>工作表便会被该订单的详细信息所填充。</p></li><li><p>在<span class="ui">“指示订单状态”</span>列表中，单击<span class="ui">“已履行”</span>。</p><p>当状态设置为<span class="ui">“已履行”</span>后：</p><ul><li><p>订单状态被保存回内存中的数据集中。</p></li><li><p>对于订单中所订购的每种产品，都会从内存中的数据集中该产品的<span class="ui">“UnitsInStock”</span>元素中减去该产品的订购数量。 这样可以确保每种产品的正确<span class="ui">“UnitsInStock”</span>值可用于下一次订购。</p></li><li><p>订单从<span class="ui">“Unfulfilled Orders”（未履行的订单）</span>列表中移除。</p></li></ul></li></ol></div><h1 class="heading" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><span onclick="ExpandCollapse(demonstratesToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(demonstratesToggle, event)" tabindex="0">演示</span></h1><div id="demonstratesSection" class="section"><p xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">本示例演示如何： </p><ul xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>检索和使用从 SQL Server 数据库提取的 XML 文件中的数据。 </p></li><li><p>使用数据绑定的 Excel 控件显示数据。</p></li><li><p>处理多组主/从数据。</p></li></ul></div></div>
+    </div>
+</body></html>
