@@ -1,0 +1,51 @@
+﻿<html xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+</head>
+
+<body>
+<!-- When viewing in Visual Studio, choose the Design button for easier reading. -->
+<p>查询可视化工具是一个程序集，可用于在 Visual Studio 调试会话中可视化数据库查询。此项目本身只是一个库，无法运行。如果编译此项目，就会生成一个库 (DLL)。在 Visual Studio 中，使用该库可以增强调试 LINQ to SQL 应用程序的功能。</p>
+
+<p class="MsoNormal"><strong>注意</strong>：在使用可视化工具调试应用程序时，可能需要将“<span style="color: #A31515">Persist Security Info=true</span>”添加到连接字符串中。激活调试器后，它会序列化所调试程序中的信息，并将其发送给显示可视化工具的进程。其中一条序列化的信息是从 SqlConnection 对象获取的连接字符串。默认情况下，SqlConnection&nbsp;对象并不返回密码，因此调试器会序列化不包含密码的连接字符串并将其发送给可视化工具。当您尝试在可视化工具中执行查询时，查询可能会因为没有密码而失败。</span>请只在调试时使用此设置。不建议在生产环境中使用此设置。</p>
+<p>若要使用可视化工具，必须将 <strong>LinqToSqlQueryVisualizer</strong> 项目生成的 DLL 复制到 <strong>...\Documents\Visual Studio 2008\Visualizers</strong> 目录中。您可能需要创建 <strong>Visualizers</strong> 目录。在 Windows Vista 以前的版本中，请使用 <strong>My Documents</strong> 目录，而不是 <strong>Documents</strong>。如果您拥有适当的权限，也可以将该文件复制到以下位置：
+
+ <strong>...\Program Files\Microsoft Visual Studio 9.0\Common7\Packages\Debugger\Visualizers</strong>。</p>
+
+<p>下面是有关操作步骤的分步说明：</p>
+<ul>
+	<li>生成查询可视化工具</li>
+	<li>将编译生成的 DLL 从项目的 bin 目录复制到 <strong>Visualizers</strong> 目录</li>
+	<li>如有必要，请关闭 Visual Studio，然后再将其重新打开，以确保它识别可视化工具</li>
+	<li>您可以在现有示例项目（例如 <strong>SampleQueries</strong>）中测试可视化工具</li>
+	<li>另外，也可以创建一个默认控制台应用程序，并在其中测试可视化工具</li>
+	<li>若要开始创建自己的测试工具，首先应创建一个默认控制台应用程序</li>
+	<li>使用 LINQ to SQL 设计器连接到随示例提供的 Northwind 数据库。<ul>
+		<li>打开<strong></strong>“添加新项”对话框 (Ctrl-Shift-A)</li>
+		<li>选择<strong></strong>“LINQ to SQL 类”</li>
+		<li>打开<strong></strong>“服务器资源管理器”（先按 Ctrl-W，再按 L）</li>
+		<li>在资源管理器中选择<strong></strong>“连接到数据库”按钮。如有必要，请选择“Microsoft SQL Server 数据库文件”作为“数据源”。通过浏览找到随示例提供的 <strong>Data</strong> 目录中的 <strong>Northwind.mdb</strong> 数据库。</li>
+		<li>将<strong></strong>“Customers”表拖到设计器上。</li>
+	</ul>
+	</li>
+	<li>编写并调用一个简单的查询，如下面所示的 <strong> SimpleQuery()</strong> 查询：</li>
+	<li>在 <strong>foreach</strong> 行中设置一个断点并运行到该断点处。</li>
+	<li>将鼠标悬停在单词 <strong>query</strong> 上，单击放大镜图标 <img alt="放大" src="Magnify.png" width="33" height="16"> 即可弹出可视化工具<br>
+	</li>
+</ul>
+<pre>        public void SimpleQuery()
+        {
+            DataClasses1DataContext db = new DataClasses1DataContext();
+
+            var query = from c in db.Customers
+                        select c;
+
+            foreach (var item in query)
+            {
+                Console.WriteLine(item.CompanyName);
+            }
+        }
+</pre>
+
+</body>
+</html>

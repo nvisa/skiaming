@@ -1,0 +1,27 @@
+﻿<html>
+<body>
+
+<p>此项目是一个 Visual Studio 外接程序，它允许用户自动将有效的 XML 转换为相应的 LINQ to XML 语句，从而增强了 IDE 中的功能集。Visual Studio 速成版不支持外接程序。</p>
+<p>生成完毕后，请将 PasteXmlAsLinq.dll 和 PasteXmlAsLinq.Addins 文件复制到以下目录（可能需要手动创建）中：</p>
+
+  <pre>..Documents\Visual Studio 2008\Addins</pre>
+
+<p>复制文件后，可能需要重新启动环境。</p>
+    <p>
+        若要查看运行中的外接程序，需要选择一些 XML 并将其粘贴到 C# 源文件中。具体做法是转到“编辑”菜单，并单击菜单项<strong></strong>“将 XML 作为 XElement 进行粘贴”[Paste XML as XElement]。请注意，除非剪贴板上已有内容，否则不会在菜单中显示该项。
+    </p>
+    <p>
+        下面是用作示例的一小段 XML：</p>
+
+<!-- <mynode></mynode> -->
+
+<pre>&lt;mynode&gt;&lt;/mynode&gt;</pre>
+
+<p>粘贴此 XML 后，其结果将类似于以下内容：</p>
+
+<pre>XElement xml = new XElement("mynode", "");</pre>
+
+<p>很多 LINQ 示例都需要位于 Data 示例中的 XML 文件和/或 Northwind 示例数据库版本。如果将 Data 示例与其他 LINQ 示例安装在同一父文件夹下，则系统将自动解析 XML 文件和数据库文件的路径。此外，很多示例文件还需要 ObjectDumper 项目。</p>
+
+</body>
+</html>

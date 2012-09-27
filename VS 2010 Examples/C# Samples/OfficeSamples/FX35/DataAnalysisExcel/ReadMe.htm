@@ -1,0 +1,33 @@
+﻿<html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" /><META NAME="save" CONTENT="history" /><title xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">数据分析示例</title><META NAME="Description" CONTENT="本示例只能在 Microsoft Office Excel 2007 中运行。 "></META><META NAME="MS.LOCALE" CONTENT="en-us" /><style>
+body
+{font-family:Verdana;font-size:medium;}
+div#mainSection, div#header
+{font-size:70%;width: 100%;}
+div#mainBody
+{font-size:90%;}
+div#mainSection div table
+{font-size: 100%;text-align: left;}
+span#nsrTitle
+{color:#003399;font-size:90%;font-weight:600;}
+div#header
+{background-color:#D4DFFF;}
+.heading
+{font-size:120%;color:#003399;}
+.subHeading
+{font-size:100%;margin-bottom:4;}
+li
+{margin-top:-2;margin-bottom:3;}
+p
+{margin-top:10;margin-bottom:5;}
+div.tableSection p
+{margin-top:1;margin-bottom:4;}	
+div#mainSection table th
+{background-color:#EFEFF7;color:#000066;text-align:left;}
+div#mainSection table td
+{background-color:#F7F7FF;}
+div#mainSection table
+{margin-top:5px;margin-bottom: px;}
+.style1{color: Green;}
+			</style></head><body><div id="header"><table width="100%" id="topTable"></table></div><div id="mainSection"><div id="mainBody"><p><span class="style1">&#39; 版权所有© Microsoft Corporation。 保留所有权利。 </span> <br class="style1" /> <span class="style1">&#39; 此代码的发布遵从 </span> <br class="style1" /> <span class="style1">&#39; Microsoft 公共许可（MS-PL，<a href="http://opensource.org/licenses/ms-pl.html"> http://opensource.org/licenses/ms-pl.html</a>）的条款。</span></p><br /><br /><div class="introduction"><div class="alert"><table width="100%" cellspacing="0" cellpadding="0" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><tr><th align="left"><b>注意：</b></th></tr><tr><td><p>本示例在 Microsoft Office Excel 2007 及更高版本中运行。 </p></td></tr></table></div><p xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">本示例演示如何使用 Microsoft Office Excel 2007 中的工具栏按钮和菜单执行数据分析任务。要分析的数据存储在 XML 文件中。</p><p xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">此外，本示例是可完全本地化的；它演示如何利用 System.Resources..::.ResourceManager 和托管资源 (RESX) 文件。 该代码在编写时使用了 Visual Studio Tools for Office 的较早版本中必需的区域性交换技术以便进行全球化。 因为对 Visual Studio Tools for Office 处理 Excel 的方式进行了更改，所以这些技术不再是必需的。 有关更多信息，请参见“Office 解决方案的全球化和本地化”、“使用各种区域设置对 Excel 中的数据进行格式设置”以及“如何：使用反射使字符串在 Excel 中是区域安全的”。 </p><div class="alert"><table width="100%" cellspacing="0" cellpadding="0" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><tr><th align="left"><b>注意：</b></th></tr><tr><td><p>如果您的 Office 为英语版本，运行它的 Windows 未使用区域设置“英语(美国)”，则本示例无法运行。</p></td></tr></table></div><p xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">此示例是一个供虚构的冰激凌店使用的简单库存管理工具。 工作簿中具有跟踪销售、仓库存货以及售出产品的系统。 每个系统都将数据存储在 XML 文件中。</p><p xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">该商店的库存受到以下约束：</p><ul xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>库存能力为 300 箱冰激凌。</p></li><li><p>冰激凌每周送一次货，送货时间为早晨。</p></li><li><p>订购日期必须比发货日期提前两天以上。 将时间表设置为星期二订购、星期四接货。</p></li><li><p>如果需要在正常送货时间之外送货，需为此订单另行支付 25 元。</p></li></ul><div class="alert"><table width="100%" cellspacing="0" cellpadding="0" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><tr><th align="left"><b>安全说明：</b></th></tr><tr><td><p>此代码示例用于阐释概念，仅显示与该概念相关的代码。 代码示例不一定满足特定环境的安全要求，不应原样照搬使用。 我们建议您添加安全性代码和错误处理代码，让您的项目更加安全可靠。 Microsoft 按“原样”提供此代码示例，不提供任何保证。</p></td></tr></table></div><p xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">有关如何在计算机上安装示例项目的信息，请参见“如何：安装和使用帮助中的示例文件”。</p></div><h3 class="procedureSubHeading" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">运行此示例</h3><div class="subSection"><ol xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>按 F5。</p><p>工作簿中打开 Inventory 工作表，表中显示每种口味的冰激凌的日均销量和日均利润的数据透视表，此外还包含一个 ListObject 控件，显示前一天销售数据。 请注意，一个名为<span class="ui">“Menu Commands”（菜单命令）</span>的组和一个名为<span class="ui">“Custom Toolbars”（自定义工具栏）</span>的组已被添加到功能区的<span class="ui">“外接程序”</span>选项卡中。 <span class="ui">“Menu Commands”（菜单命令）</span>组中添加了<span class="ui">“Orders”（订单）</span>菜单，并且向<span class="ui">“Custom Toolbars”（自定义工具栏）</span>组中添加了与两个菜单项对应的按钮。</p></li><li><p>通过在 Calendar 控件上选择不同的日期来查看历史销售数据。 如果在数据源中选择最后一天的数据，将显示两个附加列：<span class="ui">“Estimated Inventory”（预计库存）</span>和<span class="ui">“Recommendation”（建议）</span>。</p></li><li><p>单击<span class="ui">“Add New Date”（添加新日期）</span>可以添加新的一天的数据。</p><p>ListObject 控件被清空，便于输入每种口味的冰激凌在每天停业时的库存值。 为每个冰激凌口味输入当前库存时，<span class="ui">“Estimated Inventory”（预计库存）</span>列会显示到周末时预计的短缺或过剩情况。 <span class="ui">“Recommendation”（建议）</span>列显示是否有必要创建计划外订单。 操作窗格显示高库存项和低库存项的列表。</p></li><li><p>单击<span class="ui">“Save Data”（保存数据）</span>，保存您的更改。</p></li><li><p>在操作窗格上的一个列表中单击一种口味的冰激凌。</p><p>这种口味的冰激凌的历史销售数据和趋势图表将显示在“Details”（详细信息）工作表中。</p></li><li><p>如果建议创建计划外订单，请单击<span class="ui">“Create”（创建）</span>，确定要订购的冰激凌的口味和数量。</p></li><li><p>向工作簿添加一个名为<span class="ui">“Unscheduled Order_<span class="placeholder">&lt;Date&gt;</span>”（计划外订单_<日期>）</span>的新工作表。 该工作表估算每种口味的冰激凌各需订购多少，以免本周剩余时间缺货。</p></li><li><p>在<span class="ui">“Orders”（订单）</span>菜单上单击<span class="ui">“Create Weekly Order”（创建周订单）</span>，创建周订单。</p><p>将从前两周的 XML 文件中读取销售信息，然后计算日平均销售量，并确定销售标准偏差。 将日平均销售量加上两倍标准偏差再乘以七天，据此计算出未来销售量的估计值。 这样，订购数量达到此星期期望销售量的概率为 95.4%。</p><p>向工作簿添加一个名为<span class="ui">“Weekly Order_<span class="placeholder">&lt;Date&gt;</span>”（周订单_<日期>）</span>的新工作表。 其中 <span class="placeholder">&lt;日期&gt;</span> 是拟定的订购日期。</p></li></ol></div><h1 class="heading" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><span onclick="ExpandCollapse(demonstratesToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(demonstratesToggle, event)" tabindex="0">演示</span></h1><div id="demonstratesSection" class="section"><p xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt">此示例演示以下任务：</p><ul xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>从 XML 文件中读取数据。</p></li><li><p>自定义菜单和工具栏。</p></li><li><p>使用 Excel 内置函数分析数据。</p></li><li><p>创建链接到 XML 文件中的数据的数据透视表。</p></li><li><p>将 XML 数据绑定到 Excel 列表控件。</p></li><li><p>创建图表。</p></li><li><p>准备用于本地化的用户界面布局和字符串。</p></li></ul></div></div>
+    </div>
+</body></html>

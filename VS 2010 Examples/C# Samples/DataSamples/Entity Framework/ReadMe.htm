@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Microsoft ADO.NET Entity Framework 应用程序示例</title>
+    <style type="text/css">
+        .style1
+        {
+            color: Green;
+        }
+    </style>
+</head>
+<body>
+<p><span class="style1">&#39; 版权所有© Microsoft Corporation。 保留所有权利。 </span><br class="style1" /><span class="style1">&#39; 此代码的发布遵从</span><br class="style1" /><span class="style1">&#39; Microsoft 公共许可（MS-PL，<a href="http://opensource.org/licenses/ms-pl.html">http://opensource.org/licenses/ms-pl.html</a>）的条款。</span></p>
+<h1>Microsoft ADO.NET Entity Framework 应用程序示例</h1>
+
+<p>
+此示例演示一个基于 Microsoft ADO.NET Entity Framework 构建的 WPF 应用程序。 该应用程序演示如何在一些促进代码可测试性和可维护性的常用设计模式中使用实体框架。
+</p>
+
+<p>
+EmployeeTracker 项目的代码隐藏 App.xaml 中有一个“useFakes”布尔标志，该标志用于确定应用程序是使用实体框架针对 Microsoft SQL Server 运行还是针对内存中虚设运行。 在设置为 false 时，应用程序会尝试将位于 EntityFramework 项目中的 MDF 文件附加到本地 Microsoft SQL Server Express 实例。 此连接可以在 EmployeeTracker 项目的 App.config 文件中更改。
+</p>
+
+<p>
+该解决方案由以下项目组成：
+</P>
+
+<h2>模型</h2>
+
+<p>
+此项目包含业务模型。
+</P>
+
+<p>
+Department 和 Employee 对象具有一些使导航属性保持同步的嵌入式逻辑。 在某个 Employee 上设置 Department 属性会导致该 Employee 添加到新 Department 上的 Employees 集合中，并从旧 Department 上的 Employees 集合中移除。 当某个 Employee 添加到 Department 上的 Employees 集合或从中移除时，会应用类似逻辑。 在 Manager/Reports 关系上也实现了相同的链接地址信息方式。 在使用更改跟踪代理针对实体框架运行时，不需要此逻辑，因为这些代理会自动执行此链接地址信息，但是在使用虚设或任何其他持久性机制时，该逻辑是业务模型的核心，应保留在原处。
+</P>
+
+<p>
+抽象类 Tests\Model\Entities\FixupTestsBase.cs 中定义了一组测试，用于测试链接地址信息行为。 派生此类是为了对以下版本的业务对象运行相同测试：
+<ul>
+<li>纯 POCO（即基类）- Tests\Model\Entities\BaseModelTypeFixupTests.cs</li>
+<li>附加到 ObjectContext 的 EF 代理 - Tests\EntityFramework\DetachedProxyFixupTests.cs</li>
+<li>未附加到 ObjectContext 的 EF 代理 - Tests\EntityFramework\AttachedProxyFixupTests.cs</li>
+</ul>
+</P>
+
+<h2>Common</h2>
+
+<p>
+此项目包含一组使用工作单元和储存库模式、用于数据检索和保持的接口。 此项目针对某些接口提供实现，这些接口可在多个数据访问方法中重复使用。 IEmployeeContext 接口表示数据访问需要的基础功能，在 EntityFramework 和 Fakes 项目中实现。
+</P>
+
+<h2>EntityFramework</h2>
+
+<p>
+此项目包含在数据库 (Employee.mdf) 与 Model 项目中定义的业务对象之间进行映射的实体数据模型 (EmployeeModel.edmx)。 还存在一个自定义 T4 模板 (ContextTemplate.tt)，该模板基于默认模板，但是移除了实体生成，因为我们使用预定义业务对象。 该 T4 模板还将 IEmployeeContext 接口添加到生成的上下文。
+</P>
+
+<p>
+实体数据模型包括一个模型定义的函数 (MDF)，用于计算 Employee 的任期。 Common 项目中的 Employee 储存库具有一个私有方法，用于计算使用 EdmFunction 特性标记的任期。 在针对实体框架运行时，会使用该 MDF 而不是此方法，并会在数据库中进行计算。 该方法包括在针对虚设运行时使用的实现。
+</P>
+
+<h2>Fakes</h2>
+
+<p>
+此项目包含内存中版本的数据访问组件，这些组件主要用于单元测试，但是 WPF 应用程序也可以针对这些实现运行。 还包括一个类，用于对使用一组示例数据预填充的虚设上下文进行实例化。
+</P>
+
+<h2>EmployeeTracker</h2>
+
+<p>
+此项目是在 WPF 中使用“模型-视图-视图模型”模式实现的用户界面。 应用程序的入口点位于 App.xaml 的代码隐藏文件中，该文件中构造了 UnitOfWork 和储存库。 在针对 EF 运行时，App.config 中存在一个连接字符串，用于控制对数据库的访问。 如果没有名为 .\SQLEXPRESS 的可用本地 Microsoft Sql Server Express 实例，则需要更新此连接。
+</P>
+
+<h2>Tests</h2>
+
+<p>
+此项目包含用于其他项目中的组件的单元测试。 在测试 EF 组件时，会使用 App.config 中的连接字符串。 在测试过程中不附加数据库，因此仅使用连接字符串的元数据节。
+</P>
+</body>
+</html>
+
+
+
