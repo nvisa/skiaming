@@ -37,7 +37,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;E:\GoogleCode\SkiaCode\include\core;E:\GoogleCode\SkiaCode\include\animator;E:\GoogleCode\SkiaCode\include\config;E:\GoogleCode\SkiaCode\include\device;E:\GoogleCode\SkiaCode\include\effects;E:\GoogleCode\SkiaCode\include\gpu;E:\GoogleCode\SkiaCode\include\images;E:\GoogleCode\SkiaCode\include\pdf;E:\GoogleCode\SkiaCode\include\pipe;E:\GoogleCode\SkiaCode\include\ports;E:\GoogleCode\SkiaCode\include\svg;E:\GoogleCode\SkiaCode\include\text;E:\GoogleCode\SkiaCode\include\utils;E:\GoogleCode\SkiaCode\include\views;E:\GoogleCode\SkiaCode\include\xml</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;E:\GoogleCode\SkiaCode\out\Debug\lib</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -138,12 +143,79 @@
     <ClInclude Include="Video.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Graphics.cpp" />
-    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="AccessibilityProperties.cpp" />
+    <ClCompile Include="AVM1Movie.cpp" />
+    <ClCompile Include="BevelFilter.cpp" />
+    <ClCompile Include="Bitmap.cpp" />
+    <ClCompile Include="BitmapData.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="BitmapDataChannel.cpp" />
+    <ClCompile Include="BitmapFilter.cpp" />
+    <ClCompile Include="BitmapFilterQuality.cpp" />
+    <ClCompile Include="BitmapFilterType.cpp" />
+    <ClCompile Include="BlendMode.cpp" />
+    <ClCompile Include="BlurFilter.cpp" />
+    <ClCompile Include="ByteArray.cpp" />
+    <ClCompile Include="CapsStyle.cpp" />
+    <ClCompile Include="ColorCorrection.cpp" />
+    <ClCompile Include="ColorCorrectionSupport.cpp" />
+    <ClCompile Include="ColorMatrixFilter.cpp" />
+    <ClCompile Include="ColorTransform.cpp" />
+    <ClCompile Include="ConvolutionFilter.cpp" />
+    <ClCompile Include="DisplacementMapFilter.cpp" />
+    <ClCompile Include="DisplayObject.cpp" />
+    <ClCompile Include="DisplayObjectContainer.cpp" />
+    <ClCompile Include="DropShadowFilter.cpp" />
+    <ClCompile Include="EventDispatcher.cpp" />
+    <ClCompile Include="GlowFilter.cpp" />
+    <ClCompile Include="GradientBevelFilter.cpp" />
+    <ClCompile Include="GradientGlowFilter.cpp" />
+    <ClCompile Include="GradientType.cpp" />
+    <ClCompile Include="Graphics.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GraphicsBitmapFill.cpp" />
+    <ClCompile Include="GraphicsEndFill.cpp" />
+    <ClCompile Include="GraphicsGradientFill.cpp" />
+    <ClCompile Include="GraphicsPath.cpp" />
+    <ClCompile Include="GraphicsShaderFill.cpp" />
+    <ClCompile Include="GraphicsSolidFill.cpp" />
+    <ClCompile Include="GraphicsStroke.cpp" />
+    <ClCompile Include="GraphicsTrianglePath.cpp" />
+    <ClCompile Include="IBitmapDrawable.cpp" />
+    <ClCompile Include="IGraphicsData.cpp" />
+    <ClCompile Include="IGraphicsFill.cpp" />
+    <ClCompile Include="InteractiveObject.cpp" />
+    <ClCompile Include="InterpolationMethod.cpp" />
+    <ClCompile Include="JointStyle.cpp" />
+    <ClCompile Include="LineScaleMode.cpp" />
+    <ClCompile Include="Loader.cpp" />
+    <ClCompile Include="LoaderInfo.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="MorphShape.cpp" />
+    <ClCompile Include="MovieClip.cpp" />
+    <ClCompile Include="Object.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="ShaderData.cpp" />
+    <ClCompile Include="ShaderFilter.cpp" />
+    <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="SimpleButton.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="StaticText.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TextField.cpp" />
+    <ClCompile Include="TextLine.cpp" />
+    <ClCompile Include="URLRequest.cpp" />
+    <ClCompile Include="Video.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
