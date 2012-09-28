@@ -55,9 +55,7 @@ void RunGetImage()
 // Main entry point of the application
 //
 
-int 
-APIENTRY 
-WinMain(HINSTANCE hInstance, HINSTANCE, PSTR , int)
+int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE, PSTR , int)
 {
     // Initialize the global module instance value
 
