@@ -4,6 +4,7 @@
 #include "Rectangle.h"
 #include <vector>
 #include <string>
+#include "SKBitmap.h"
 namespace splght{
 #ifndef Boolean
 #define Boolean bool
@@ -52,6 +53,8 @@ BitmapDataChannel.BLUE
 则对 BitmapData 对象的任何方法或属性的调用都会引发 ArgumentError 错误。 */
 	class	BitmapData: public Object
 	{
+	private:
+		SkBitmap m_pBitmap;
 	public:
 		/*创建一个具有指定的宽度和高度的 BitmapData 对象。如果为 fillColor 参数指定一个值，则位图中的每个像素都将
 		设置为该颜色。 
@@ -64,7 +67,7 @@ BitmapDataChannel.BLUE
 		// 要创建完全透明的位图，请将 transparent 参数的值设置为 true，将 fillColor 参数的值设置为 0x00000000（或设置为 0）。
 		// 将 transparent 属性设置为 false 可以略微提升呈现性能。  
 		// fillColor:uint (default = 0xFFFFFFFF) — 用于填充位图图像区域的 32 位 ARGB 颜色值。默认值为 0xFFFFFFFF（纯白色）。
-		BitmapData(int width,int  height,Boolean   transparent= true,uint   fillColor= 0xFFFFFFFF);
+		BitmapData(int width,int  height,bool transparent= true, unsigned int fillColor= 0xFFFFFFFF);
 
 		/*取得一个源图像和一个滤镜对象，并生成过滤的图像;
 		此方法依赖于内置滤镜对象的行为，这些对象确定受输入源矩形影响的目标矩形。;
@@ -87,7 +90,7 @@ BitmapDataChannel.BLUE
 		void    applyFilter(BitmapData sourceBitmapData,Rectangle  sourceRect,Point  destPoint,BitmapFilter  filter);
 
 		//返回一个新的 BitmapData 对象，它是对原始实例的克隆，包含与原始实例所含位图完全相同的副本。 BitmapData
-		BitmapData    clone( );
+		BitmapData clone();
 		//使用 ColorTransform 对象调整位图图像的指定区域中的颜色值。 BitmapData
 		void    colorTransform(Rectangle rect,flash.geom:ColorTransform  colorTransform);
 		//比较两个 BitmapData 对象。 BitmapData

@@ -33,6 +33,7 @@ namespace splght{
 #ifndef Number
 #define Number float
 #endif
+class SkCanvas;
 //Graphics 类包含一组可用来创建矢量形状的方法。
 //支持绘制的显示对象包括 Sprite 和 Shape 对象。
 //这些类中的每一个类都包括 graphics 属性，该属性是一个 Graphics 对象。
@@ -41,7 +42,11 @@ namespace splght{
 //Graphics 类是最终类；无法从其派生子类。
 	class	Graphics: public Object
 	{
+	private:
+		SkCanvas* m_pCanvas;
 	public:
+		Graphics();
+		~Graphics();
 		//用位图图像填充绘图区。
 		//bitmap:包含要显示的位的透明或不透明位图图像。 
 		//matrix: 一个 matrix 对象（属于 flash.geom.Matrix 类），您可以使用它在位图上定义转换。
@@ -52,7 +57,7 @@ namespace splght{
 		//repeat 设置为false 时，位图填充将对位图外部的填充区域使用边缘像素：
 		//smooth:如果为 false，则使用最近邻点算法来呈现放大的位图图像，而且该图像看起来是像素化的。
 		//如果为 true，则使用双线性算法来呈现放大的位图图像。使用最近邻点算法呈现较快。 
-		void beginBitmapFill(BitmapData bitmap, Matrix matrix = null, Boolean repeat = true, Boolean smooth = false);
+		void beginBitmapFill(const BitmapData &bitmap, const Matrix &matrix = null, Boolean repeat = true, Boolean smooth = false);
 
 		/*指定一种简单的单一颜色填充，在绘制时该填充将在随后对其他Graphics 方法（如 lineTo() 或 drawCircle()）的调用中使用
 		该填充将保持有效，直到您调用 beginFill()、beginBitmapFill()、beginGradientFill() 或 beginShaderFill() 方法。
@@ -60,7 +65,7 @@ namespace splght{
 		只要绘制 3 个或更多个点，或者调用 endFill() 方法时，应用程序就会呈现填充*/
 		//color:填充的颜色 (0xRRGGBB)。  
 		//alpha:填充的 Alpha 值（从 0.0 到 1.0）。  
-		void beginFill(uint color, Number alpha = 1.0);
+		void beginFill(const uint color, const Number alpha = 1.0);
 
 		/*指定一种渐变填充，用于随后调用对象的其他 Graphics 方法（如 lineTo() 或 drawCircle()）。
 		该填充将保持有效，直到您调用 beginFill()、beginBitmapFill()、beginGradientFill() 或 beginShaderFill() 方法。
@@ -78,8 +83,8 @@ namespace splght{
 		//InterpolationMethod.LINEAR_RGB 或 InterpolationMethod.RGB 
 		//focalPointRatio:一个控制渐变的焦点位置的数字。0 表示焦点位于中心。1 表示焦点位于渐变圆的一条边界上。
 		//-1 表示焦点位于渐变圆的另一条边界上。小于 -1 或大于 1 的值将舍入为 -1 或 1。 
-		void beginGradientFill(String type, vector<long> colors, vector<double> alphas, vector<short> ratios, Matrix matrix = null, 
-				String spreadMethod = "pad", String interpolationMethod = "rgb", Number focalPointRatio = 0);
+		void beginGradientFill(const String type, const vector<long> &colors, const vector<double> &alphas, const vector<short> &ratios, const Matrix matrix = null, 
+				const String &spreadMethod = "pad", const String &interpolationMethod = "rgb", Number focalPointRatio = 0);
 
 		/*为对象指定着色器填充，供随后调用其他 Graphics 方法（如 lineTo() 或 drawCircle()）时使用。
 		该填充将保持有效，直到您调用 beginFill()、beginBitmapFill()、beginGradientFill() 或 beginShaderFill() 方法。
@@ -92,14 +97,14 @@ namespace splght{
 		//matrix:一个 matrix 对象（属于 flash.geom.Matrix 类），可用于对着色器定义转换。
 		//例如，可以使用以下矩阵将着色器旋转 45 度（pi/4 弧度）: matrix = new flash.geom.Matrix(); matrix.rotate(Math.PI / 4);
 	   //着色器中收到的坐标基于为 matrix 参数指定的矩阵。对于默认 (null) 矩阵，着色器中的坐标是可用于对输入采样的局部像素坐标。
-		void beginShaderFill(Shader shader, Matrix matrix = null);
+		void beginShaderFill(cosnt Shader &shader, cosnt Matrix &matrix = null);
 
 		//清除绘制到此 Graphics 对象的图形，并重置填充和线条样式设置。 
 		void clear();
 		
 		//将源 Graphics 对象中的所有绘画命令复制到执行调用的 Graphics 对象中。 Graphics 
 		//sourceGraphics: 从中复制绘画命令的 Graphics 对象
-		void	copyFrom(Graphics sourceGraphics);		
+		void	copyFrom(const Graphics &sourceGraphics);	
 
 		/*通过由 (controlX, controlY) 指定的控制点,使用当前线条样式绘制一条从当前绘画位置开始到 (anchorX, anchorY) 结束的曲线。
 		当前绘画位置随后设置为 (anchorX, anchorY)。如果正在其中绘制的影片剪辑包含用 Flash 绘画工具创建的内容，
@@ -132,7 +137,7 @@ namespace splght{
 		或引用一组完整定义的复杂数据以呈现完整的形状。
 		图形路径可以包含其他图形路径。如果 graphicsData 矢量包括路径，则在此操作期间将呈现该路径及其所有子路径。 */
 		//graphicsData:一个包含图形对象的矢量，其中的每个对象都必须实现 IGraphicsData 接口
-		void	drawGraphicsData(vector<IGraphicsData> graphicsData);
+		void	drawGraphicsData(const vector<IGraphicsData> &graphicsData);
 		
 		/*提交一系列绘制命令。drawPath() 方法使用矢量数组来将各个 moveTo()、lineTo() 和 curveTo() 绘图命令并入到一个调用中。
 		drawPath() 方法参数将绘图命令与 x 和 y 坐标值对以及绘图方向合并起来。绘图命令为 GraphicsPathCommand 类中的值。
@@ -149,7 +154,7 @@ namespace splght{
 		//data:一个由数字构成的矢量，其中的每一对数字将被视为一个坐标位置（一个 x, y 对）。
 		//x 和 y 坐标值对不是 Point 对象；data 矢量是一系列数字，其中的每个由两个数字构成的组表示一个坐标位置。  
 		//winding:使用 GraphicsPathWinding 类中定义的值指定缠绕规则。  
-		void	drawPath(vector<int> commands, vector<Number> data, String winding = "evenOdd");
+		void	drawPath(const vector<int> &commands, const vector<Number> &data, const String &winding = "evenOdd");
 		
 		/*绘制一个矩形。在调用 drawRect() 方法之前，通过调用 linestyle()、lineGradientStyle()、beginFill()、
 		beginGradientFill() 或 beginBitmapFill() 方法来设置线条样式或/和填充。 */
@@ -188,8 +193,8 @@ namespace splght{
 		// 如果 uvtData 参数为 null，则将应用普通填充规则（和任何填充类型）。
 		// culling:指定是否呈现面向指定方向的三角形。此参数可防止呈现在当前视图中看不见的三角形。
 		// 此参数可设置为由 TriangleCulling 类定义的任何值。  
-		void drawTriangles(vector<Number> vertices, vector<int> indices = null, vector<Number> uvtData = null, 
-		String culling = "none");
+		void drawTriangles(const vector<Number> &vertices, const vector<int> &indices = null, const vector<Number> &uvtData = null, 
+		const String &culling = "none");
 		
 		/*对从上一次调用 beginFill()、beginGradientFill() 或 beginBitmapFill() 方法之后添加的直线和曲线应用填充。
 		Flash 使用的是对 beginFill()、beginGradientFill() 或 beginBitmapFill() 方法的先前调用中指定的填充。
@@ -207,7 +212,7 @@ namespace splght{
 		//该矩阵可用于在将位图应用于线条样式之前缩放位图或以其他方式处理位图。 
 		// repeat: 是否以平铺方式重复位图。  
 		// smooth:是否应对位图应用平滑处理。   	
-		void	lineBitmapStyle(BitmapData bitmap, Matrix matrix = null, Boolean repeat = true, Boolean smooth = false);
+		void	lineBitmapStyle(const BitmapData &bitmap, const Matrix *matrix = null, Boolean repeat = true, Boolean smooth = false);
 		
 
 		/*指定一种渐变，用于绘制线条时的笔触。 
@@ -228,7 +233,7 @@ namespace splght{
 		// interpolationMethod:String (default = "rgb") — InterpolationMethod 类中用于指定要使用的值的值。
 		// focalPointRatio:Number (default = 0) — 一个控制渐变的焦点位置的数字。值 0 表示焦点位于中心。
 		// 值 1 表示焦点位于渐变圆的一条边界上。值 -1 表示焦点位于渐变圆的另一条边界上。小于 -1 或大于 1 的值将舍入为 -1 或 1。
-		void lineGradientStyle(String type, Array colors, Array alphas, Array ratios, Matrix matrix = null, 
+		void lineGradientStyle(const String &type, const Array &colors, Array alphas, Array ratios, const Matrix matrix = null, 
 			String spreadMethod = "pad", String interpolationMethod = "rgb", Number focalPointRatio = 0);
 		
 
