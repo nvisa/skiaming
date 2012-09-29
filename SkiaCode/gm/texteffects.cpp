@@ -72,9 +72,9 @@ static void r4(SkLayerRasterizer* rast, SkPaint& p) {
 
 #include "SkDiscretePathEffect.h"
 
-static void r5(SkLayerRasterizer* rast, SkPaint& p) {
+static void r5(SkLayerRasterizer* rast, SkPaint& p) 
+{
     rast->addLayer(p);
-
     p.setPathEffect(new SkDiscretePathEffect(SK_Scalar1*4, SK_Scalar1*3))->unref();
     p.setXfermodeMode(SkXfermode::kSrcOut_Mode);
     rast->addLayer(p);
@@ -204,7 +204,8 @@ static const struct {
 
 #include "SkXfermode.h"
 
-static void apply_shader(SkPaint* paint, int index) {
+static void apply_shader(SkPaint* paint, int index) 
+{
     raster_proc proc = gRastProcs[index];
     if (proc)
     {
@@ -236,7 +237,8 @@ protected:
         return SkISize::Make(460, 680);
     }
 
-    virtual void onDraw(SkCanvas* canvas) SK_OVERRIDE {
+    virtual void onDraw(SkCanvas* canvas) SK_OVERRIDE 
+	{
         canvas->save();
 
         SkPaint     paint;
@@ -248,7 +250,8 @@ protected:
 
         SkString str("Hamburgefons");
 
-        for (size_t i = 0; i < SK_ARRAY_COUNT(gRastProcs); i++) {
+        for (size_t i = 0; i < SK_ARRAY_COUNT(gRastProcs); i++) 
+		{
             apply_shader(&paint, i);
 
             //  paint.setMaskFilter(NULL);

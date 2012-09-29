@@ -5,12 +5,12 @@
 #include <vector>
 #include <string>
 namespace splght{
-#ifndef Boolean
-#define Boolean bool
+#ifndef LX_Boolean
+#define LX_Boolean bool
 #endif
 
-#ifndef unit
-#define uint unsigned int
+#ifndef LX_UNIT
+#define LX_UNIT unsigned int
 #endif
 
 #ifndef NaN
@@ -29,6 +29,11 @@ namespace splght{
 #ifndef Number
 #define Number float
 #endif
+typedef struct
+{
+	float x;
+	float y;
+}Point, *PPOINT;
 //Rectangle 对象是按其位置（由它左上角的点 (x, y) 确定）以及宽度和高度定义的区域。 
 //Rectangle 类的 x、y、width 和 height 属性相互独立；更改一个属性的值不会影响其他属性。
 //但是，right 和 bottom 属性与这四个属性是整体相关的。例如，如果更改 right 属性的值，则 width 属性的值将发生变化；
@@ -69,7 +74,7 @@ namespace splght{
 		//生成并返回一个字符串，该字符串列出 Rectangle 对象的水平位置和垂直位置以及高度和宽度。 Rectangle
 		String    toString( );
 		//通过填充两个矩形之间的水平和垂直空间，将这两个矩形组合在一起以创建一个新的 Rectangle 对象。 Rectangle
-		Rectangle    union(Rectangle toUnion);
+		Rectangle GetUnion(Rectangle toUnion);
 	private:
 		//y 和 height 属性的和。 Rectangle
 		Number bottom;

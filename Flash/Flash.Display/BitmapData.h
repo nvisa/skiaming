@@ -54,7 +54,7 @@ BitmapDataChannel.BLUE
 	class	BitmapData: public Object
 	{
 	private:
-		SkBitmap m_pBitmap;
+		SkBitmap* m_pBitmap;
 	public:
 		/*创建一个具有指定的宽度和高度的 BitmapData 对象。如果为 fillColor 参数指定一个值，则位图中的每个像素都将
 		设置为该颜色。 

@@ -89,9 +89,6 @@
     <ClCompile Include="SkiaTestFunc0305SkMagnifierImageFilter.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="SkiaTestFunc0306SkModeColorFilter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="SkiaTestFunc0401SkTable_ColorFilter.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -105,6 +102,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="SkiaTestFunc0405SkModeColorFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiaTempTestFunc.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

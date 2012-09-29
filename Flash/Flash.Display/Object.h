@@ -1,6 +1,6 @@
 #pragma once
-#include "StdAfx.h"
-
+#include <string>
+using namespace std;
 namespace splght{
 #ifndef Boolean
 #define Boolean bool
@@ -37,10 +37,10 @@ namespace splght{
 		void setPropertyIsEnumerable(char*name, bool isEnum = true);
 		char* toLocaleString();
 		Object valueOf();
-		virtual String Prototypename();
+		String Prototypename();
 	private:
-		Object constructor;	//对类对象或给定对象实例的构造函数的引用。 Object 
-		Object prototype;		//[静态] 对类或函数对象的原型对象的引用。 Object
+// 		Object constructor;	//对类对象或给定对象实例的构造函数的引用。 Object 
+// 		Object prototype;		//[静态] 对类或函数对象的原型对象的引用。 Object
 
 	};
 }

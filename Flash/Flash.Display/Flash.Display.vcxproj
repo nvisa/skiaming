@@ -132,6 +132,7 @@
     <ClInclude Include="ShaderFilter.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="SimpleButton.h" />
+    <ClInclude Include="splght.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="StaticText.h" />
@@ -143,79 +144,10 @@
     <ClInclude Include="Video.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AccessibilityProperties.cpp" />
-    <ClCompile Include="AVM1Movie.cpp" />
-    <ClCompile Include="BevelFilter.cpp" />
-    <ClCompile Include="Bitmap.cpp" />
-    <ClCompile Include="BitmapData.cpp">
+    <ClCompile Include="Bitmap.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="BitmapDataChannel.cpp" />
-    <ClCompile Include="BitmapFilter.cpp" />
-    <ClCompile Include="BitmapFilterQuality.cpp" />
-    <ClCompile Include="BitmapFilterType.cpp" />
-    <ClCompile Include="BlendMode.cpp" />
-    <ClCompile Include="BlurFilter.cpp" />
-    <ClCompile Include="ByteArray.cpp" />
-    <ClCompile Include="CapsStyle.cpp" />
-    <ClCompile Include="ColorCorrection.cpp" />
-    <ClCompile Include="ColorCorrectionSupport.cpp" />
-    <ClCompile Include="ColorMatrixFilter.cpp" />
-    <ClCompile Include="ColorTransform.cpp" />
-    <ClCompile Include="ConvolutionFilter.cpp" />
-    <ClCompile Include="DisplacementMapFilter.cpp" />
-    <ClCompile Include="DisplayObject.cpp" />
-    <ClCompile Include="DisplayObjectContainer.cpp" />
-    <ClCompile Include="DropShadowFilter.cpp" />
-    <ClCompile Include="EventDispatcher.cpp" />
-    <ClCompile Include="GlowFilter.cpp" />
-    <ClCompile Include="GradientBevelFilter.cpp" />
-    <ClCompile Include="GradientGlowFilter.cpp" />
-    <ClCompile Include="GradientType.cpp" />
-    <ClCompile Include="Graphics.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="GraphicsBitmapFill.cpp" />
-    <ClCompile Include="GraphicsEndFill.cpp" />
-    <ClCompile Include="GraphicsGradientFill.cpp" />
-    <ClCompile Include="GraphicsPath.cpp" />
-    <ClCompile Include="GraphicsShaderFill.cpp" />
-    <ClCompile Include="GraphicsSolidFill.cpp" />
-    <ClCompile Include="GraphicsStroke.cpp" />
-    <ClCompile Include="GraphicsTrianglePath.cpp" />
-    <ClCompile Include="IBitmapDrawable.cpp" />
-    <ClCompile Include="IGraphicsData.cpp" />
-    <ClCompile Include="IGraphicsFill.cpp" />
-    <ClCompile Include="InteractiveObject.cpp" />
-    <ClCompile Include="InterpolationMethod.cpp" />
-    <ClCompile Include="JointStyle.cpp" />
-    <ClCompile Include="LineScaleMode.cpp" />
-    <ClCompile Include="Loader.cpp" />
-    <ClCompile Include="LoaderInfo.cpp" />
-    <ClCompile Include="Matrix.cpp" />
-    <ClCompile Include="MorphShape.cpp" />
-    <ClCompile Include="MovieClip.cpp" />
-    <ClCompile Include="Object.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="Rectangle.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="ShaderData.cpp" />
-    <ClCompile Include="ShaderFilter.cpp" />
-    <ClCompile Include="Shape.cpp" />
-    <ClCompile Include="SimpleButton.cpp" />
-    <ClCompile Include="Sprite.cpp" />
-    <ClCompile Include="Stage.cpp" />
-    <ClCompile Include="StaticText.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="TextField.cpp" />
-    <ClCompile Include="TextLine.cpp" />
-    <ClCompile Include="URLRequest.cpp" />
-    <ClCompile Include="Video.cpp" />
+    <ClCompile Include="BitmapData.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

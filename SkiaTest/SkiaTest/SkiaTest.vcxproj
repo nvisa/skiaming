@@ -151,7 +151,7 @@
     <ClCompile Include="SkiaTestFunc0305SkMagnifierImageFilter.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="SkiaTestFunc0306SkModeColorFilter.cpp">
+    <ClCompile Include="SkiaTempTestFunc.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="SkiaTestFunc0401SkTable_ColorFilter.cpp">

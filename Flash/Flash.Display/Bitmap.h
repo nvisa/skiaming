@@ -39,13 +39,14 @@ namespace splght{
 	{
 	public:
 		//初始化 Bitmap 对象以引用指定的 BitmapData 对象。 Bitmap
-		Bitmap(BitmapData  bitmapData= null,String   pixelSnapping= "auto",Boolean   smoothing= false);
+		Bitmap(BitmapData bitmapData= null, String pixelSnapping= "auto", Boolean smoothing= false);
+		~Bitmap();
 	private:
 		//被引用的 BitmapData 对象。 Bitmap
 		BitmapData bitmapData;
 		//控制 Bitmap 对象是否贴紧至最近的像素。 Bitmap
 		String pixelSnapping;
 		//控制在缩放时是否对位图进行平滑处理。 Bitmap
-		Boolean smoothing;		
+		Boolean smoothing;
 	};
 }
