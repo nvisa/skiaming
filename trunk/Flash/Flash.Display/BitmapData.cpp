@@ -13,7 +13,6 @@
 // fillColor:uint (default = 0xFFFFFFFF) — 用于填充位图图像区域的 32 位 ARGB 颜色值。默认值为 0xFFFFFFFF（纯白色）。
 BitmapData::BitmapData(int width,int  height,bool transparent= true, unsigned int fillColor= 0xFFFFFFFF)
 {
-	
 }
 
 /*取得一个源图像和一个滤镜对象，并生成过滤的图像;

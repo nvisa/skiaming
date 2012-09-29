@@ -29,6 +29,7 @@ static struct SkiaContentAndSpecification
 	const TCHAR* pSpecification;
 }gSkiaTest[]=
 {
+	{L"TempTest", L"TempTest"},
 	{L"1.01.beginBitmapFill", L"1.01.Graphics::beginBitmapFill"},
 	{L"1.02. beginFill", L"1.02. Graphics::beginFill"},
 	{L"1.03. beginGradientFill", L"1.03. Graphics::beginGradientFill"},
@@ -55,6 +56,7 @@ static struct SkiaContentAndSpecification
 typedef bool (*FuncSkiaTest)(SkCanvas*, SkBitmap*);
 FuncSkiaTest gSkiaTestFunc[] =
 {
+	SkiaTempTestFunc,
 	SkiaTestFunc0101beginBitmapFill,
 	SkiaTestFunc0102beginFill,
 	SkiaTestFunc0103beginGradientFill,

@@ -13,82 +13,82 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="头文件\Object">
+    <Filter Include="Object">
       <UniqueIdentifier>{c90ca75c-8ed1-492b-a63e-f20348604d1e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.filters">
+    <Filter Include="Object\flash.filters">
       <UniqueIdentifier>{edf2d8dc-ae77-46da-a465-89e1ad8b47a7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.filters\BitmapFilter">
+    <Filter Include="Object\flash.filters\BitmapFilter">
       <UniqueIdentifier>{fa1bf1b1-1087-4a14-aefe-df125cb38846}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display">
+    <Filter Include="Object\flash.display">
       <UniqueIdentifier>{0ee16e81-7081-4ce6-af95-c81876cfdf12}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.geom">
-      <UniqueIdentifier>{ffde854f-8a47-4db4-aac1-4a05f3cd7a04}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="头文件\Object\flash.events">
-      <UniqueIdentifier>{20b5a19b-faba-490d-a1ed-12ce556b003c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="头文件\Object\flash.utils">
-      <UniqueIdentifier>{86fb297e-ed6e-4a80-9bd4-b51ffb81a2f2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="头文件\Object\flash.display\ConstData">
+    <Filter Include="Object\flash.display\ConstData">
       <UniqueIdentifier>{e3ba731b-de97-4163-992e-b0db5d8bf7d0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\IGraphicsFill">
+    <Filter Include="Object\flash.display\IGraphicsFill">
       <UniqueIdentifier>{fd6bf001-f691-48d3-9791-3591f0588e96}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\IBitmapDrawable">
+    <Filter Include="Object\flash.display\IBitmapDrawable">
       <UniqueIdentifier>{4644410c-fea4-4289-940a-9a920cf0b146}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\IBitmapDrawable\BitmapData">
+    <Filter Include="Object\flash.display\IBitmapDrawable\BitmapData">
       <UniqueIdentifier>{ffe40d6f-db48-49dc-812a-924b20945c2d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\IBitmapDrawable\DisplayObject">
+    <Filter Include="Object\flash.display\IBitmapDrawable\DisplayObject">
       <UniqueIdentifier>{d4953dc8-e36e-4417-8805-571576b9206b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\IGraphicsData">
+    <Filter Include="Object\flash.display\IGraphicsData">
       <UniqueIdentifier>{499d4a8a-936b-4a37-bd5f-b92094bcce29}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\IGraphicsData\IGraphicsFill">
+    <Filter Include="Object\flash.display\IGraphicsData\IGraphicsFill">
       <UniqueIdentifier>{790a88e2-aa93-4762-9fb0-e3eead31690d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\IGraphicsPath">
-      <UniqueIdentifier>{3ae0e687-82df-46c7-abc6-41737bbffd9f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="头文件\Object\flash.display\IGraphicsData\IGraphicsPath">
+    <Filter Include="Object\flash.display\IGraphicsData\IGraphicsPath">
       <UniqueIdentifier>{f083531c-5fb4-4aac-b08e-40d29068665e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\IGraphicsStroke">
-      <UniqueIdentifier>{08a8033d-fb5c-4801-bfe6-f15f04f08c0d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="头文件\Object\flash.display\IGraphicsData\IGraphicsStroke">
+    <Filter Include="Object\flash.display\IGraphicsData\IGraphicsStroke">
       <UniqueIdentifier>{879e2c08-0914-4be7-a15c-186ad1ee90eb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.accessibility">
-      <UniqueIdentifier>{0084be57-07cd-4ffd-9011-57d007b3cdfb}</UniqueIdentifier>
+    <Filter Include="Object\flash.display\IGraphicsPath">
+      <UniqueIdentifier>{3ae0e687-82df-46c7-abc6-41737bbffd9f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\DisplayObject">
+    <Filter Include="Object\flash.display\IGraphicsStroke">
+      <UniqueIdentifier>{08a8033d-fb5c-4801-bfe6-f15f04f08c0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\flash.display\DisplayObject">
       <UniqueIdentifier>{5f2baab0-3003-4b2c-9f53-101e42d89725}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\DisplayObject\InteractiveObject">
+    <Filter Include="Object\flash.display\DisplayObject\InteractiveObject">
       <UniqueIdentifier>{3deb0ae0-3c27-4e7d-b465-75dc03dd4395}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer">
+    <Filter Include="Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer">
       <UniqueIdentifier>{91baa50e-fc7e-4f37-ab7c-39eec6df0147}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer\Sprite">
+    <Filter Include="Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer\Sprite">
       <UniqueIdentifier>{6438f6a7-a356-454a-ad30-b4bd1fc791da}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer\Sprite\MovieClip">
+    <Filter Include="Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer\Sprite\MovieClip">
       <UniqueIdentifier>{ae10484a-b8eb-45b5-ac7f-5fa60eace266}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.events\EventDispatcher">
+    <Filter Include="Object\flash.geom">
+      <UniqueIdentifier>{ffde854f-8a47-4db4-aac1-4a05f3cd7a04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\flash.events">
+      <UniqueIdentifier>{20b5a19b-faba-490d-a1ed-12ce556b003c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\flash.events\EventDispatcher">
       <UniqueIdentifier>{edd74559-74df-4c6a-9151-1cb63aae7379}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Object\flash.net">
+    <Filter Include="Object\flash.utils">
+      <UniqueIdentifier>{86fb297e-ed6e-4a80-9bd4-b51ffb81a2f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\flash.accessibility">
+      <UniqueIdentifier>{0084be57-07cd-4ffd-9011-57d007b3cdfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\flash.net">
       <UniqueIdentifier>{ee26afe7-338b-49b7-a4c1-0ee7a75c3afd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -104,387 +104,204 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Graphics.h">
-      <Filter>头文件\Object\flash.display</Filter>
+      <Filter>Object\flash.display</Filter>
     </ClInclude>
     <ClInclude Include="IGraphicsData.h">
-      <Filter>头文件\Object\flash.display</Filter>
+      <Filter>Object\flash.display</Filter>
     </ClInclude>
     <ClInclude Include="Shader.h">
-      <Filter>头文件\Object\flash.display</Filter>
+      <Filter>Object\flash.display</Filter>
     </ClInclude>
     <ClInclude Include="ShaderData.h">
-      <Filter>头文件\Object\flash.display</Filter>
+      <Filter>Object\flash.display</Filter>
     </ClInclude>
     <ClInclude Include="Matrix.h">
-      <Filter>头文件\Object\flash.geom</Filter>
+      <Filter>Object\flash.geom</Filter>
     </ClInclude>
     <ClInclude Include="Rectangle.h">
-      <Filter>头文件\Object\flash.geom</Filter>
+      <Filter>Object\flash.geom</Filter>
     </ClInclude>
     <ClInclude Include="BevelFilter.h">
-      <Filter>头文件\Object\flash.filters\BitmapFilter</Filter>
+      <Filter>Object\flash.filters\BitmapFilter</Filter>
     </ClInclude>
     <ClInclude Include="ConvolutionFilter.h">
-      <Filter>头文件\Object\flash.filters\BitmapFilter</Filter>
+      <Filter>Object\flash.filters\BitmapFilter</Filter>
     </ClInclude>
     <ClInclude Include="BitmapFilter.h">
-      <Filter>头文件\Object\flash.filters\BitmapFilter</Filter>
+      <Filter>Object\flash.filters\BitmapFilter</Filter>
     </ClInclude>
     <ClInclude Include="BlurFilter.h">
-      <Filter>头文件\Object\flash.filters\BitmapFilter</Filter>
+      <Filter>Object\flash.filters\BitmapFilter</Filter>
     </ClInclude>
     <ClInclude Include="ColorMatrixFilter.h">
-      <Filter>头文件\Object\flash.filters\BitmapFilter</Filter>
+      <Filter>Object\flash.filters\BitmapFilter</Filter>
     </ClInclude>
     <ClInclude Include="DisplacementMapFilter.h">
-      <Filter>头文件\Object\flash.filters\BitmapFilter</Filter>
+      <Filter>Object\flash.filters\BitmapFilter</Filter>
     </ClInclude>
     <ClInclude Include="DropShadowFilter.h">
-      <Filter>头文件\Object\flash.filters\BitmapFilter</Filter>
+      <Filter>Object\flash.filters\BitmapFilter</Filter>
     </ClInclude>
     <ClInclude Include="GlowFilter.h">
-      <Filter>头文件\Object\flash.filters\BitmapFilter</Filter>
+      <Filter>Object\flash.filters\BitmapFilter</Filter>
     </ClInclude>
     <ClInclude Include="GradientBevelFilter.h">
-      <Filter>头文件\Object\flash.filters\BitmapFilter</Filter>
+      <Filter>Object\flash.filters\BitmapFilter</Filter>
     </ClInclude>
     <ClInclude Include="GradientGlowFilter.h">
-      <Filter>头文件\Object\flash.filters\BitmapFilter</Filter>
+      <Filter>Object\flash.filters\BitmapFilter</Filter>
     </ClInclude>
     <ClInclude Include="ShaderFilter.h">
-      <Filter>头文件\Object\flash.filters\BitmapFilter</Filter>
+      <Filter>Object\flash.filters\BitmapFilter</Filter>
     </ClInclude>
     <ClInclude Include="Bitmap.h">
-      <Filter>头文件\Object\flash.display\DisplayObject</Filter>
+      <Filter>Object\flash.display\DisplayObject</Filter>
     </ClInclude>
     <ClInclude Include="AVM1Movie.h">
-      <Filter>头文件\Object\flash.display\DisplayObject</Filter>
+      <Filter>Object\flash.display\DisplayObject</Filter>
     </ClInclude>
     <ClInclude Include="MorphShape.h">
-      <Filter>头文件\Object\flash.display\DisplayObject</Filter>
+      <Filter>Object\flash.display\DisplayObject</Filter>
     </ClInclude>
     <ClInclude Include="Shape.h">
-      <Filter>头文件\Object\flash.display\DisplayObject</Filter>
+      <Filter>Object\flash.display\DisplayObject</Filter>
     </ClInclude>
     <ClInclude Include="StaticText.h">
-      <Filter>头文件\Object\flash.display\DisplayObject</Filter>
+      <Filter>Object\flash.display\DisplayObject</Filter>
     </ClInclude>
     <ClInclude Include="Video.h">
-      <Filter>头文件\Object\flash.display\DisplayObject</Filter>
+      <Filter>Object\flash.display\DisplayObject</Filter>
     </ClInclude>
     <ClInclude Include="EventDispatcher.h">
-      <Filter>头文件\Object\flash.events</Filter>
+      <Filter>Object\flash.events</Filter>
     </ClInclude>
     <ClInclude Include="ByteArray.h">
-      <Filter>头文件\Object\flash.utils</Filter>
+      <Filter>Object\flash.utils</Filter>
     </ClInclude>
     <ClInclude Include="DisplayObjectContainer.h">
-      <Filter>头文件\Object\flash.display\DisplayObject\InteractiveObject</Filter>
+      <Filter>Object\flash.display\DisplayObject\InteractiveObject</Filter>
     </ClInclude>
     <ClInclude Include="InteractiveObject.h">
-      <Filter>头文件\Object\flash.display\DisplayObject</Filter>
+      <Filter>Object\flash.display\DisplayObject</Filter>
     </ClInclude>
     <ClInclude Include="SimpleButton.h">
-      <Filter>头文件\Object\flash.display\DisplayObject\InteractiveObject</Filter>
+      <Filter>Object\flash.display\DisplayObject\InteractiveObject</Filter>
     </ClInclude>
     <ClInclude Include="TextField.h">
-      <Filter>头文件\Object\flash.display\DisplayObject\InteractiveObject</Filter>
+      <Filter>Object\flash.display\DisplayObject\InteractiveObject</Filter>
     </ClInclude>
     <ClInclude Include="Loader.h">
-      <Filter>头文件\Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer</Filter>
+      <Filter>Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer</Filter>
     </ClInclude>
     <ClInclude Include="Sprite.h">
-      <Filter>头文件\Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer</Filter>
+      <Filter>Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer</Filter>
     </ClInclude>
     <ClInclude Include="Stage.h">
-      <Filter>头文件\Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer</Filter>
+      <Filter>Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer</Filter>
     </ClInclude>
     <ClInclude Include="TextLine.h">
-      <Filter>头文件\Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer</Filter>
+      <Filter>Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer</Filter>
     </ClInclude>
     <ClInclude Include="Object.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="GradientType.h">
-      <Filter>头文件\Object\flash.display\ConstData</Filter>
+      <Filter>Object\flash.display\ConstData</Filter>
     </ClInclude>
     <ClInclude Include="BitmapDataChannel.h">
-      <Filter>头文件\Object\flash.display\ConstData</Filter>
+      <Filter>Object\flash.display\ConstData</Filter>
     </ClInclude>
     <ClInclude Include="BlendMode.h">
-      <Filter>头文件\Object\flash.display\ConstData</Filter>
+      <Filter>Object\flash.display\ConstData</Filter>
     </ClInclude>
     <ClInclude Include="CapsStyle.h">
-      <Filter>头文件\Object\flash.display\ConstData</Filter>
+      <Filter>Object\flash.display\ConstData</Filter>
     </ClInclude>
     <ClInclude Include="ColorCorrection.h">
-      <Filter>头文件\Object\flash.display\ConstData</Filter>
+      <Filter>Object\flash.display\ConstData</Filter>
     </ClInclude>
     <ClInclude Include="ColorCorrectionSupport.h">
-      <Filter>头文件\Object\flash.display\ConstData</Filter>
+      <Filter>Object\flash.display\ConstData</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsBitmapFill.h">
-      <Filter>头文件\Object\flash.display\IGraphicsFill</Filter>
+      <Filter>Object\flash.display\IGraphicsFill</Filter>
     </ClInclude>
     <ClInclude Include="IGraphicsFill.h">
-      <Filter>头文件\Object\flash.display</Filter>
+      <Filter>Object\flash.display</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsEndFill.h">
-      <Filter>头文件\Object\flash.display\IGraphicsFill</Filter>
+      <Filter>Object\flash.display\IGraphicsFill</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsGradientFill.h">
-      <Filter>头文件\Object\flash.display\IGraphicsFill</Filter>
+      <Filter>Object\flash.display\IGraphicsFill</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsShaderFill.h">
-      <Filter>头文件\Object\flash.display\IGraphicsFill</Filter>
+      <Filter>Object\flash.display\IGraphicsFill</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsSolidFill.h">
-      <Filter>头文件\Object\flash.display\IGraphicsFill</Filter>
+      <Filter>Object\flash.display\IGraphicsFill</Filter>
     </ClInclude>
     <ClInclude Include="IBitmapDrawable.h">
-      <Filter>头文件\Object\flash.display</Filter>
+      <Filter>Object\flash.display</Filter>
     </ClInclude>
     <ClInclude Include="BitmapData.h">
-      <Filter>头文件\Object\flash.display\IBitmapDrawable</Filter>
+      <Filter>Object\flash.display\IBitmapDrawable</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsPath.h">
-      <Filter>头文件\Object\flash.display\IGraphicsPath</Filter>
+      <Filter>Object\flash.display\IGraphicsPath</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsTrianglePath.h">
-      <Filter>头文件\Object\flash.display\IGraphicsPath</Filter>
+      <Filter>Object\flash.display\IGraphicsPath</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsStroke.h">
-      <Filter>头文件\Object\flash.display\IGraphicsStroke</Filter>
+      <Filter>Object\flash.display\IGraphicsStroke</Filter>
     </ClInclude>
     <ClInclude Include="InterpolationMethod.h">
-      <Filter>头文件\Object\flash.display\ConstData</Filter>
+      <Filter>Object\flash.display\ConstData</Filter>
     </ClInclude>
     <ClInclude Include="JointStyle.h">
-      <Filter>头文件\Object\flash.display\ConstData</Filter>
+      <Filter>Object\flash.display\ConstData</Filter>
     </ClInclude>
     <ClInclude Include="LineScaleMode.h">
-      <Filter>头文件\Object\flash.display\ConstData</Filter>
+      <Filter>Object\flash.display\ConstData</Filter>
     </ClInclude>
     <ClInclude Include="MovieClip.h">
-      <Filter>头文件\Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer\Sprite</Filter>
+      <Filter>Object\flash.display\DisplayObject\InteractiveObject\DisplayObjectContainer\Sprite</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
-      <Filter>头文件\Object\flash.display</Filter>
+      <Filter>Object\flash.display</Filter>
     </ClInclude>
     <ClInclude Include="BitmapFilterQuality.h">
-      <Filter>头文件\Object\flash.filters</Filter>
+      <Filter>Object\flash.filters</Filter>
     </ClInclude>
     <ClInclude Include="BitmapFilterType.h">
-      <Filter>头文件\Object\flash.filters</Filter>
+      <Filter>Object\flash.filters</Filter>
     </ClInclude>
     <ClInclude Include="AccessibilityProperties.h">
-      <Filter>头文件\Object\flash.accessibility</Filter>
+      <Filter>Object\flash.accessibility</Filter>
     </ClInclude>
     <ClInclude Include="LoaderInfo.h">
-      <Filter>头文件\Object\flash.events\EventDispatcher</Filter>
+      <Filter>Object\flash.events\EventDispatcher</Filter>
     </ClInclude>
     <ClInclude Include="DisplayObject.h">
-      <Filter>头文件\Object\flash.display</Filter>
+      <Filter>Object\flash.display</Filter>
     </ClInclude>
     <ClInclude Include="ColorTransform.h">
-      <Filter>头文件\Object\flash.geom</Filter>
+      <Filter>Object\flash.geom</Filter>
     </ClInclude>
     <ClInclude Include="URLRequest.h">
-      <Filter>头文件\Object\flash.net</Filter>
+      <Filter>Object\flash.net</Filter>
+    </ClInclude>
+    <ClInclude Include="splght.h">
+      <Filter>Object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Object.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphics.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="Bitmap.cpp">
+      <Filter>Object\flash.display\DisplayObject</Filter>
     </ClCompile>
     <ClCompile Include="BitmapData.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="AccessibilityProperties.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="AVM1Movie.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="BevelFilter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Bitmap.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="BitmapDataChannel.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="BitmapFilter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="BitmapFilterQuality.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="BitmapFilterType.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="BlendMode.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="BlurFilter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ByteArray.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CapsStyle.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ColorCorrection.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ColorCorrectionSupport.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ColorMatrixFilter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ColorTransform.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ConvolutionFilter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DisplacementMapFilter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DisplayObject.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DisplayObjectContainer.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DropShadowFilter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="EventDispatcher.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GlowFilter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GradientBevelFilter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GradientGlowFilter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GradientType.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsBitmapFill.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsEndFill.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsGradientFill.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsPath.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsShaderFill.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsSolidFill.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsStroke.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsTrianglePath.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="IBitmapDrawable.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="IGraphicsData.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="IGraphicsFill.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="InteractiveObject.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="InterpolationMethod.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="JointStyle.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LineScaleMode.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Loader.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LoaderInfo.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Matrix.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="MorphShape.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="MovieClip.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Rectangle.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Shader.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ShaderData.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ShaderFilter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Shape.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="SimpleButton.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Sprite.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Stage.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="StaticText.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TextField.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TextLine.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="URLRequest.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Video.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Object\flash.display\IBitmapDrawable</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
