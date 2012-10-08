@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: EX02 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\LIBO_J~1\LOCALS~1\Temp\RSP23.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/EX02.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter2\EX02\EX02.CPP"
+]
+Creating command line "cl.exe @C:\DOCUME~1\LIBO_J~1\LOCALS~1\Temp\RSP23.tmp" 
+Creating temporary file "C:\DOCUME~1\LIBO_J~1\LOCALS~1\Temp\RSP24.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/EX02.pdb" /debug /machine:I386 /out:"Debug/EX02.exe" /pdbtype:sept 
+".\Debug\EX02.OBJ"
+]
+Creating command line "link.exe @C:\DOCUME~1\LIBO_J~1\LOCALS~1\Temp\RSP24.tmp"
+<h3>Output Window</h3>
+Compiling...
+EX02.CPP
+f:\李波的书库\vc++\孙鑫教程\vc++深入详解code\chapter2\ex02\ex02.cpp(15) : error C2248: 'x' : cannot access private member declared in class 'point'
+        f:\李波的书库\vc++\孙鑫教程\vc++深入详解code\chapter2\ex02\ex02.cpp(4) : see declaration of 'x'
+f:\李波的书库\vc++\孙鑫教程\vc++深入详解code\chapter2\ex02\ex02.cpp(16) : error C2248: 'y' : cannot access private member declared in class 'point'
+        f:\李波的书库\vc++\孙鑫教程\vc++深入详解code\chapter2\ex02\ex02.cpp(5) : see declaration of 'y'
+f:\李波的书库\vc++\孙鑫教程\vc++深入详解code\chapter2\ex02\ex02.cpp(17) : error C2248: 'output' : cannot access private member declared in class 'point'
+        f:\李波的书库\vc++\孙鑫教程\vc++深入详解code\chapter2\ex02\ex02.cpp(6) : see declaration of 'output'
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+EX02.exe - 3 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ClockTest - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/ClockTest.res" /d "_DEBUG" /d "_AFXDLL" "D:\VC++深入编程\CHAPTER18\ClockTest\ClockTest.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP45.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/ClockTest.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\VC++深入编程\CHAPTER18\ClockTest\ClockTest.cpp"
+"D:\VC++深入编程\CHAPTER18\ClockTest\ClockTestDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP45.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP46.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/ClockTest.pdb" /debug /machine:I386 /out:"Debug/ClockTest.exe" /pdbtype:sept 
+".\Debug\clock.obj"
+".\Debug\ClockTest.obj"
+".\Debug\ClockTestDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\ClockTest.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP46.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+ClockTestDlg.cpp
+Generating Code...
+Skipping... (no relevant changes detected)
+ClockTest.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+ClockTest.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

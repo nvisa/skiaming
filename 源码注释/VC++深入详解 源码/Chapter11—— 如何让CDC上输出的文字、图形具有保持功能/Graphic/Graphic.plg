@@ -1,0 +1,69 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Graphic - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/Graphic.res" /d "_DEBUG" /d "_AFXDLL" "F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter11\Graphic\Graphic.rc"" 
+Creating temporary file "C:\DOCUME~1\LIBO_J~1\LOCALS~1\Temp\RSP112.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/Graphic.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter11\Graphic\BtnST.cpp"
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter11\Graphic\Graph.cpp"
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter11\Graphic\Graphic.cpp"
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter11\Graphic\GraphicDoc.cpp"
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter11\Graphic\GraphicView.cpp"
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter11\Graphic\MainFrm.cpp"
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter11\Graphic\SettingDlg.cpp"
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter11\Graphic\SXBtn.cpp"
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter11\Graphic\TestBtn.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\LIBO_J~1\LOCALS~1\Temp\RSP112.tmp" 
+Creating temporary file "C:\DOCUME~1\LIBO_J~1\LOCALS~1\Temp\RSP113.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/Graphic.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter11\Graphic\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\LIBO_J~1\LOCALS~1\Temp\RSP113.tmp" 
+Creating temporary file "C:\DOCUME~1\LIBO_J~1\LOCALS~1\Temp\RSP114.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Graphic.pdb" /debug /machine:I386 /out:"Debug/Graphic.exe" /pdbtype:sept 
+".\Debug\BtnST.obj"
+".\Debug\Graph.obj"
+".\Debug\Graphic.obj"
+".\Debug\GraphicDoc.obj"
+".\Debug\GraphicView.obj"
+".\Debug\MainFrm.obj"
+".\Debug\SettingDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\SXBtn.obj"
+".\Debug\TestBtn.obj"
+".\Debug\Graphic.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\LIBO_J~1\LOCALS~1\Temp\RSP114.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+BtnST.cpp
+Graph.cpp
+Graphic.cpp
+GraphicDoc.cpp
+GraphicView.cpp
+MainFrm.cpp
+SettingDlg.cpp
+SXBtn.cpp
+TestBtn.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Graphic.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
