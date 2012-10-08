@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: NamedPipeSrv - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/NamedPipeSrv.res" /d "_DEBUG" /d "_AFXDLL" "D:\VC++深入编程\Chapter17\NamedPipeSrv\NamedPipeSrv.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1.YY\LOCALS~1\Temp\RSP3.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/NamedPipeSrv.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\VC++深入编程\Chapter17\NamedPipeSrv\MainFrm.cpp"
+"D:\VC++深入编程\Chapter17\NamedPipeSrv\NamedPipeSrv.cpp"
+"D:\VC++深入编程\Chapter17\NamedPipeSrv\NamedPipeSrvDoc.cpp"
+"D:\VC++深入编程\Chapter17\NamedPipeSrv\NamedPipeSrvView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1.YY\LOCALS~1\Temp\RSP3.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1.YY\LOCALS~1\Temp\RSP4.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/NamedPipeSrv.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\VC++深入编程\Chapter17\NamedPipeSrv\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1.YY\LOCALS~1\Temp\RSP4.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1.YY\LOCALS~1\Temp\RSP5.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/NamedPipeSrv.pdb" /debug /machine:I386 /out:"Debug/NamedPipeSrv.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\NamedPipeSrv.obj"
+".\Debug\NamedPipeSrvDoc.obj"
+".\Debug\NamedPipeSrvView.obj"
+".\Debug\StdAfx.obj"
+".\Debug\NamedPipeSrv.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1.YY\LOCALS~1\Temp\RSP5.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+NamedPipeSrv.cpp
+NamedPipeSrvDoc.cpp
+NamedPipeSrvView.cpp
+Generating Code...
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/NamedPipeSrv.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\MainFrm.sbr" ".\Debug\NamedPipeSrv.sbr" ".\Debug\NamedPipeSrvDoc.sbr" ".\Debug\NamedPipeSrvView.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+NamedPipeSrv.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

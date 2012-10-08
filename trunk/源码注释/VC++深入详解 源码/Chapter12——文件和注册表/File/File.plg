@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: File - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/File.res" /d "_DEBUG" /d "_AFXDLL" "F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter12\File\File.rc"" 
+Creating temporary file "C:\DOCUME~1\LIBOJE~1\LOCALS~1\Temp\RSP64.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/File.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter12\File\File.cpp"
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter12\File\FileDoc.cpp"
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter12\File\FileView.cpp"
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter12\File\MainFrm.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\LIBOJE~1\LOCALS~1\Temp\RSP64.tmp" 
+Creating temporary file "C:\DOCUME~1\LIBOJE~1\LOCALS~1\Temp\RSP65.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/File.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\李波的书库\VC++\孙鑫教程\VC++深入详解code\Chapter12\File\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\LIBOJE~1\LOCALS~1\Temp\RSP65.tmp" 
+Creating temporary file "C:\DOCUME~1\LIBOJE~1\LOCALS~1\Temp\RSP66.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/File.pdb" /debug /machine:I386 /out:"Debug/File.exe" /pdbtype:sept 
+".\Debug\File.obj"
+".\Debug\FileDoc.obj"
+".\Debug\FileView.obj"
+".\Debug\MainFrm.obj"
+".\Debug\StdAfx.obj"
+".\Debug\File.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\LIBOJE~1\LOCALS~1\Temp\RSP66.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+File.cpp
+FileDoc.cpp
+FileView.cpp
+MainFrm.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+File.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
