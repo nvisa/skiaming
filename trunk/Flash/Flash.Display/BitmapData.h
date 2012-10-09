@@ -1,11 +1,6 @@
 #pragma once
-#include "StdAfx.h"
-#include "Object.h"
 #include "splght.h"
 #include "Rectangle.h"
-#include <vector>
-#include <string>
-#include "SKBitmap.h"
 namespace splght{
 
 /*使用 BitmapData 类可以处理 Bitmap 对象的位图图像的数据（像素）。可以使用 BitmapData 类的方法创建任意大小的透明或不透明
@@ -31,7 +26,7 @@ BitmapDataChannel.BLUE
 	class	BitmapData/*: public Object*/
 	{
 	private:
-		SkBitmap* m_pBitmap;
+		//SkBitmap* m_pBitmap;
 	public:
 		/*创建一个具有指定的宽度和高度的 BitmapData 对象。如果为 fillColor 参数指定一个值，则位图中的每个像素都将
 		设置为该颜色。 
@@ -67,7 +62,7 @@ BitmapDataChannel.BLUE
 		//void    applyFilter(const BitmapData& sourceBitmapData, const Rectangle&  sourceRect,Point  destPoint,BitmapFilter  filter);
 
 		//返回一个新的 BitmapData 对象，它是对原始实例的克隆，包含与原始实例所含位图完全相同的副本。 BitmapData
-		BitmapData clone();
+		//BitmapData clone();
 		//使用 ColorTransform 对象调整位图图像的指定区域中的颜色值。 BitmapData
 		//void    colorTransform(Rectangle rect,flash.geom:ColorTransform  colorTransform);
 		//比较两个 BitmapData 对象。 BitmapData
@@ -127,7 +122,7 @@ BitmapDataChannel.BLUE
 		//解除锁定图像，以使引用 BitmapData 对象的任何对象（如 Bitmap 对象）在此 BitmapData 对象更改时更新。 BitmapData
 		//void    unlock(Rectangle  changeRect= null);
 		LX_int GetHeight() const {return m_iWidth;}
-		LX_int GetWidth() const {return width;}
+		LX_int GetWidth() const {return m_iWidth;}
 		LX_BOOL GetTransparent() const {return m_bTransparent;}
 	private:
 		//[只读] 位图图像的高度，以像素为单位。 BitmapData
