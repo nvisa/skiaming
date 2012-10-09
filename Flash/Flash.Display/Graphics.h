@@ -97,7 +97,7 @@ class SkCanvas;
 		//matrix:一个 matrix 对象（属于 flash.geom.Matrix 类），可用于对着色器定义转换。
 		//例如，可以使用以下矩阵将着色器旋转 45 度（pi/4 弧度）: matrix = new flash.geom.Matrix(); matrix.rotate(Math.PI / 4);
 	   //着色器中收到的坐标基于为 matrix 参数指定的矩阵。对于默认 (null) 矩阵，着色器中的坐标是可用于对输入采样的局部像素坐标。
-		void beginShaderFill(cosnt Shader &shader, cosnt Matrix &matrix = null);
+		void beginShaderFill(const Shader &shader, cosnt Matrix &matrix = null);
 
 		//清除绘制到此 Graphics 对象的图形，并重置填充和线条样式设置。 
 		void clear();

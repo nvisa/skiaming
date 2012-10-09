@@ -43,7 +43,7 @@ Sprite 类也包括 graphics 属性，并且它包括不可用于 Shape 类的其他功能。
 	{
 	public:	
 		//创建新的 Shape 对象。 Shape
-		Shape( );
+		Shape();
 	private:
 		//[只读] 指定属于该 Shape 对象的 Graphics 对象，可通过此对象执行矢量绘画命令。 Shape
 		Graphics graphics;
