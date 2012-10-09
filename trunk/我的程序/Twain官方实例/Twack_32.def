@@ -1,0 +1,12 @@
+NAME                TWACK_32
+DESCRIPTION         'TWAIN_32 Application Tester'
+
+CODE                PRELOAD MOVEABLE DISCARDABLE
+DATA                PRELOAD SINGLE MOVEABLE
+HEAPSIZE            5120
+STACKSIZE           10240
+
+EXPORTS
+    TW_MainWndProc  @1
+    AboutDlgProc    @2
+    SendDlgProc     @3

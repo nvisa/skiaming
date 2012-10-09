@@ -1,0 +1,70 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Twack_32 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/Twack_32.res" /d "_DEBUG" "C:\Users\Administrator\Desktop\Twain官方实例\Twack_32.RC"" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPEEEB.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fr"Debug/" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Users\Administrator\Desktop\Twain官方实例\Captest.c"
+"C:\Users\Administrator\Desktop\Twain官方实例\Dca_acq.c"
+"C:\Users\Administrator\Desktop\Twain官方实例\Dca_glue.c"
+"C:\Users\Administrator\Desktop\Twain官方实例\Special.c"
+"C:\Users\Administrator\Desktop\Twain官方实例\Table.c"
+"C:\Users\Administrator\Desktop\Twain官方实例\Triplets.c"
+"C:\Users\Administrator\Desktop\Twain官方实例\Twacker.c"
+"C:\Users\Administrator\Desktop\Twain官方实例\twndebug.c"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPEEEB.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPEEFB.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Twack_32.pdb" /debug /machine:I386 /def:".\TWACK_32.DEF" /out:"Debug/Twack_32.exe" 
+".\Debug\Captest.obj"
+".\Debug\Dca_acq.obj"
+".\Debug\Dca_glue.obj"
+".\Debug\Special.obj"
+".\Debug\Table.obj"
+".\Debug\Triplets.obj"
+".\Debug\Twacker.obj"
+".\Debug\twndebug.obj"
+".\Debug\Twack_32.res"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPEEFB.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+Captest.c
+Dca_acq.c
+c:\users\administrator\desktop\twain官方实例\dca_acq.c(695) : warning C4554: '|' : check operator precedence for possible error; use parentheses to clarify precedence
+c:\users\administrator\desktop\twain官方实例\dca_acq.c(1058) : warning C4554: '|' : check operator precedence for possible error; use parentheses to clarify precedence
+c:\users\administrator\desktop\twain官方实例\dca_acq.c(1204) : warning C4554: '|' : check operator precedence for possible error; use parentheses to clarify precedence
+c:\users\administrator\desktop\twain官方实例\dca_acq.c(1681) : warning C4554: '|' : check operator precedence for possible error; use parentheses to clarify precedence
+c:\users\administrator\desktop\twain官方实例\dca_acq.c(1832) : warning C4554: '|' : check operator precedence for possible error; use parentheses to clarify precedence
+Dca_glue.c
+Special.c
+c:\users\administrator\desktop\twain官方实例\special.c(253) : warning C4113: 'int (__stdcall *)()' differs in parameter lists from 'int (__stdcall *)(struct HWND__ *,unsigned int ,unsigned int ,long )'
+Table.c
+Triplets.c
+Twacker.c
+c:\users\administrator\desktop\twain官方实例\twacker.c(104) : warning C4028: formal parameter 1 different from declaration
+c:\users\administrator\desktop\twain官方实例\twacker.c(104) : warning C4028: formal parameter 2 different from declaration
+c:\users\administrator\desktop\twain官方实例\twacker.c(1070) : warning C4113: 'int (__stdcall *)()' differs in parameter lists from 'int (__stdcall *)(struct HWND__ *,unsigned int ,unsigned int ,long )'
+twndebug.c
+Generating Code...
+c:\users\administrator\desktop\twain官方实例\twacker.c(1411) : warning C4715: 'CloseApplication' : not all control paths return a value
+Linking...
+.\TWACK_32.DEF : warning LNK4017: CODE statement not supported for the target platform; ignored
+.\TWACK_32.DEF : warning LNK4017: DATA statement not supported for the target platform; ignored
+   Creating library Debug/Twack_32.lib and object Debug/Twack_32.exp
+
+
+
+<h3>Results</h3>
+Twack_32.exe - 0 error(s), 12 warning(s)
+</pre>
+</body>
+</html>
