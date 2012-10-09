@@ -303,5 +303,11 @@
     <ClCompile Include="BitmapData.cpp">
       <Filter>Object\flash.display\IBitmapDrawable</Filter>
     </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Object\flash.display</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>Object\flash.geom</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

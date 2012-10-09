@@ -22,7 +22,7 @@ Graphics::~Graphics()
 //如果为 true，则使用双线性算法来呈现放大的位图图像。使用最近邻点算法呈现较快。 
 void beginBitmapFill(const BitmapData &bitmap, const Matrix &matrix = null, Boolean repeat = true, Boolean smooth = false)
 {
-	
+
 }
 
 /*指定一种简单的单一颜色填充，在绘制时该填充将在随后对其他Graphics 方法（如 lineTo() 或 drawCircle()）的调用中使用
