@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CreateFrame1", "CreateFrame1.vcproj", "{1DDCDD6B-6845-4282-9389-E58881228223}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DDCDD6B-6845-4282-9389-E58881228223}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1DDCDD6B-6845-4282-9389-E58881228223}.Debug|Win32.Build.0 = Debug|Win32
+		{1DDCDD6B-6845-4282-9389-E58881228223}.Release|Win32.ActiveCfg = Release|Win32
+		{1DDCDD6B-6845-4282-9389-E58881228223}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

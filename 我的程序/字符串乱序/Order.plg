@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Order - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/Order.res" /d "_DEBUG" /d "_AFXDLL" "F:\360ÔÆÅÌ\ÎÒµÄ³ÌÐò\×Ö·û´®ÂÒÐò\Order.rc"" 
+Creating temporary file "C:\Users\Scenery\AppData\Local\Temp\RSPB24F.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "UNICODE" /D "_UNICODE" /Fp"Debug/Order.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\360ÔÆÅÌ\ÎÒµÄ³ÌÐò\×Ö·û´®ÂÒÐò\Order.cpp"
+"F:\360ÔÆÅÌ\ÎÒµÄ³ÌÐò\×Ö·û´®ÂÒÐò\OrderDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\Scenery\AppData\Local\Temp\RSPB24F.tmp" 
+Creating temporary file "C:\Users\Scenery\AppData\Local\Temp\RSPB250.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "UNICODE" /D "_UNICODE" /Fp"Debug/Order.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\360ÔÆÅÌ\ÎÒµÄ³ÌÐò\×Ö·û´®ÂÒÐò\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Scenery\AppData\Local\Temp\RSPB250.tmp" 
+Creating command line "link.exe /nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:yes /pdb:"Debug/Order.pdb" /debug /machine:I386 /out:"Debug/Order.exe" /pdbtype:sept  ".\Debug\Order.obj" ".\Debug\OrderDlg.obj" ".\Debug\StdAfx.obj" ".\Debug\Order.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Order.cpp
+OrderDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Order.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

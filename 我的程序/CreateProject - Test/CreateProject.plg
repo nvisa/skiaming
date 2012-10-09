@@ -1,0 +1,48 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CreateProject - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/CreateProject.res" /d "_DEBUG" /d "_AFXDLL" "F:\360云盘\我的程序\CreateProject - 副本\CreateProject.rc"" 
+Creating temporary file "C:\Users\Scenery\AppData\Local\Temp\RSPDD6A.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/CreateProject.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\360云盘\我的程序\CreateProject - 副本\CreateProject.cpp"
+"F:\360云盘\我的程序\CreateProject - 副本\CreateProjectDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\Scenery\AppData\Local\Temp\RSPDD6A.tmp" 
+Creating temporary file "C:\Users\Scenery\AppData\Local\Temp\RSPDD6B.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/CreateProject.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\360云盘\我的程序\CreateProject - 副本\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Scenery\AppData\Local\Temp\RSPDD6B.tmp" 
+Creating temporary file "C:\Users\Scenery\AppData\Local\Temp\RSPDD6C.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/CreateProject.pdb" /debug /machine:I386 /out:"Debug/CreateProject.exe" /pdbtype:sept 
+".\Debug\CreateProject.obj"
+".\Debug\CreateProjectDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\CreateProject.res"
+]
+Creating command line "link.exe @C:\Users\Scenery\AppData\Local\Temp\RSPDD6C.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+CreateProject.cpp
+CreateProjectDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+CreateProject.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

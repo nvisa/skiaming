@@ -1,0 +1,22 @@
+# Microsoft Developer Studio Generated Dependency File, included by Order.mak
+
+.\Order.cpp : \
+	".\Order.h"\
+	".\OrderDlg.h"\
+	".\StdAfx.h"\
+	
+
+.\Order.rc : \
+	".\res\Order.ico"\
+	".\res\Order.rc2"\
+	
+
+.\OrderDlg.cpp : \
+	".\Order.h"\
+	".\OrderDlg.h"\
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	
