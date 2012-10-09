@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MySkia", "MySkia\MySkia.vcxproj", "{E2DB364D-0A40-4C55-9E01-7C1861D17E0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2DB364D-0A40-4C55-9E01-7C1861D17E0B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E2DB364D-0A40-4C55-9E01-7C1861D17E0B}.Debug|Win32.Build.0 = Debug|Win32
+		{E2DB364D-0A40-4C55-9E01-7C1861D17E0B}.Release|Win32.ActiveCfg = Release|Win32
+		{E2DB364D-0A40-4C55-9E01-7C1861D17E0B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
