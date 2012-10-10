@@ -23,8 +23,12 @@
     call, its (virtual) destructor is called. It is an error for the
     destructor to be called explicitly (or via the object going out of scope on
     the stack or calling delete) if getRefCnt() > 1.
+	被多个对象共享的对象的基类.当如果拥有者想共享一个引用,可以调用ref().当拥有者想释放
+	引用,调用unref().当调用unref导致共享对象的引用数目为0时,将调用析构函数(虚的).显式调用
+	析构函数会引起错误.
 */
-class SK_API SkRefCnt : SkNoncopyable {
+class SK_API SkRefCnt : SkNoncopyable 
+{
 public:
     SK_DECLARE_INST_COUNT_ROOT(SkRefCnt)
 
@@ -34,7 +38,8 @@ public:
 
     /** Destruct, asserting that the reference count is 1.
     */
-    virtual ~SkRefCnt() {
+    virtual ~SkRefCnt() 
+	{
 #ifdef SK_DEBUG
         SkASSERT(fRefCnt == 1);
         fRefCnt = 0;    // illegal value, to catch us if we reuse after delete
@@ -47,7 +52,8 @@ public:
 
     /** Increment the reference count. Must be balanced by a call to unref().
     */
-    void ref() const {
+    void ref() const 
+	{
         SkASSERT(fRefCnt > 0);
         sk_atomic_inc(&fRefCnt);  // No barrier required.
     }
@@ -57,10 +63,12 @@ public:
         the object needs to have been allocated via new, and not on the stack.
 		减少引用数目.如果在减少前为1,则删除对象
     */
-    void unref() const {
+    void unref() const 
+	{
         SkASSERT(fRefCnt > 0);
         // Release barrier (SL/S), if not provided below.
-        if (sk_atomic_dec(&fRefCnt) == 1) {
+        if (sk_atomic_dec(&fRefCnt) == 1) 
+		{
             // Aquire barrier (L/SL), if not provided above.
             // Prevents code in dispose from happening before the decrement.
             sk_membar_aquire__after_atomic_dec();
@@ -68,7 +76,8 @@ public:
         }
     }
 
-    void validate() const {
+    void validate() const 
+	{
         SkASSERT(fRefCnt > 0);
     }
 
@@ -79,7 +88,8 @@ protected:
      *  be called right before calling through to inherited internal_dispose()
      *  or before calling the destructor.
      */
-    void internal_dispose_restore_refcnt_to_1() const {
+    void internal_dispose_restore_refcnt_to_1() const 
+	{
 #ifdef SK_DEBUG
         SkASSERT(0 == fRefCnt);
         fRefCnt = 1;
@@ -90,7 +100,8 @@ private:
     /**
      *  Called when the ref count goes to 0.
      */
-    virtual void internal_dispose() const {
+    virtual void internal_dispose() const 
+	{
         this->internal_dispose_restore_refcnt_to_1();
         SkDELETE(this);
     }
@@ -100,7 +111,6 @@ private:
                                 // call SkRefCnt's & directly set fRefCnt (to 1)
 
     mutable int32_t fRefCnt;
-
     typedef SkNoncopyable INHERITED;
 };
 

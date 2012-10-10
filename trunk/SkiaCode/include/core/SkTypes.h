@@ -354,6 +354,7 @@ template <typename Dst> Dst SkTCast(const void* ptr) {
 
 SkNoncopyable is the base class for objects that may do not want to
 be copied. It hides its copy-constructor and its assignment-operator.
+不想被复制的类的基类,隐藏了拷贝构造函数和赋值操作符
 */
 class SK_API SkNoncopyable {
 public:

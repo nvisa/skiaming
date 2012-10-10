@@ -94,6 +94,7 @@ void sk_membar_aquire__after_atomic_conditional_inc() {
     previous value.
     No additional memory barrier is required.
     This must act as a compiler barrier.
+	被接口层实现,函数将向呗地址指定的整数增加1,返回之前的值
 */
 SK_API int32_t sk_atomic_inc(int32_t* addr);
 
