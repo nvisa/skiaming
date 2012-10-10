@@ -79,14 +79,16 @@ struct SkBitmap::MipMap : SkNoncopyable {
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-SkBitmap::SkBitmap() {
-    sk_bzero(this, sizeof(*this));
+SkBitmap::SkBitmap() 
+{
+    sk_bzero(this, sizeof(*this));	//将所有变量初始化为0的方法
 }
 
-SkBitmap::SkBitmap(const SkBitmap& src) {
+SkBitmap::SkBitmap(const SkBitmap& src) 
+{
     SkDEBUGCODE(src.validate();)
     sk_bzero(this, sizeof(*this));
-    *this = src;
+    *this = src;									//使用了=操作符的重载
     SkDEBUGCODE(this->validate();)
 }
 
@@ -96,9 +98,10 @@ SkBitmap::~SkBitmap() {
 }
 
 SkBitmap& SkBitmap::operator=(const SkBitmap& src) {
-    if (this != &src) {
+    if (this != &src) 
+	{
         this->freePixels();
-        memcpy(this, &src, sizeof(src));
+        memcpy(this, &src, sizeof(src));		//赋值的办法,值得学习
 
         // inc src reference counts
         SkSafeRef(src.fPixelRef);
@@ -112,10 +115,13 @@ SkBitmap& SkBitmap::operator=(const SkBitmap& src) {
             2. unlocked pixelref, pixels/ctable should be null
             3. locked pixelref, we should lock the ref again ourselves
         */
-        if (NULL == fPixelRef) {
+        if (NULL == fPixelRef) 
+		{
             // leave fPixels as it is
             SkSafeRef(fColorTable); // ref the user's ctable if present
-        } else {    // we have a pixelref, so pixels/ctable reflect it
+        } 
+		else 
+		{    // we have a pixelref, so pixels/ctable reflect it
             // ignore the values from the memcpy
             fPixels = NULL;
             fColorTable = NULL;
@@ -127,7 +133,6 @@ SkBitmap& SkBitmap::operator=(const SkBitmap& src) {
             // as soon either is modified.
         }
     }
-
     SkDEBUGCODE(this->validate();)
     return *this;
 }
@@ -339,18 +344,22 @@ SkPixelRef* SkBitmap::setPixelRef(SkPixelRef* pr, size_t offset) {
     return pr;
 }
 
-void SkBitmap::lockPixels() const {
-    if (NULL != fPixelRef && 1 == ++fPixelLockCount) {
+void SkBitmap::lockPixels() const 
+{
+    if (NULL != fPixelRef && 1 == ++fPixelLockCount) 
+	{
         fPixelRef->lockPixels();
         this->updatePixelsFromRef();
     }
     SkDEBUGCODE(this->validate();)
 }
 
-void SkBitmap::unlockPixels() const {
+void SkBitmap::unlockPixels() const 
+{
     SkASSERT(NULL == fPixelRef || fPixelLockCount > 0);
 
-    if (NULL != fPixelRef && 0 == --fPixelLockCount) {
+    if (NULL != fPixelRef && 0 == --fPixelLockCount) 
+	{
         fPixelRef->unlockPixels();
         this->updatePixelsFromRef();
     }
@@ -376,26 +385,32 @@ void SkBitmap::setPixels(void* p, SkColorTable* ctable) {
     SkDEBUGCODE(this->validate();)
 }
 
-bool SkBitmap::allocPixels(Allocator* allocator, SkColorTable* ctable) {
+bool SkBitmap::allocPixels(Allocator* allocator, SkColorTable* ctable) 
+{
     HeapAllocator stdalloc;
 
-    if (NULL == allocator) {
+    if (NULL == allocator) 
+	{
         allocator = &stdalloc;
     }
     return allocator->allocPixelRef(this, ctable);
 }
 
-void SkBitmap::freePixels() {
+void SkBitmap::freePixels() 
+{
     // if we're gonna free the pixels, we certainly need to free the mipmap
     this->freeMipMap();
 
-    if (fColorTable) {
+    if (fColorTable) 
+	{
         fColorTable->unref();
         fColorTable = NULL;
     }
 
-    if (NULL != fPixelRef) {
-        if (fPixelLockCount > 0) {
+    if (NULL != fPixelRef) 
+	{
+        if (fPixelLockCount > 0) 
+		{
             fPixelRef->unlockPixels();
         }
         fPixelRef->unref();
@@ -406,8 +421,10 @@ void SkBitmap::freePixels() {
     fPixels = NULL;
 }
 
-void SkBitmap::freeMipMap() {
-    if (fMipMap) {
+void SkBitmap::freeMipMap() 
+{
+    if (fMipMap) 
+	{
         fMipMap->unref();
         fMipMap = NULL;
     }
@@ -436,12 +453,14 @@ SkGpuTexture* SkBitmap::getTexture() const {
 bool SkBitmap::HeapAllocator::allocPixelRef(SkBitmap* dst,
                                             SkColorTable* ctable) {
     Sk64 size = dst->getSize64();
-    if (size.isNeg() || !size.is32()) {
+    if (size.isNeg() || !size.is32()) 
+	{
         return false;
     }
 
     void* addr = sk_malloc_flags(size.get32(), 0);  // returns NULL on failure
-    if (NULL == addr) {
+    if (NULL == addr) 
+	{
         return false;
     }
 
@@ -1441,7 +1460,8 @@ SkBitmap::RLEPixels::~RLEPixels() {
 ///////////////////////////////////////////////////////////////////////////////
 
 #ifdef SK_DEBUG
-void SkBitmap::validate() const {
+void SkBitmap::validate() const		//确保对象有效
+{
     SkASSERT(fConfig < kConfigCount);
     SkASSERT(fRowBytes >= (unsigned)ComputeRowBytes((Config)fConfig, fWidth));
     SkASSERT(fFlags <= (kImageIsOpaque_Flag | kImageIsVolatile_Flag | kImageIsImmutable_Flag));

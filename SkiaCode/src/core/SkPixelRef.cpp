@@ -104,22 +104,25 @@ void SkPixelRef::flatten(SkFlattenableWriteBuffer& buffer) const {
     }
 }
 
-void SkPixelRef::lockPixels() {
+void SkPixelRef::lockPixels() 
+{
     SkASSERT(!fPreLocked || SKPIXELREF_PRELOCKED_LOCKCOUNT == fLockCount);
-
-    if (!fPreLocked) {
+    if (!fPreLocked) 
+	{
         SkAutoMutexAcquire  ac(*fMutex);
-
-        if (1 == ++fLockCount) {
+        if (1 == ++fLockCount) 
+		{
             fPixels = this->onLockPixels(&fColorTable);
         }
     }
 }
 
-void SkPixelRef::unlockPixels() {
+void SkPixelRef::unlockPixels() 
+{
     SkASSERT(!fPreLocked || SKPIXELREF_PRELOCKED_LOCKCOUNT == fLockCount);
 
-    if (!fPreLocked) {
+    if (!fPreLocked) 
+	{
         SkAutoMutexAcquire  ac(*fMutex);
 
         SkASSERT(fLockCount > 0);
